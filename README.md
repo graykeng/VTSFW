@@ -1,3 +1,4 @@
-#VTSF Website Development
+#VTSF
+Website Development
 
 Contributor: Gray Keng
