@@ -1,0 +1,28 @@
+.CardImage {
+    border: 1px solid #ddd;
+    border-radius: 20px;
+
+    height: auto;
+    max-height: 250px;
+    width: auto;
+    max-width: 250px;
+
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.Cards {
+    width: 75%;
+    margin: auto;
+}
+
+.ImageBetween {
+    margin: 20px;
+}
+
+.Cd {
+    margin-left: auto;
+    margin-right: auto;
+    background: #000;
+}
