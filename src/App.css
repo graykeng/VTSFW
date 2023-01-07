@@ -1,18 +1,22 @@
 .CardImage {
-    border: 1px solid #ddd;
-    border-radius: 20px;
+    border: 1px solid black;
+    border-radius: 15px;
 
     height: auto;
     max-height: 250px;
-    width: auto;
+    width: 40%;
     max-width: 250px;
 
     margin-left: auto;
     margin-right: auto;
     
+    display: block;
 }
 
-.Cards {
+.AllCards {
+    /* to be deleted */
+    border: 5px solid black;
+
     width: 75%;
     margin: auto;
 }
@@ -21,8 +25,13 @@
     margin: 20px;
 }
 
-.Cd {
-    margin-left: auto;
-    margin-right: auto;
-    background: #000;
+.SingleCard {
+    margin: auto;
+    width: 50%;
+    border: 3px solid black;
+    padding: 10px;
+}
+
+.CardText {
+    text-align: center;
 }

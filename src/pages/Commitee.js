@@ -13,7 +13,10 @@ import CommiteeCard from '../component/CommiteeCard';
 const CommiteeNames = [
     { id: 1, name: "Gray" },
     { id: 2, name: "Annie" },
-    { id: 3, name: "Eric" }
+    { id: 3, name: "Eric" },
+    { id: 4, name: "Roger" },
+    { id: 5, name: "Jason" },
+    { id: 6, name: "Jennie" }
 ]
 
 const Commitee = () => {
@@ -22,17 +25,13 @@ const Commitee = () => {
         <Helmet>
             <title>VTSF | Commitee</title>
         </Helmet>
-        <Tabs 
-            defaultActiveKey="VTSF 2022"
-            className="mt-3 mb-5"
-            fill
-        >
+        <Tabs defaultActiveKey="VTSF 2022" className="mt-3 mb-5" fill>
             <Tab eventKey="VTSF 2022" title="VTSF 2022">
 
-                <div className='Cards'>
+                <div className='AllCards'>
                     <Row xs={1} md={2}>
                         {CommiteeNames.map(CommiteeNames => (
-                            <CommiteeCard key={CommiteeNames.id} name={CommiteeNames.name} />
+                            <CommiteeCard key={CommiteeNames.id} id={CommiteeNames.id} name={CommiteeNames.name} />
                         ))}
                     </Row>
                 </div>
