@@ -1,8 +1,12 @@
 import React from 'react'
 
+import CarouselFadeExample from '../component/Carousel'
+
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+        <CarouselFadeExample />
+    </div>
   )
 }
 
