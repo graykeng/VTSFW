@@ -7,7 +7,6 @@ const Blog = () => {
         <Helmet>
             <title>VTSF | Blog</title>
         </Helmet>
-        Blog
     </div>
   )
 }

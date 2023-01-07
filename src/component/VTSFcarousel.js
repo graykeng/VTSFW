@@ -2,7 +2,7 @@ import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import test from '../image/test.png';
 
-function CarouselFadeExample() {
+function VTSFcarousel() {
   return (
     <Carousel fade>
       <Carousel.Item>
@@ -44,4 +44,4 @@ function CarouselFadeExample() {
   );
 }
 
-export default CarouselFadeExample;
+export default VTSFcarousel;

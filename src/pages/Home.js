@@ -1,7 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 
-import CarouselFadeExample from '../component/Carousel'
+import VTSFcarousel from '../component/VTSFcarousel'
 
 const Home = () => {
   return (
@@ -9,7 +9,7 @@ const Home = () => {
         <Helmet>
             <title>VTSF | Home</title>
         </Helmet>
-        <CarouselFadeExample />
+        <VTSFcarousel />
     </div>
   )
 }
