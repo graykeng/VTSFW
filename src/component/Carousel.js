@@ -1,4 +1,6 @@
+import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
+import test from '../image/test.png';
 
 function CarouselFadeExample() {
   return (
@@ -6,7 +8,7 @@ function CarouselFadeExample() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="holder.js/800x400?text=First slide&bg=373940"
+          src={test}
           alt="First slide"
         />
         <Carousel.Caption>
@@ -16,11 +18,10 @@ function CarouselFadeExample() {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100"
-          src="holder.js/800x400?text=Second slide&bg=282c34"
+          className="d-block w-1000"
+          src={test}
           alt="Second slide"
         />
-
         <Carousel.Caption>
           <h3>Second slide label</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -28,11 +29,10 @@ function CarouselFadeExample() {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100"
-          src="holder.js/800x400?text=Third slide&bg=20232a"
+          className="d-block w-50"
+          src={test}
           alt="Third slide"
         />
-
         <Carousel.Caption>
           <h3>Third slide label</h3>
           <p>

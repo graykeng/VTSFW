@@ -1,8 +1,13 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 
 const Gallery = () => {
   return (
-    <div>Gallery</div>
+    <div>
+        <Helmet>
+            <title>VTSF | Gallery</title>
+        </Helmet>
+    </div>
   )
 }
 

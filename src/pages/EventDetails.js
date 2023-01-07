@@ -1,8 +1,13 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 
 const EventDetails = () => {
   return (
-    <div>EventDetails</div>
+    <div>
+        <Helmet>
+            <title>VTSF | Event Details</title>
+        </Helmet>
+    </div>
   )
 }
 
