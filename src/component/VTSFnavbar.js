@@ -10,14 +10,14 @@ const VTSFnavbar = () => {
         <Navbar bg="light" expand="lg">
             <Container>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                    <Navbar.Collapse id="basic-navbar-nav">
+                    <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link href="#home">Home</Nav.Link>
-                            <Nav.Link href="#link">Gallery</Nav.Link>
-                            <Nav.Link href="#link">Event Details</Nav.Link>
-                            <Nav.Link href="#link">Blog</Nav.Link>
-                            <Nav.Link href="#link">Commitee</Nav.Link>
-                            <Nav.Link href="#link">Sponsors</Nav.Link>
+                            <Nav.Link href="/">Home</Nav.Link>
+                            <Nav.Link href="/Gallery">Gallery</Nav.Link>
+                            <Nav.Link href="/EventDetails">Event Details</Nav.Link>
+                            <Nav.Link href="/Blog">Blog</Nav.Link>
+                            <Nav.Link href="/Commitee">Commitee</Nav.Link>
+                            <Nav.Link href="/Sponsors">Sponsors</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
             </Container>
