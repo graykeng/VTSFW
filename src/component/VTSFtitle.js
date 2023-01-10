@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 
 const VTSFtitle = () => {
+
+  function NotYet(){
+    alert("We haven't started selling the ticket for 2023.")
+  }
+
   return (
     <>
       <Navbar bg="dark" variant="dark">
@@ -18,6 +23,9 @@ const VTSFtitle = () => {
             <span className=''>VTSF</span>
           </Navbar.Brand>
           <Navbar.Collapse className="justify-content-end">
+            <Navbar.Brand>
+              <button variant="primary" onClick={NotYet} className="TicketButton">Buy Ticket</button>
+            </Navbar.Brand>
             <Navbar.Brand href="https://www.instagram.com/vtsf2022/" target="_blank">
               <img
                 alt=''
