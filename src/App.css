@@ -24,6 +24,7 @@
     /* border: 5px solid black; */
 }
 
+/* One single commitee card */
 .SingleCard {
     /* margin: auto; */
     margin-bottom: 2%;
@@ -34,6 +35,7 @@
     /* border: 3px solid black; */
 }
 
+/* Commitee cards title */
 .CardTitle {
     text-align: center;
     font-family: "Times New Roman", Times, serif;
@@ -41,6 +43,7 @@
     margin-top: 1%;
 }
 
+/* Commitee cards text */
 .CardText {
     font-family: "Times New Roman", Times, serif;
     font-size: 1.25em;
@@ -48,10 +51,25 @@
     padding-right: 20%;
 }
 
+/* Whole footer */
 .Footer {
     background-color: #EFEFEF;
 }
 
+/* Only for the interval of logos on the footer */
 .Logo {
     margin-right: 10px;
+}
+
+/* Carousel image */
+.CarouselSize {
+    height: auto;
+    max-height: 70%;
+    width: auto;
+    max-width: 70%;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
