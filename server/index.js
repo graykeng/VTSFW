@@ -13,8 +13,8 @@ const db = mysql.createConnection({
   database: "vtsf",
 });
 
-app.get("/employees", (req, res) => {
-    db.query("SELECT * FROM Commitee", (err, result) => {
+app.get("/CommiteeInfo2022", (req, res) => {
+    db.query("SELECT * FROM Commitee WHERE id BETWEEN 20220000 AND 20229999;", (err, result) => {
       if (err) {
         console.log(err);
       } else {
