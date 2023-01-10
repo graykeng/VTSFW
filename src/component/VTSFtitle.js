@@ -2,10 +2,6 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 
-import VTSFLogo from '../image/logo.jpg';
-import instagramLogo from '../image/instagramLogo.jpg';
-import facebookLogo from '../image/facebookLogo.jpg';
-
 const VTSFtitle = () => {
   return (
     <>
@@ -14,7 +10,7 @@ const VTSFtitle = () => {
           <Navbar.Brand href="/">
             <img
               alt=''
-              src={VTSFLogo}
+              src={process.env.PUBLIC_URL + './image/logo.jpg'}
               width='30'
               height='30'
               className="d-inline-block align-top"
@@ -25,7 +21,7 @@ const VTSFtitle = () => {
             <Navbar.Brand href="https://www.instagram.com/vtsf2022/" target="_blank">
               <img
                 alt=''
-                src={instagramLogo}
+                src={process.env.PUBLIC_URL + './image/instagramLogo.jpg'}
                 width='30'
                 height='30'
                 className="d-inline-block align-top"
@@ -34,7 +30,7 @@ const VTSFtitle = () => {
             <Navbar.Brand href="https://www.facebook.com/Vancouver-Taiwanese-Student-Forum-VTSF-108853708309621" target="_blank">
               <img
                 alt=''
-                src={facebookLogo}
+                src={process.env.PUBLIC_URL + './image/facebookLogo.jpg'}
                 width='30'
                 height='30'
                 className="d-inline-block align-top"

@@ -19,16 +19,11 @@ const CommiteeCard = ({ info }) => {
         </h5>
       </div>
 
-
       <div className='CardText'>
         <p>
-          {info.LastName}
+          {info.Intro}
         </p>
       </div>
-      
-
-
-
     </div>
   )
 }
