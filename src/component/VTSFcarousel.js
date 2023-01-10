@@ -1,6 +1,5 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import test from '../image/test.png';
 
 function VTSFcarousel() {
   return (
@@ -8,7 +7,7 @@ function VTSFcarousel() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src={test}
+          src={process.env.PUBLIC_URL + '/image/EventPic/DSC00941.jpg'}
           alt="First slide"
         />
         <Carousel.Caption>
@@ -18,8 +17,8 @@ function VTSFcarousel() {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-1000"
-          src={test}
+          className="d-block w-100"
+          src={process.env.PUBLIC_URL + '/image/EventPic/DSC00961.jpg'}
           alt="Second slide"
         />
         <Carousel.Caption>
@@ -29,8 +28,8 @@ function VTSFcarousel() {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-50"
-          src={test}
+          className="d-block w-100"
+          src={process.env.PUBLIC_URL + '/image/EventPic/DSC01342.jpg'}
           alt="Third slide"
         />
         <Carousel.Caption>
