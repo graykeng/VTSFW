@@ -10,6 +10,7 @@ import Sponsors from "./pages/Sponsors";
 
 import VTSFnavbar from "./component/VTSFnavbar";
 import VTSFtitle from "./component/VTSFtitle";
+import VTSFfooter from "./component/VTSFfooter";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/Commitee" element={<Commitee />} />
         <Route path="/Sponsors" element={<Sponsors />} />
       </Routes>
+      <VTSFfooter />
     </div>
   );
 }

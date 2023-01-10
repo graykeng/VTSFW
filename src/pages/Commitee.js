@@ -7,17 +7,9 @@ import Row from 'react-bootstrap/Row';
 
 import '../App.css';
 
+import { CommiteeInfo2022 } from '../info.js';
 import logo from "../image/logo.jpg";
 import CommiteeCard from '../component/CommiteeCard';
-
-const CommiteeNames = [
-    { id: 1, name: "Gray" },
-    { id: 2, name: "Annie" },
-    { id: 3, name: "Eric" },
-    { id: 4, name: "Roger" },
-    { id: 5, name: "Jason" },
-    { id: 6, name: "Jennie" }
-]
 
 const Commitee = () => {
   return (
@@ -30,8 +22,8 @@ const Commitee = () => {
 
                 <div className='AllCards'>
                     <Row xs={1} md={2}>
-                        {CommiteeNames.map(CommiteeNames => (
-                            <CommiteeCard key={CommiteeNames.id} id={CommiteeNames.id} name={CommiteeNames.name} />
+                        {CommiteeInfo2022.map(CommiteeInfo2022 => (
+                            <CommiteeCard info={CommiteeInfo2022} />
                         ))}
                     </Row>
                 </div>

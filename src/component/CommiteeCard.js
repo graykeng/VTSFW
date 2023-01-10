@@ -1,21 +1,29 @@
 import React from 'react';
 
-import {
-  Annie, Eric, Gray, Jason, Roger
-} from '../image/CommiteePic/index.js';
-
 import '../App.css';
 
-const CommiteeCard = ({ id, name }) => {
+const CommiteeCard = ({ info }) => {
+
   return (
     <div className='SingleCard'>
-      <div >
-        <img src={name} className="CardImage" />
+      <div>
+        <img src={info.pic} className="CardImage" />
       </div>
-      <div className='CardText'>
+
+      <div className='CardTitle'>
         <h3>
-          {name}
+          {info.name}
         </h3>
+        <h5>
+          {info.title}
+        </h5>
+      </div>
+
+
+      <div className='CardText'>
+        <p>
+          {info.name}
+        </p>
       </div>
       
 
