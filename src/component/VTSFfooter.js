@@ -18,18 +18,18 @@ const VTSFfooter = () => {
                 <div className="col-md-3 mb-md-0 mb-3">
                     <h5>VTSF SOCIAL MEDIA</h5>
                     <div className='mt-3'>
-                        <a href="/" className='Logo'><img width='30' height='30' src={logo}/></a>
-                        <a href="https://www.instagram.com/vtsf2022/" target="_blank" className='Logo'><img width='30' height='30' src={instagramLogo}/></a>
-                        <a href="https://www.facebook.com/Vancouver-Taiwanese-Student-Forum-VTSF-108853708309621" target="_blank" className='Logo'><img width='30' height='30' src={facebookLogo}/></a>
+                        <a href="/" className='Logo'><img width='30' height='30' src={logo} alt="VTSF Logo"/></a>
+                        <a href="https://www.instagram.com/vtsf2022/" target="_blank" rel="noopener noreferrer" className='Logo'><img width='30' height='30' src={instagramLogo} alt="Instagram Logo"/></a>
+                        <a href="https://www.facebook.com/Vancouver-Taiwanese-Student-Forum-VTSF-108853708309621" target="_blank" rel="noopener noreferrer" className='Logo'><img width='30' height='30' src={facebookLogo} alt="Facebook Logo"/></a>
                     </div>
                 </div>
 
                 <div className="col-md-3 mb-md-0 mb-3">
                     <h5>WEB DEVELOPER</h5>
                     <div className='mt-3'>
-                        <a href="https://github.com/graykeng" target="_blank" className='Logo'><img width='30' height='30' src={githubLogo}/></a>
-                        <a href="https://www.linkedin.com/in/gray-keng-68a5681b0/" target="_blank" className='Logo'><img width='30' height='30' src={linkedinLogo}/></a>
-                        <a href="mailto:graywork777@gmail.com" className='Logo'><img width='30' height='30' src={emailLogo}/></a>
+                        <a href="https://github.com/graykeng" target="_blank" rel="noopener noreferrer" className='Logo'><img width='30' height='30' src={githubLogo} alt="Github Logo"/></a>
+                        <a href="https://www.linkedin.com/in/gray-keng-68a5681b0/" target="_blank" rel="noopener noreferrer" className='Logo'><img width='30' height='30' src={linkedinLogo} alt="Linkedin Logo"/></a>
+                        <a href="mailto:graywork777@gmail.com" className='Logo'><img width='30' height='30' src={emailLogo} alt="Email Logo"/></a>
                     </div>
                 </div>
             </div>

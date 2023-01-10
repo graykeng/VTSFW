@@ -7,7 +7,7 @@ const CommiteeCard = ({ info }) => {
   return (
     <div className='SingleCard'>
       <div>
-        <img src={info.pic} className="CardImage" />
+        <img src={info.pic} className="CardImage" alt={info.name} />
       </div>
 
       <div className='CardTitle'>

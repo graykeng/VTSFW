@@ -2,13 +2,11 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import { Tab } from 'react-bootstrap';
 import { Tabs } from 'react-bootstrap';
-import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
 import '../App.css';
 
 import { CommiteeInfo2022 } from '../info.js';
-import logo from "../image/logo.jpg";
 import CommiteeCard from '../component/CommiteeCard';
 
 const Commitee = () => {
