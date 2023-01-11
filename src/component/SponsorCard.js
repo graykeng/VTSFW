@@ -7,7 +7,7 @@ const SponsorCard = ({ info }) => {
   return (
     <div className='SingleCard'>
       <div>
-        <img src={process.env.PUBLIC_URL + info.ImagePath} className="SponsorCardImage" alt={info.FirstName} />
+        <img src={process.env.PUBLIC_URL + info.ImagePath} className="SponsorCardImage" alt={info.SponsorEng} />
       </div>
 
       <div className='CardTitle'>
@@ -18,12 +18,6 @@ const SponsorCard = ({ info }) => {
           {info.SponsorChn}
         </h3>
       </div>
-
-      {/* <div className='CardText'>
-        <p>
-          {info.Intro}
-        </p>
-      </div> */}
     </div>
   )
 }
