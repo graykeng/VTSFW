@@ -17,6 +17,7 @@ const Commitee = () => {
             setCommiteeInfo2022(response.data);
         });
     };
+    
     return (
         <div>
             <Helmet>
@@ -37,7 +38,7 @@ const Commitee = () => {
                     </div>
 
                 </Tab>
-                <Tab eventKey="VTSF 2023" title="VTSF 2023">
+                <Tab eventKey="VTSF 2023" title="VTSF 2023" disabled>
                     
                 </Tab>
                 <Tab eventKey="VTSF 2024" title="VTSF 2024" disabled>

@@ -92,3 +92,15 @@
     background-color: #008CBA;
     color: white;
 }
+
+.SponsorCardImage {
+    height: auto;
+    max-height: 300px;
+    width: 40%;
+    max-width: 300px;
+
+    margin-left: auto;
+    margin-right: auto;
+    
+    display: block;
+}

@@ -14,15 +14,28 @@ const db = mysql.createConnection({
 });
 
 app.get("/CommiteeInfo2022", (req, res) => {
-    db.query("SELECT * FROM Commitee WHERE id BETWEEN 20220000 AND 20229999;", (err, result) => {
-      if (err) {
-        console.log(err);
-      } else {
-        res.send(result);
-      }
-    });
+  db.query("SELECT * FROM Commitee WHERE id BETWEEN 20220000 AND 20229999;", (err, result) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.send(result);
+      console.log("CommiteeInfo2022 Fetched Successfully.");
+    }
   });
+});
+
+app.get("/SponsorsInfo2022", (req, res) => {
+  db.query("SELECT * FROM Sponsors WHERE id BETWEEN 20220000 AND 20229999;", (err, result) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.send(result);
+      console.log("SponsorsInfo2022 Fetched Successfully.");
+    }
+  });
+});
+
 
 app.listen(3001, () => {
-console.log("Yey, your server is running on port 3001");
+  console.log("Server is running on port 3001.");
 });
