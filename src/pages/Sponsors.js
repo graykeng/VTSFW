@@ -29,6 +29,7 @@ const Sponsors = () => {
               <h1 className='SponsorRank'>PLATINUM</h1>
               <hr/>
               <Row xs={1} md={2}>
+                {/* filter the SponsorsInfo and get platinum sponsors in 2022 */}
                 {SponsorsInfo2022.filter(val => val.SponsorRank === "platinum" && val.id >= 20220000 && val.id <=20229999).map((val, key) => (
                   <SponsorCard key={val.id} props={val} />
                 ))}
@@ -37,7 +38,8 @@ const Sponsors = () => {
               <h1 className='SponsorRank'>GOLD</h1>
               <hr/>
               <Row xs={1} md={2}>
-                {SponsorsInfo2022.filter(val => val.SponsorRank === "gold").map((val, key) => (
+                {/* filter the SponsorsInfo and get gold sponsors in 2022 */}
+                {SponsorsInfo2022.filter(val => val.SponsorRank === "gold" && val.id >= 20220000 && val.id <= 20229999).map((val, key) => (
                   <SponsorCard key={val.id} props={val} />
                 ))}
               </Row>
@@ -45,7 +47,8 @@ const Sponsors = () => {
               <h1 className='SponsorRank'>SILVER</h1>
               <hr/>
               <Row xs={1} md={2}>
-                {SponsorsInfo2022.filter(val => val.SponsorRank === "silver").map((val, key) => (
+                {/* filter the SponsorsInfo and get silver sponsors in 2022 */}
+                {SponsorsInfo2022.filter(val => val.SponsorRank === "silver" && val.id >= 20220000 && val.id <= 20229999).map((val, key) => (
                   <SponsorCard key={val.id} props={val} />
                 ))}
               </Row>
@@ -53,7 +56,8 @@ const Sponsors = () => {
               <h1 className='SponsorRank'>BRONZE</h1>
               <hr/>
               <Row xs={1} md={2}>
-                {SponsorsInfo2022.filter(val => val.SponsorRank === "bronze").map((val, key) => (
+                {/* filter the SponsorsInfo and get bronze     sponsors in 2022 */}
+                {SponsorsInfo2022.filter(val => val.SponsorRank === "bronze" && val.id >= 20220000 && val.id <= 20229999).map((val, key) => (
                   <SponsorCard key={val.id} props={val} />
                 ))}
               </Row>
