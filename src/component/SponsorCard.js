@@ -12,7 +12,7 @@ const SponsorCard = ({ props }) => {
 
       <div className='CardTitle'>
         <h5>
-          {props.SponsorEng}
+        <a href={props.Web} target="_blank" rel="noopener noreferrer" className='SponsorWeb'>{props.SponsorEng}</a>
         </h5>
         <h5>
           {props.SponsorChn}

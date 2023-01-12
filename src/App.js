@@ -15,7 +15,7 @@ import VTSFfooter from "./component/VTSFfooter";
 function App() {
   
   return (
-    <div className="App">
+    <div className="App BGC">
       <VTSFtitle />
       <VTSFnavbar />
       <Routes>

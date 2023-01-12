@@ -110,3 +110,51 @@
     text-align: center;
     margin-top: 5%;
 }
+
+.SponsorWeb {
+    text-decoration: underline;
+    font-weight: bold;
+    color: black;
+}
+
+.TitleText {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.12em;
+    padding-left: 10%;
+}
+
+/* Event Details */
+.EventDetailsTitle {
+    font-family: 'Apple Chancery', sans-serif;
+    font-size: 5em;
+    text-align: center;
+    margin-top: 3%;
+}
+
+.EventDetailsSubTitle {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 3%;
+}
+
+.EventDetailsEng {
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-bottom: 5%;
+    text-align: center;
+}
+
+.EventDetailsChn {
+    background-color: #8A2A36;
+}
+
+
+
+/* Background color */
+.BGC {
+    background-color: #FFFFFE;
+}
+
+.NAVC {
+    background-color: #EFEFEF;
+}

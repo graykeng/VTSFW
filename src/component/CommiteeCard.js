@@ -19,11 +19,11 @@ const CommiteeCard = ({ props }) => {
         </h5>
       </div>
 
-      <div className='CardText'>
+      {/* <div className='CardText'>
         <p>
           {props.Intro}
         </p>
-      </div>
+      </div> */}
     </div>
   )
 }

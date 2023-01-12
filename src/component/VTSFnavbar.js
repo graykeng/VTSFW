@@ -7,17 +7,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const VTSFnavbar = () => {
   return (
     <div>
-        <Navbar bg="light" expand="lg">
+        <Navbar className='NAVC' expand="lg">
             <Container>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link href="/">Home</Nav.Link>
-                            <Nav.Link href="/Gallery">Gallery</Nav.Link>
-                            <Nav.Link href="/EventDetails">Event Details</Nav.Link>
-                            <Nav.Link href="/Blog">Blog</Nav.Link>
-                            <Nav.Link href="/Commitee">Commitee</Nav.Link>
-                            <Nav.Link href="/Sponsors">Sponsors</Nav.Link>
+                            <Nav.Link href="/" className='TitleText'>Home</Nav.Link>
+                            <Nav.Link href="/Gallery" className='TitleText'>Gallery</Nav.Link>
+                            <Nav.Link href="/EventDetails" className='TitleText'>Event Details</Nav.Link>
+                            <Nav.Link href="/Blog" className='TitleText'>Blog</Nav.Link>
+                            <Nav.Link href="/Commitee" className='TitleText'>Commitee</Nav.Link>
+                            <Nav.Link href="/Sponsors" className='TitleText'>Sponsors</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
             </Container>

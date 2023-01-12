@@ -20,7 +20,7 @@ const VTSFtitle = () => {
               height='30'
               className="d-inline-block align-top"
             />{' '}
-            <span className=''>VTSF</span>
+            <span className='TitleText'>VTSF</span>
           </Navbar.Brand>
           <Navbar.Collapse className="justify-content-end">
             <Navbar.Brand>
