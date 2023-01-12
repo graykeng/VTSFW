@@ -13,24 +13,24 @@ const db = mysql.createConnection({
   database: "vtsf",
 });
 
-app.get("/CommiteeInfo2022", (req, res) => {
-  db.query("SELECT * FROM Commitee WHERE id BETWEEN 20220000 AND 20229999;", (err, result) => {
+app.get("/CommiteeInfo", (req, res) => {
+  db.query("SELECT * FROM Commitee;", (err, result) => {
     if (err) {
       console.log(err);
     } else {
       res.send(result);
-      console.log("CommiteeInfo2022 Fetched Successfully.");
+      console.log("CommiteeInfo Fetched Successfully.");
     }
   });
 });
 
-app.get("/SponsorsInfo2022", (req, res) => {
-  db.query("SELECT * FROM Sponsors WHERE id BETWEEN 20220000 AND 20229999;", (err, result) => {
+app.get("/SponsorsInfo", (req, res) => {
+  db.query("SELECT * FROM Sponsors;", (err, result) => {
     if (err) {
       console.log(err);
     } else {
       res.send(result);
-      console.log("SponsorsInfo2022 Fetched Successfully.");
+      console.log("SponsorsInfo Fetched Successfully.");
     }
   });
 });

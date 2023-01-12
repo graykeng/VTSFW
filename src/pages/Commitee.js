@@ -11,10 +11,10 @@ import '../App.css';
 import CommiteeCard from '../component/CommiteeCard';
 
 const Commitee = () => {
-    const [CommiteeInfo2022, setCommiteeInfo2022] = useState([]);
-    const getCommiteeInfo2022 = () => {
-        Axios.get("http://localhost:3001/CommiteeInfo2022").then((response) => {
-            setCommiteeInfo2022(response.data);
+    const [CommiteeInfo, setCommiteeInfo] = useState([]);
+    const getCommiteeInfo = () => {
+        Axios.get("http://localhost:3001/CommiteeInfo").then((response) => {
+            setCommiteeInfo(response.data);
         });
     };
 
@@ -28,10 +28,10 @@ const Commitee = () => {
 
                     <div className='AllCards'>
                         {useEffect(() => {
-                            getCommiteeInfo2022();
+                            getCommiteeInfo();
                         }, [])}
                         <Row xs={1} md={2}>
-                            {CommiteeInfo2022.map((val, key) => (
+                            {CommiteeInfo.filter(val => val.id >= 20220000 && val.id <= 20229999).map((val, key) => (
                                 <CommiteeCard key={val.id} props={val} />
                             ))}
                         </Row>

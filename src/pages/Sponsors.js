@@ -8,10 +8,10 @@ import Axios from "axios";
 import SponsorCard from '../component/SponsorCard';
 
 const Sponsors = () => {
-  const [SponsorsInfo2022, setSponsorsInfo2022] = useState([]);
-    const getSponsorsInfo2022 = () => {
-      Axios.get("http://localhost:3001/SponsorsInfo2022").then((response) => {
-        setSponsorsInfo2022(response.data);
+  const [SponsorsInfo, setSponsorsInfo] = useState([]);
+    const getSponsorsInfo = () => {
+      Axios.get("http://localhost:3001/SponsorsInfo").then((response) => {
+        setSponsorsInfo(response.data);
     });
   };
 
@@ -24,13 +24,13 @@ const Sponsors = () => {
         <Tab eventKey="VTSF 2022" title="VTSF 2022">
           <div className='AllCards'>
               {useEffect(() => {
-                  getSponsorsInfo2022();
+                  getSponsorsInfo();
               }, [])}
               <h1 className='SponsorRank'>PLATINUM</h1>
               <hr/>
               <Row xs={1} md={2}>
                 {/* filter the SponsorsInfo and get platinum sponsors in 2022 */}
-                {SponsorsInfo2022.filter(val => val.SponsorRank === "platinum" && val.id >= 20220000 && val.id <=20229999).map((val, key) => (
+                {SponsorsInfo.filter(val => val.SponsorRank === "platinum" && val.id >= 20220000 && val.id <=20229999).map((val, key) => (
                   <SponsorCard key={val.id} props={val} />
                 ))}
               </Row>
@@ -39,7 +39,7 @@ const Sponsors = () => {
               <hr/>
               <Row xs={1} md={2}>
                 {/* filter the SponsorsInfo and get gold sponsors in 2022 */}
-                {SponsorsInfo2022.filter(val => val.SponsorRank === "gold" && val.id >= 20220000 && val.id <= 20229999).map((val, key) => (
+                {SponsorsInfo.filter(val => val.SponsorRank === "gold" && val.id >= 20220000 && val.id <= 20229999).map((val, key) => (
                   <SponsorCard key={val.id} props={val} />
                 ))}
               </Row>
@@ -48,7 +48,7 @@ const Sponsors = () => {
               <hr/>
               <Row xs={1} md={2}>
                 {/* filter the SponsorsInfo and get silver sponsors in 2022 */}
-                {SponsorsInfo2022.filter(val => val.SponsorRank === "silver" && val.id >= 20220000 && val.id <= 20229999).map((val, key) => (
+                {SponsorsInfo.filter(val => val.SponsorRank === "silver" && val.id >= 20220000 && val.id <= 20229999).map((val, key) => (
                   <SponsorCard key={val.id} props={val} />
                 ))}
               </Row>
@@ -57,7 +57,7 @@ const Sponsors = () => {
               <hr/>
               <Row xs={1} md={2}>
                 {/* filter the SponsorsInfo and get bronze     sponsors in 2022 */}
-                {SponsorsInfo2022.filter(val => val.SponsorRank === "bronze" && val.id >= 20220000 && val.id <= 20229999).map((val, key) => (
+                {SponsorsInfo.filter(val => val.SponsorRank === "bronze" && val.id >= 20220000 && val.id <= 20229999).map((val, key) => (
                   <SponsorCard key={val.id} props={val} />
                 ))}
               </Row>
