@@ -26,14 +26,37 @@ const Sponsors = () => {
               {useEffect(() => {
                   getSponsorsInfo2022();
               }, [])}
-              <h1 className='SponsorRank'>Platinum</h1>
+              <h1 className='SponsorRank'>PLATINUM</h1>
               <hr/>
               <Row xs={1} md={2}>
-                {SponsorsInfo2022.filter(val => val.SponsorRank === "platinum").map((val, key) => (
+                {SponsorsInfo2022.filter(val => val.SponsorRank === "platinum" && val.id >= 20220000 && val.id <=20229999).map((val, key) => (
+                  <SponsorCard key={val.id} props={val} />
+                ))}
+              </Row>
+
+              <h1 className='SponsorRank'>GOLD</h1>
+              <hr/>
+              <Row xs={1} md={2}>
+                {SponsorsInfo2022.filter(val => val.SponsorRank === "gold").map((val, key) => (
                   <SponsorCard key={val.id} props={val} />
                 ))}
               </Row>
               
+              <h1 className='SponsorRank'>SILVER</h1>
+              <hr/>
+              <Row xs={1} md={2}>
+                {SponsorsInfo2022.filter(val => val.SponsorRank === "silver").map((val, key) => (
+                  <SponsorCard key={val.id} props={val} />
+                ))}
+              </Row>
+
+              <h1 className='SponsorRank'>BRONZE</h1>
+              <hr/>
+              <Row xs={1} md={2}>
+                {SponsorsInfo2022.filter(val => val.SponsorRank === "bronze").map((val, key) => (
+                  <SponsorCard key={val.id} props={val} />
+                ))}
+              </Row>
           </div>
         </Tab>
         <Tab eventKey="VTSF 2023" title="VTSF 2023" disabled>
