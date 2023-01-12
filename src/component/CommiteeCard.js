@@ -2,26 +2,26 @@ import React from 'react';
 
 import '../App.css';
 
-const CommiteeCard = ({ info }) => {
+const CommiteeCard = ({ props }) => {
 
   return (
     <div className='SingleCard'>
       <div>
-        <img src={process.env.PUBLIC_URL + info.ImagePath} className="CardImage" alt={info.FirstName} />
+        <img src={process.env.PUBLIC_URL + props.ImagePath} className="CardImage" alt={props.FirstName} />
       </div>
 
       <div className='CardTitle'>
         <h3>
-          {info.FirstName + ' ' + info.LastName}
+          {props.FirstName + ' ' + props.LastName}
         </h3>
         <h5>
-          {info.Title}
+          {props.Title}
         </h5>
       </div>
 
       <div className='CardText'>
         <p>
-          {info.Intro}
+          {props.Intro}
         </p>
       </div>
     </div>

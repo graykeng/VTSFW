@@ -2,20 +2,20 @@ import React from 'react';
 
 import '../App.css';
 
-const SponsorCard = ({ info }) => {
+const SponsorCard = ({ props }) => {
 
   return (
     <div className='SingleCard'>
       <div>
-        <img src={process.env.PUBLIC_URL + info.ImagePath} className="SponsorCardImage" alt={info.SponsorEng} />
+        <img src={process.env.PUBLIC_URL + props.ImagePath} className="SponsorCardImage" alt={props.SponsorEng} />
       </div>
 
       <div className='CardTitle'>
         <h3>
-          {info.SponsorEng}
+          {props.SponsorEng}
         </h3>
         <h3>
-          {info.SponsorChn}
+          {props.SponsorChn}
         </h3>
       </div>
     </div>

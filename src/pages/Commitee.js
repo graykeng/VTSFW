@@ -17,7 +17,7 @@ const Commitee = () => {
             setCommiteeInfo2022(response.data);
         });
     };
-    
+
     return (
         <div>
             <Helmet>
@@ -32,7 +32,7 @@ const Commitee = () => {
                         }, [])}
                         <Row xs={1} md={2}>
                             {CommiteeInfo2022.map((val, key) => (
-                                <CommiteeCard key={val.id} info={val} />
+                                <CommiteeCard key={val.id} props={val} />
                             ))}
                         </Row>
                     </div>

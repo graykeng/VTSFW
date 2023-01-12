@@ -104,3 +104,8 @@
     
     display: block;
 }
+
+.SponsorRank {
+    font-family: palatino, serif;
+    text-align: center;
+}

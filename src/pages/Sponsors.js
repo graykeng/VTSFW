@@ -14,7 +14,7 @@ const Sponsors = () => {
         setSponsorsInfo2022(response.data);
     });
   };
-  
+
   return (
     <div>
       <Helmet>
@@ -26,11 +26,14 @@ const Sponsors = () => {
               {useEffect(() => {
                   getSponsorsInfo2022();
               }, [])}
+              <h1 className='SponsorRank'>Platinum</h1>
+              <hr/>
               <Row xs={1} md={2}>
-                  {SponsorsInfo2022.map((val, key) => (
-                    <SponsorCard key={val.id} info={val} />
-                  ))}
+                {SponsorsInfo2022.filter(val => val.SponsorRank === "platinum").map((val, key) => (
+                  <SponsorCard key={val.id} props={val} />
+                ))}
               </Row>
+              
           </div>
         </Tab>
         <Tab eventKey="VTSF 2023" title="VTSF 2023" disabled>
