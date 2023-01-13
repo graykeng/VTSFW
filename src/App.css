@@ -140,12 +140,28 @@
 .EventDetailsEng {
     padding-left: 20%;
     padding-right: 20%;
+    padding-top: 5%;
     padding-bottom: 5%;
     text-align: center;
+    font-size: 1.12em;
 }
 
 .EventDetailsChn {
     background-color: #8A2A36;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: center;
+    font-size: 1.12em;
+    color: white;
+}
+
+.BlogSection {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    padding-left: 20%;
+    padding-right: 20%;
 }
 
 
