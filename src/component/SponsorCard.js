@@ -7,7 +7,7 @@ const SponsorCard = ({ props }) => {
   return (
     <div className='SingleCard'>
       <div>
-        <img src={process.env.PUBLIC_URL + props.ImagePath} className="SponsorCardImage" alt={props.SponsorEng} />
+        <img src={props.ImagePath} className="SponsorCardImage" alt={props.SponsorEng} />
       </div>
 
       <div className='CardTitle'>

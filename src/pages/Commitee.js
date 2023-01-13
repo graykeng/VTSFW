@@ -1,22 +1,14 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
 import { Helmet } from 'react-helmet'
 import { Tab } from 'react-bootstrap';
 import { Tabs } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
-import Axios from "axios";
 
 import '../App.css';
 
 import CommiteeCard from '../component/CommiteeCard';
 
-const Commitee = () => {
-    const [CommiteeInfo, setCommiteeInfo] = useState([]);
-    const getCommiteeInfo = () => {
-        Axios.get("http://localhost:3001/CommiteeInfo").then((response) => {
-            setCommiteeInfo(response.data);
-        });
-    };
+const Commitee = ({ CommiteeInfo }) => {
 
     return (
         <div>
@@ -27,9 +19,6 @@ const Commitee = () => {
                 <Tab eventKey="VTSF 2022" title="VTSF 2022">
 
                     <div className='AllCards'>
-                        {useEffect(() => {
-                            getCommiteeInfo();
-                        }, [])}
                         <Row xs={1} md={2}>
                             {CommiteeInfo.filter(val => val.id >= 20220000 && val.id <= 20229999).map((val, key) => (
                                 <CommiteeCard key={val.id} props={val} />

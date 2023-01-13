@@ -2,7 +2,11 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 
-const VTSFtitle = () => {
+const VTSFtitle = ({ LogoPic }) => {
+
+  // const VTSFPath = LogoPic.filter(val => val.Logo === "VTSF").map(val) => (
+
+  // )
 
   function NotYet(){
     alert("We haven't started selling the ticket for 2023.")
@@ -15,7 +19,7 @@ const VTSFtitle = () => {
           <Navbar.Brand href="/">
             <img
               alt=''
-              src={process.env.PUBLIC_URL + './image/logo.jpg'}
+              src={'/'}
               width='30'
               height='30'
               className="d-inline-block align-top"

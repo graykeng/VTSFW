@@ -1,8 +1,6 @@
 /* For the image on the card from the commitee page */
 .CardImage {
-    border: 1px solid Gray;
-    border-radius: 15px;
-    box-shadow: 1px 1px;
+    border-radius: 8px;
 
     height: auto;
     max-height: 300px;

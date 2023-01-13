@@ -7,7 +7,7 @@ const CommiteeCard = ({ props }) => {
   return (
     <div className='SingleCard'>
       <div>
-        <img src={process.env.PUBLIC_URL + props.ImagePath} className="CardImage" alt={props.FirstName} />
+        <img src={props.ImagePath} className="CardImage" alt={props.FirstName} />
       </div>
 
       <div className='CardTitle'>

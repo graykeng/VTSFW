@@ -35,6 +35,27 @@ app.get("/SponsorsInfo", (req, res) => {
   });
 });
 
+app.get("/EventPic", (req, res) => {
+  db.query("SELECT * FROM EventPic;", (err, result) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.send(result);
+      console.log("EventPic Fetched Successfully.");
+    }
+  })
+})
+
+app.get("/LogoPic", (req, res) => {
+  db.query("SELECT * FROM LogoPic;", (err, result) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.send(result);
+      console.log("LogoPic Fetched Successfully.");
+    }
+  })
+})
 
 app.listen(3001, () => {
   console.log("Server is running on port 3001.");
