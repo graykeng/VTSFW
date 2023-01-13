@@ -4,9 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 
 const VTSFtitle = ({ LogoPic }) => {
 
-  // const VTSFPath = LogoPic.filter(val => val.Logo === "VTSF").map(val) => (
-
-  // )
+  // const VTSFPath = LogoPic.map(())
 
   function NotYet(){
     alert("We haven't started selling the ticket for 2023.")

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 
-import VTSFcarousel from '../component/VTSFcarousel'
+// import VTSFcarousel from '../component/VTSFcarousel'
 
 const Gallery = ({ EventInfoForTransfer }) => {
   return (

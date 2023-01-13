@@ -6,7 +6,7 @@ function VTSFcarousel({ EventPic }) {
     <Carousel fade>
       
       {EventPic.filter(val => val.InPage === 'Carousel').map((val) => (
-        <Carousel.Item interval={2000}>
+        <Carousel.Item interval={2000} key={val.id}>
           <img
             className="CarouselSize"
             src={val.ImagePath}

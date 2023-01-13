@@ -15,6 +15,7 @@ import VTSFfooter from "./component/VTSFfooter";
 
 function App() {
 
+  // Define the get, set methods to connect to the backend server
   const [EventPic, setEventPic] = useState([]);
   const getEventPic = () => {
     Axios.get("http://localhost:3001/EventPic").then((response) => {
@@ -33,7 +34,6 @@ function App() {
   const getSponsorsInfo = () => {
     Axios.get("http://localhost:3001/SponsorsInfo").then((response) => {
       setSponsorsInfo(response.data);
-      console.log(response.data);
     });
   };
 
@@ -44,6 +44,7 @@ function App() {
     });
   };
 
+  // Render only once by using useEffect
   useEffect(() => {
     getEventPic();
     getCommiteeInfo();
