@@ -19,7 +19,7 @@ const VTSFtitle = ({ LogoPic }) => {
           <Navbar.Brand href="/">
             <img
               alt=''
-              src={'/'}
+              src={process.env.PUBLIC_URL + './image/Logo.jpg'}
               width='30'
               height='30'
               className="d-inline-block align-top"

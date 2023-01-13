@@ -33,22 +33,23 @@ function App() {
   const getSponsorsInfo = () => {
     Axios.get("http://localhost:3001/SponsorsInfo").then((response) => {
       setSponsorsInfo(response.data);
+      console.log(response.data);
     });
   };
 
   const [LogoPic, setLogoPic] = useState([]);
   const getLogoPic = () => {
     Axios.get("http://localhost:3001/LogoPic").then((response) => {
-      setSponsorsInfo(response.data);
+      setLogoPic(response.data);
     });
   };
 
-  {useEffect(() => {
+  useEffect(() => {
     getEventPic();
     getCommiteeInfo();
     getSponsorsInfo();
     getLogoPic();
-  }, [])}
+  }, [])
 
   return (
     <div className="App BGC">

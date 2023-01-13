@@ -8,15 +8,16 @@ const SponsorCard = ({ props }) => {
     <div className='SingleCard'>
       <div>
         <img src={props.ImagePath} className="SponsorCardImage" alt={props.SponsorEng} />
+        {console.log(props.ImagePath)}
       </div>
 
       <div className='CardTitle'>
-        <h5>
+        <p>
         <a href={props.Web} target="_blank" rel="noopener noreferrer" className='SponsorWeb'>{props.SponsorEng}</a>
-        </h5>
-        <h5>
+        </p>
+        <p>
           {props.SponsorChn}
-        </h5>
+        </p>
       </div>
     </div>
   )

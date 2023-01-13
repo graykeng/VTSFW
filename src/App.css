@@ -37,6 +37,8 @@
 .CardTitle {
     text-align: center;
     font-family: "Times New Roman", Times, serif;
+    font-size: 1.5em;
+    font-weight: bold;
 
     margin-top: 1%;
 }
@@ -131,8 +133,9 @@
 
 .EventDetailsSubTitle {
     text-align: center;
-    font-size: 1.5em;
+    font-size: 2.5em;
     margin-bottom: 3%;
+    font-family: 'cwTeXKai';
 }
 
 .EventDetailsEng {
@@ -141,7 +144,7 @@
     padding-top: 5%;
     padding-bottom: 5%;
     text-align: center;
-    font-size: 1.12em;
+    font-size: 1.2em;
 }
 
 .EventDetailsChn {
@@ -151,7 +154,7 @@
     padding-top: 5%;
     padding-bottom: 5%;
     text-align: center;
-    font-size: 1.12em;
+    font-size: 1.2em;
     color: white;
 }
 
@@ -172,3 +175,15 @@
 .NAVC {
     background-color: #EFEFEF;
 }
+
+/* Chinese Font */
+@font-face {
+    font-family: 'cwTeXKai';
+    font-style: normal;
+    font-weight: 500;
+    src: url(//fonts.gstatic.com/ea/cwtexkai/v3/cwTeXKai-zhonly.eot);
+    src: url(//fonts.gstatic.com/ea/cwtexkai/v3/cwTeXKai-zhonly.eot?#iefix) format('embedded-opentype'),
+         url(//fonts.gstatic.com/ea/cwtexkai/v3/cwTeXKai-zhonly.woff2) format('woff2'),
+         url(//fonts.gstatic.com/ea/cwtexkai/v3/cwTeXKai-zhonly.woff) format('woff'),
+         url(//fonts.gstatic.com/ea/cwtexkai/v3/cwTeXKai-zhonly.ttf) format('truetype');
+  }
