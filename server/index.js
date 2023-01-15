@@ -58,7 +58,7 @@ app.get("/LogoPic", (req, res) => {
 })
 
 app.get("/BlogPost", (req, res) => {
-  db.query("SELECT * FROM BlogPost;", (err, result) => {
+  db.query("SELECT * FROM BlogPost ORDER BY id DESC;", (err, result) => {
     if (err) {
       console.log(err);
     } else {

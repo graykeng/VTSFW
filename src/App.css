@@ -159,21 +159,22 @@
 }
 
 .BlogSection {
-    padding-top: 10%;
-    padding-bottom: 10%;
+    display: felx;
+    justify-content: center;    
+    align-items: center; 
     padding-left: 20%;
     padding-right: 20%;
 }
 
 .BlogCol {
-    margin: 5%
+   margin: 5%;
 }
 
 
 
 /* Background color */
 .BGC {
-    background-color: #FFFFFE;
+    background-color: #FFFFFD;
 }
 
 .NAVC {
@@ -190,4 +191,5 @@
          url(//fonts.gstatic.com/ea/cwtexkai/v3/cwTeXKai-zhonly.woff2) format('woff2'),
          url(//fonts.gstatic.com/ea/cwtexkai/v3/cwTeXKai-zhonly.woff) format('woff'),
          url(//fonts.gstatic.com/ea/cwtexkai/v3/cwTeXKai-zhonly.ttf) format('truetype');
-  }
+}
+

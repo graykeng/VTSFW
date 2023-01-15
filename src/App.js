@@ -46,7 +46,7 @@ function App() {
 
   const [BlogPost, setBlogPost] = useState([]);
   const getBlogPost = () => {
-    Axios.get("http://localhost:3001/LogoPic").then((response) => {
+    Axios.get("http://localhost:3001/BlogPost").then((response) => {
       setBlogPost(response.data);
     })
   }

@@ -14,15 +14,19 @@ const Blog = ( props ) => {
           <Row>
             {props.BlogPost.map((val, index) => {
               return (
-                <Col key={index} md={4} className='BlogCol'>
-                  <img src={val.ImagePath} width='95%' />
+                <Col key={index} md={4}>
+                  <div className='BlogCol'>
+                    
+                      <img src={val.ImagePath} width='100%' class='image-class' />
+                    
+                  </div>
                 </Col>
               );
             })}
           </Row>
           <Row >
             <Col>
-              
+              1 of 3
             </Col>
             <Col>
               2 of 3
