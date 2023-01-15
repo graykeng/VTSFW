@@ -2,12 +2,14 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 
-const VTSFtitle = ({ LogoPic }) => {
+const VTSFtitle = ( props ) => {
 
-  // const VTSFPath = LogoPic.map(())
+  const VTSFPath = props.LogoPic.filter(val => val.Logo === 'VTSF').map(val => val.ImagePath).toString();
+  const InstagramPath = props.LogoPic.filter(val => val.Logo === 'Instagram').map(val => val.ImagePath).toString();
+  const FacebookPath = props.LogoPic.filter(val => val.Logo === 'Facebook').map(val => val.ImagePath).toString();
 
   function NotYet(){
-    alert("We haven't started selling the ticket for 2023.")
+    alert("We haven't started selling the ticket for 2023.");
   }
 
   return (
@@ -17,7 +19,7 @@ const VTSFtitle = ({ LogoPic }) => {
           <Navbar.Brand href="/">
             <img
               alt=''
-              src={process.env.PUBLIC_URL + './image/Logo.jpg'}
+              src={VTSFPath}
               width='30'
               height='30'
               className="d-inline-block align-top"
@@ -31,7 +33,7 @@ const VTSFtitle = ({ LogoPic }) => {
             <Navbar.Brand href="https://www.instagram.com/vtsf2022/" target="_blank">
               <img
                 alt=''
-                src={process.env.PUBLIC_URL + './image/instagramLogo.jpg'}
+                src={InstagramPath}
                 width='30'
                 height='30'
                 className="d-inline-block align-top"
@@ -40,7 +42,7 @@ const VTSFtitle = ({ LogoPic }) => {
             <Navbar.Brand href="https://www.facebook.com/Vancouver-Taiwanese-Student-Forum-VTSF-108853708309621" target="_blank">
               <img
                 alt=''
-                src={process.env.PUBLIC_URL + './image/facebookLogo.jpg'}
+                src={FacebookPath}
                 width='30'
                 height='30'
                 className="d-inline-block align-top"

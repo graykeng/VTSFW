@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet'
 
 // import VTSFcarousel from '../component/VTSFcarousel'
 
-const Gallery = ({ EventInfoForTransfer }) => {
+const Gallery = ( props ) => {
   return (
     <div>
         <Helmet>

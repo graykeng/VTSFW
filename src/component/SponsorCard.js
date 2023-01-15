@@ -2,21 +2,20 @@ import React from 'react';
 
 import '../App.css';
 
-const SponsorCard = ({ props }) => {
+const SponsorCard = ( props ) => {
 
   return (
     <div className='SingleCard'>
       <div>
-        <img src={props.ImagePath} className="SponsorCardImage" alt={props.SponsorEng} />
-        {console.log(props.ImagePath)}
+        <img src={props.SponsorsInfo.ImagePath} className="SponsorCardImage" alt={props.SponsorsInfo.SponsorEng} />
       </div>
 
       <div className='CardTitle'>
         <p>
-        <a href={props.Web} target="_blank" rel="noopener noreferrer" className='SponsorWeb'>{props.SponsorEng}</a>
+        <a href={props.SponsorsInfo.Web} target="_blank" rel="noopener noreferrer" className='SponsorWeb'>{props.SponsorsInfo.SponsorEng}</a>
         </p>
         <p>
-          {props.SponsorChn}
+          {props.SponsorsInfo.SponsorChn}
         </p>
       </div>
     </div>

@@ -57,6 +57,17 @@ app.get("/LogoPic", (req, res) => {
   })
 })
 
+app.get("/BlogPost", (req, res) => {
+  db.query("SELECT * FROM BlogPost;", (err, result) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.send(result);
+      console.log("BlogPost Fetched Successfully.");
+    }
+  })
+})
+
 app.listen(3001, () => {
   console.log("Server is running on port 3001.");
 });

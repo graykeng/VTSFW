@@ -44,12 +44,20 @@ function App() {
     });
   };
 
+  const [BlogPost, setBlogPost] = useState([]);
+  const getBlogPost = () => {
+    Axios.get("http://localhost:3001/LogoPic").then((response) => {
+      setBlogPost(response.data);
+    })
+  }
+
   // Render only once by using useEffect
   useEffect(() => {
     getEventPic();
     getCommiteeInfo();
     getSponsorsInfo();
     getLogoPic();
+    getBlogPost();
   }, [])
 
   return (
@@ -57,9 +65,9 @@ function App() {
       <VTSFtitle LogoPic={ LogoPic }/>
       <VTSFnavbar />
       <Routes>
-        <Route path="/" element={<Home EventPicForTransfer={ EventPic }/>} />
-        <Route path="/Gallery" element={<Gallery EventInfoForTransfer={ EventPic }/>} />
-        <Route path="/Blog" element={<Blog />} />
+        <Route path="/" element={<Home EventPic={ EventPic }/>} />
+        <Route path="/Gallery" element={<Gallery EventInfo={ EventPic }/>} />
+        <Route path="/Blog" element={<Blog BlogPost={ BlogPost }/>} />
         <Route path="/Commitee" element={<Commitee CommiteeInfo={ CommiteeInfo }/>} />
         <Route path="/Sponsors" element={<Sponsors SponsorsInfo={ SponsorsInfo }/>} />
       </Routes>

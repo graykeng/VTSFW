@@ -8,7 +8,7 @@ import '../App.css';
 
 import CommiteeCard from '../component/CommiteeCard';
 
-const Commitee = ({ CommiteeInfo }) => {
+const Commitee = ( props ) => {
 
     return (
         <div>
@@ -20,8 +20,8 @@ const Commitee = ({ CommiteeInfo }) => {
 
                     <div className='AllCards'>
                         <Row xs={1} md={2}>
-                            {CommiteeInfo.filter(val => val.id >= 20220000 && val.id <= 20229999).map((val, key) => (
-                                <CommiteeCard key={val.id} props={val} />
+                            {props.CommiteeInfo.filter(val => val.id >= 20220000 && val.id <= 20229999).map((val, key) => (
+                                <CommiteeCard key={val.id} CommiteeInfo={val} />
                             ))}
                         </Row>
                     </div>
