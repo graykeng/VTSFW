@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState, useEffect } from 'react'
 import Axios from "axios";
 
@@ -8,6 +8,7 @@ import Gallery from "./pages/Gallery";
 import Blog from "./pages/Blog";
 import Commitee from "./pages/Commitee";
 import Sponsors from "./pages/Sponsors";
+import BlogPost from "./pages/BlogPost";
 
 import VTSFnavbar from "./component/VTSFnavbar";
 import VTSFtitle from "./component/VTSFtitle";
@@ -44,10 +45,10 @@ function App() {
     });
   };
 
-  const [BlogPost, setBlogPost] = useState([]);
-  const getBlogPost = () => {
-    Axios.get("http://localhost:3001/BlogPost").then((response) => {
-      setBlogPost(response.data);
+  const [BlogPostGrid, setBlogPostGrid] = useState([]);
+  const getBlogPostGrid = () => {
+    Axios.get("http://localhost:3001/BlogPostGrid").then((response) => {
+      setBlogPostGrid(response.data);
     })
   }
 
@@ -57,20 +58,23 @@ function App() {
     getCommiteeInfo();
     getSponsorsInfo();
     getLogoPic();
-    getBlogPost();
+    getBlogPostGrid();
   }, [])
 
   return (
     <div className="App BGC">
       <VTSFtitle LogoPic={ LogoPic }/>
       <VTSFnavbar />
-      <Routes>
-        <Route path="/" element={<Home EventPic={ EventPic }/>} />
-        <Route path="/Gallery" element={<Gallery EventInfo={ EventPic }/>} />
-        <Route path="/Blog" element={<Blog BlogPost={ BlogPost }/>} />
-        <Route path="/Commitee" element={<Commitee CommiteeInfo={ CommiteeInfo }/>} />
-        <Route path="/Sponsors" element={<Sponsors SponsorsInfo={ SponsorsInfo }/>} />
-      </Routes>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home EventPic={ EventPic }/>} />
+          <Route path="/Gallery" element={<Gallery EventInfo={ EventPic }/>} />
+          <Route path="/Blog" element={<Blog BlogPostGrid={ BlogPostGrid }/>} />
+          <Route path="/Commitee" element={<Commitee CommiteeInfo={ CommiteeInfo }/>} />
+          <Route path="/Sponsors" element={<Sponsors SponsorsInfo={ SponsorsInfo }/>} />
+          <Route path="/BlogPost/:id" element={<BlogPost />} />
+        </Routes>
+      </Router>
       <VTSFfooter LogoPic={ LogoPic }/>
     </div>
   );
