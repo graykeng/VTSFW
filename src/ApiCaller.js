@@ -25,3 +25,7 @@ export const getBlogPostGrid = () => {
         .then((response) => response.data);
 }
 
+export const getPost = (id) => {
+    return Axios.get(`http://localhost:3001/BlogPostDetail/${id}`)
+    .then((response) => response.data);
+};

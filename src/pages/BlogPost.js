@@ -4,6 +4,7 @@ import Axios from "axios";
 import { Carousel } from 'react-bootstrap';
 
 import LikeButton from '../component/LikeButton';
+import { getPost } from '../ApiCaller';
 
 import '../App.css'
 
@@ -11,14 +12,9 @@ const BlogPost = () => {
   const {id}= useParams();
 
   const [Post, setPost] = useState([]);
-  const getPost = () => {
-    Axios.get(`http://localhost:3001/BlogPostDetail/${id}`).then((response) => {
-      setPost(response.data);
-    });
-  };
 
   useEffect(() => {
-    getPost();
+    getPost(id).then(data => setPost(data));
   }, [])
 
   const imageArr = Post.map(obj => obj.ImagePath);
@@ -42,6 +38,7 @@ const BlogPost = () => {
         <div>
           {imageSection}
           <LikeButton />
+          
         </div>
       </div>
     </>

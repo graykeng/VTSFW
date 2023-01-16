@@ -17,27 +17,12 @@ const Blog = ( props ) => {
             {props.BlogPostGrid.map((val, index) => {
               return (
                 <Col key={index} md={4}>
-                  <div className='BlogCol'>
-                   
+                  <div className='BlogCol'>               
                       <Link to={`/BlogPost/${val.PostID}`}><img src={val.ImagePath} alt={val.PostID} width='100%' /></Link>
-                    
-                    
-                    
                   </div>
                 </Col>
               );
             })}
-          </Row>
-          <Row >
-            <Col>
-              1 of 3
-            </Col>
-            <Col>
-              2 of 3
-            </Col>
-            <Col>
-              3 of 3
-            </Col>
           </Row>
         </div>
     </div>
