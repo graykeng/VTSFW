@@ -23,9 +23,10 @@ export const getLogoPic = () => {
 export const getBlogPostGrid = () => {
     return Axios.get("http://localhost:3001/BlogPostGrid")
         .then((response) => response.data);
-}
+};
 
 export const getPost = (id) => {
     return Axios.get(`http://localhost:3001/BlogPostDetail/${id}`)
     .then((response) => response.data);
 };
+

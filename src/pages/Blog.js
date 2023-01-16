@@ -1,10 +1,7 @@
-import React, { useState } from 'react'
-import { Helmet } from 'react-helmet'
-import BlogPost from './BlogPost'
-import { Row, Col } from 'react-bootstrap'
-import { Route, Link } from 'react-router-dom'
-import moment from 'moment'
-import axios from 'axios'
+import React from 'react';
+import { Helmet } from 'react-helmet';
+import { Row, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Blog = ( props ) => {
   return (
@@ -30,21 +27,3 @@ const Blog = ( props ) => {
 }
 
 export default Blog
-
-{/* {moment('20200101T010854').format('MMMM DD YYYY, h:mm:ss a')} */}
-// const [Post, setPost] = useState({});
-  // const [Error, setError] = useState('');
-  // const [Loading, setLoading] = useState(false);
-
-  // const fetchPost = async(PostID) => {
-  //   setLoading(true);
-  //   try {
-  //     const response = await 
-  //     axios.get(`http://localhost:3001/BlogPostDetail/${PostID}`);
-  //     setPost(response.data);
-  //   } catch (err) {
-  //     setError(err.message);
-  //   } finally {
-  //     setLoading(false);
-  //   }
-  // };

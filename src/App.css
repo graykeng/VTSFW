@@ -177,7 +177,24 @@
     align-items: center;
     padding-left: 15%;
     padding-right: 15%;
-    margin-top: 5%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+.PostTitleSection {
+    margin-bottom: 2%;
+    display: flex;
+}
+
+.PostTitle {
+    flex: 1;
+}
+
+.PostDateAndTime {
+    text-align: right;
+    vertical-align: bottom;
+    flex: 1;
+    color: Gray;
 }
 
 .PostCarouselSize {
@@ -186,6 +203,15 @@
    align-content: center;
    flex-wrap: wrap;
    width: 100%;
+}
+
+.PostContent {
+    margin-top: 3%;
+    margin-bottom: 3%;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-size: 1.25em;
+    font-family: 'Trebuchet MS', sans-serif;
 }
 
 /* Background color */

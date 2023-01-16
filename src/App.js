@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState, useEffect } from 'react'
-import Axios from "axios";
 
 import Home from "./pages/Home";
 import Gallery from "./pages/Gallery";
