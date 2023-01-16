@@ -171,7 +171,22 @@
 }
 
 /* BlogPost Page */
+.PostSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 15%;
+    padding-right: 15%;
+    margin-top: 5%;
+}
 
+.PostCarouselSize {
+   display: flex;
+   justify-content: center;
+   align-content: center;
+   flex-wrap: wrap;
+   width: 100%;
+}
 
 /* Background color */
 .BGC {

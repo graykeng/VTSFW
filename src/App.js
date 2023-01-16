@@ -14,51 +14,24 @@ import VTSFnavbar from "./component/VTSFnavbar";
 import VTSFtitle from "./component/VTSFtitle";
 import VTSFfooter from "./component/VTSFfooter";
 
+import { getEventPic, getCommiteeInfo, getSponsorsInfo, getLogoPic, getBlogPostGrid } from "./ApiCaller";
+
 function App() {
 
   // Define the get, set methods to connect to the backend server
   const [EventPic, setEventPic] = useState([]);
-  const getEventPic = () => {
-    Axios.get("http://localhost:3001/EventPic").then((response) => {
-        setEventPic(response.data);
-    });
-  };
-
   const [CommiteeInfo, setCommiteeInfo] = useState([]);
-  const getCommiteeInfo = () => {
-    Axios.get("http://localhost:3001/CommiteeInfo").then((response) => {
-        setCommiteeInfo(response.data);
-    });
-  };
-
   const [SponsorsInfo, setSponsorsInfo] = useState([]);
-  const getSponsorsInfo = () => {
-    Axios.get("http://localhost:3001/SponsorsInfo").then((response) => {
-      setSponsorsInfo(response.data);
-    });
-  };
-
   const [LogoPic, setLogoPic] = useState([]);
-  const getLogoPic = () => {
-    Axios.get("http://localhost:3001/LogoPic").then((response) => {
-      setLogoPic(response.data);
-    });
-  };
-
   const [BlogPostGrid, setBlogPostGrid] = useState([]);
-  const getBlogPostGrid = () => {
-    Axios.get("http://localhost:3001/BlogPostGrid").then((response) => {
-      setBlogPostGrid(response.data);
-    })
-  }
 
   // Render only once by using useEffect
   useEffect(() => {
-    getEventPic();
-    getCommiteeInfo();
-    getSponsorsInfo();
-    getLogoPic();
-    getBlogPostGrid();
+    getEventPic().then(data => setEventPic(data));
+    getCommiteeInfo().then(data => setCommiteeInfo(data));
+    getSponsorsInfo().then(data => setSponsorsInfo(data));
+    getLogoPic().then(data => setLogoPic(data));
+    getBlogPostGrid().then(data => setBlogPostGrid(data));
   }, [])
 
   return (

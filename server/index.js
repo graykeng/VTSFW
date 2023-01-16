@@ -79,7 +79,7 @@ app.get("/BlogPostDetail/:PostID", (req, res) => {
       return res.status(404).json({ error: "Post not found" });
     }
     else {
-      res.send(result[0]);
+      res.send(result);
       console.log(`BlogPostDetail for PostID ${req.params.PostID} fetched successfully.`)
     }
   })
