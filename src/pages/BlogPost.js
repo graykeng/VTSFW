@@ -65,9 +65,6 @@ const BlogPost = () => {
           {imageSection}
           <div className='PostContent'>
             <div>
-              {/* <p>{contentEng.split('\n').map((item, key) => {
-                return <React.Fragment key={key}>{item}<br/></React.Fragment>
-              })}</p> */}
               <p style={{whiteSpace: "pre-wrap"}}>{contentEng}</p>
               <br/>
               <p style={{whiteSpace: "pre-wrap"}}>{contentChn}</p>
