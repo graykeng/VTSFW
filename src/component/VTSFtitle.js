@@ -1,5 +1,5 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
+import { Container, Button } from 'react-bootstrap';
 import Navbar from 'react-bootstrap/Navbar';
 
 const VTSFtitle = ( props ) => {
@@ -28,7 +28,7 @@ const VTSFtitle = ( props ) => {
           </Navbar.Brand>
           <Navbar.Collapse className="justify-content-end">
             <Navbar.Brand>
-              <button variant="primary" onClick={NotYet} className="TicketButton">Buy Ticket</button>
+              <Button variant="primary" onClick={NotYet}>Buy Ticket</Button>
             </Navbar.Brand>
             <Navbar.Brand href="https://www.instagram.com/vtsf2022/" target="_blank">
               <img

@@ -75,22 +75,7 @@
 }
 
 .TicketButton {
-    padding: 5px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 13px;
-    margin: 4px 25px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    background-color: white; 
-    color: black; 
-    border: 2px solid #008CBA;
-}
-
-.TicketButton:hover {
-    background-color: #008CBA;
-    color: white;
+    margin-right: 10%;
 }
 
 .SponsorCardImage {
