@@ -1,5 +1,5 @@
 import Axios from "axios";
-const url = "https://vtsf-backend.herokuapp.com/"
+const url = "https://vtsf-backend.herokuapp.com"
 
 export const getEventPic = () => {
     return Axios.get(url + "/EventPic")
