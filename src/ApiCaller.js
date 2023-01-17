@@ -1,32 +1,33 @@
 import Axios from "axios";
+const url = "https://vtsf-backend.herokuapp.com/"
 
 export const getEventPic = () => {
-    return Axios.get("http://localhost:3001/EventPic")
+    return Axios.get(url + "/EventPic")
         .then((response) => response.data);
 };
 
 export const getCommiteeInfo = () => {
-    return Axios.get("http://localhost:3001/CommiteeInfo")
+    return Axios.get(url + "/CommiteeInfo")
         .then((response) => response.data);
 };
 
 export const getSponsorsInfo = () => {
-    return Axios.get("http://localhost:3001/SponsorsInfo")
+    return Axios.get(url + "/SponsorsInfo")
         .then((response) => response.data);
 };
 
 export const getLogoPic = () => {
-    return Axios.get("http://localhost:3001/LogoPic")
+    return Axios.get(url + "/LogoPic")
         .then((response) => response.data);
 };
 
 export const getBlogPostGrid = () => {
-    return Axios.get("http://localhost:3001/BlogPostGrid")
+    return Axios.get(url + "/BlogPostGrid")
         .then((response) => response.data);
 };
 
 export const getPost = (id) => {
-    return Axios.get(`http://localhost:3001/BlogPostDetail/${id}`)
+    return Axios.get(url + `/BlogPostDetail/${id}`)
     .then((response) => response.data);
 };
 
