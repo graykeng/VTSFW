@@ -1,5 +1,4 @@
 import Axios from "axios";
-const url = "https://vtsf-backend.herokuapp.com"
 
 export const getEventPic = () => {
     return Axios.get("https://vtsf-backend.herokuapp.com/EventPic")
@@ -22,7 +21,7 @@ export const getLogoPic = () => {
 };
 
 export const getBlogPostGrid = () => {
-    return Axios.get(url + "/BlogPostGrid")
+    return Axios.get("https://vtsf-backend.herokuapp.com/BlogPostGrid")
         .then((response) => response.data);
 };
 
