@@ -9,6 +9,10 @@ const db = require("./config/db");
 app.use(cors());
 app.use(express.json());
 
+app.get("/test", (req, res)=> {
+  res.send("It's working!");
+})
+
 app.get("/CommiteeInfo", (req, res) => {
   db.query("SELECT * FROM Commitee;", (err, result) => {
     if (err) {
