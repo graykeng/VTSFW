@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Carousel } from 'react-bootstrap';
+import ReactLinkify from 'react-linkify';
 import moment from 'moment';
 
 import { getPost } from '../ApiCaller';
@@ -21,9 +22,6 @@ const BlogPost = () => {
 
   const contentEngPre = Post.map(obj => obj.ContentEng);
   const contentEng = contentEngPre[0];
-
-  const contentChnPre = Post.map(obj => obj.ContentChn);
-  const contentChn = contentChnPre[0];
 
   const titlePre = Post.map(obj => obj.Title);
   const title = titlePre[0];
@@ -62,12 +60,18 @@ const BlogPost = () => {
               </div>
             </div>
           </div>
-          {imageSection}
-          <div className='PostContent'>
-            <div>
-              <p style={{whiteSpace: "pre-wrap"}}>{contentEng}</p>
-              <br/>
-              <p style={{whiteSpace: "pre-wrap"}}>{contentChn}</p>
+          <div className='PostContentSection'>
+            <div className='PostImage'>
+              {imageSection}
+            </div>
+            <div className='PostContent'>
+              <div>
+                <ReactLinkify componentDecorator={(decoratedHref, decoratedText, key) => (
+                  <a target="blank" href={decoratedHref} key={key}>{decoratedText}</a>
+                )}>
+                  <p style={{whiteSpace: "pre-wrap"}}>{contentEng}</p>
+                </ReactLinkify>
+              </div>
             </div>
           </div>
         </div>

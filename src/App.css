@@ -158,50 +158,92 @@
 }
 
 /* BlogPost Page */
-.PostSection {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 15%;
-    padding-right: 15%;
-    margin-top: 2%;
-    margin-bottom: 5%;
+@media screen and (min-width: 900px) {
+    .PostSection {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 15%;
+        padding-right: 15%;
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+    
+    .PostTitleSection {
+        display: flex;
+    }
+    
+    .PostTitle {
+        font-family: 'Garamond', serif;
+        font-style: italic;
+        flex: 2;
+    }
+    
+    .PostDateAndTime {
+        text-align: right;
+        vertical-align: bottom;
+        color: Gray;
+        margin-bottom: 5%;
+        flex: 1;
+    }
+    
+    .PostCarouselSize {
+       display: flex;
+       justify-content: center;
+       align-content: center;
+       flex-wrap: wrap;
+       width: 100%;
+    }
+    
+    .PostContentSection {
+        display: flex;
+    
+    }
+    
+    .PostImage {
+        flex: 1;
+    }
+    
+    .PostContent {
+        padding-top: 1%;
+        padding-left: 5%;
+        font-size: 1.1em;
+        font-family: 'Trebuchet MS', sans-serif;
+        flex: 1;
+    }
 }
 
-.PostTitleSection {
-    margin-bottom: 2%;
-    display: flex;
+@media screen and (max-width: 900px) {
+    .PostSection {
+        padding-left: 3%;
+        padding-right: 3%;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+
+    .PostTitle {
+        font-family: 'Garamond', serif;
+        font-style: italic;
+    }
+
+    .PostDateAndTime {
+        color: Gray;
+        margin-bottom: 5%;
+    }
+
+    .PostCarouselSize {
+        width: 100%;
+    }
+
+    .PostContent {
+        padding-left: 2%;
+        padding-right: 2%;
+        font-family: 'Trebuchet MS', sans-serif;
+    }
 }
 
-.PostTitle {
-    flex: 1;
-    font-family: 'Garamond', serif;
-    font-style: italic;
-}
-
-.PostDateAndTime {
-    text-align: right;
-    vertical-align: bottom;
-    flex: 1;
-    color: Gray;
-}
-
-.PostCarouselSize {
-   display: flex;
-   justify-content: center;
-   align-content: center;
-   flex-wrap: wrap;
-   width: 100%;
-}
-
-.PostContent {
-    margin-top: 3%;
-    margin-bottom: 3%;
-    padding-left: 2%;
-    padding-right: 2%;
-    font-size: 1.25em;
-    font-family: 'Trebuchet MS', sans-serif;
-}
 
 /* Background color */
 .BGC {
