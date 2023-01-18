@@ -1,6 +1,6 @@
 import Axios from "axios";
 
-const url = "https://ec2-52-13-3-113.us-west-2.compute.amazonaws.com:8080"
+const url = "http://ec2-52-13-3-113.us-west-2.compute.amazonaws.com:8080"
 
 export const getEventPic = () => {
     return Axios.get(url + "/api/EventPic")
