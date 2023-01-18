@@ -8,11 +8,11 @@ const db = require("./config/db");
 app.use(cors());
 app.use(express.json());
 
-app.get("/test", (req, res)=> {
+app.get("/api/test", (req, res)=> {
   res.send("It's working!");
 })
 
-app.get("/CommiteeInfo", (req, res) => {
+app.get("/api/CommiteeInfo", (req, res) => {
   db.query("SELECT * FROM Commitee;", (err, result) => {
     if (err) {
       console.log(err);
@@ -23,7 +23,7 @@ app.get("/CommiteeInfo", (req, res) => {
   });
 });
 
-app.get("/SponsorsInfo", (req, res) => {
+app.get("/api/SponsorsInfo", (req, res) => {
   db.query("SELECT * FROM Sponsors;", (err, result) => {
     if (err) {
       console.log(err);
@@ -34,7 +34,7 @@ app.get("/SponsorsInfo", (req, res) => {
   });
 });
 
-app.get("/EventPic", (req, res) => {
+app.get("/api/EventPic", (req, res) => {
   db.query("SELECT * FROM EventPic;", (err, result) => {
     if (err) {
       console.log(err);
@@ -45,7 +45,7 @@ app.get("/EventPic", (req, res) => {
   })
 })
 
-app.get("/LogoPic", (req, res) => {
+app.get("/api/LogoPic", (req, res) => {
   db.query("SELECT * FROM LogoPic;", (err, result) => {
     if (err) {
       console.log(err);
@@ -56,7 +56,7 @@ app.get("/LogoPic", (req, res) => {
   })
 })
 
-app.get("/BlogPostGrid", (req, res) => {
+app.get("/api/BlogPostGrid", (req, res) => {
   db.query("SELECT PostID, ImagePath FROM BlogPostPic WHERE PostPicID % 10 = 1 ORDER BY PostID DESC;", (err, result) => {
     if (err) {
       console.log(err);
@@ -67,7 +67,7 @@ app.get("/BlogPostGrid", (req, res) => {
   })
 })
 
-app.get("/BlogPostDetail/:PostID", (req, res) => {
+app.get("/api/BlogPostDetail/:PostID", (req, res) => {
   const sql = `SELECT BlogPost.*, BlogPostPic.* FROM BlogPost JOIN BlogPostPic ON BlogPost.PostID = BlogPostPic.PostID WHERE BlogPost.PostID = ${req.params.PostID};`
   db.query(sql, (err, result) => {
     if (err) {
