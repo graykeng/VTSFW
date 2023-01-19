@@ -1,2 +1,2 @@
 /* /index.html 200
-/api/* https://vtsf-backend.herokuapp.com/api/:splat 200
+/api/* http://52.13.3.113:8080/api/:splat 200
