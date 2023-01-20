@@ -242,6 +242,13 @@
         padding-right: 2%;
         font-family: 'Trebuchet MS', sans-serif;
     }
+
+    .EventDetailsTitle {
+        font-family: 'Apple Chancery', sans-serif;
+        font-size: 2em;
+        text-align: center;
+        margin-top: 1%;
+    }
 }
 
 
