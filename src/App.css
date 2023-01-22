@@ -24,12 +24,6 @@
     color: black;
 }
 
-.TitleText {
-    font-family: "Times New Roman", Times, serif;
-    font-size: 1.5em;
-    padding-left: 10%;
-}
-
 
 .EventDetailsSubTitle {
     text-align: center;
@@ -244,6 +238,12 @@
         padding-right: 20%;
     }
 
+    .TitleText {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 1.5em;
+        padding-left: 10%;
+    }
+
 }
 
 @media screen and (max-width: 900px) {
@@ -403,6 +403,13 @@
         font-family: "Times New Roman", Times, serif;
         padding-left: 20%;
         padding-right: 20%;
+    }
+
+    .TitleText {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 1.5em;
+        padding-left: 10%;
+        color: #212529;
     }
 }
 
