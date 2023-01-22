@@ -196,7 +196,6 @@
         align-items: center;
         gap: 2rem;
         padding: 0.6%;
-        flex: 1;
     }
     
     .Nav ul {
@@ -362,9 +361,8 @@
         justify-content: center;
         align-items: center;
         gap: 2rem;
-        padding: 0.6%;
-        flex: 1;
-        margin-top: 1%;
+        padding-top: 1%;
+        padding-bottom: 1%;
     }
     
     .Nav ul {
