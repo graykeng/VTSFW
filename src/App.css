@@ -46,6 +46,15 @@
    vertical-align: middle;
 }
 
+.BlogGridSingle {
+    width: 100%;
+    transition: transform 0.3s;
+}
+
+.BlogGridSingle:hover {
+    transform: scale(1.05);
+}
+
 /* BlogPost Page */
 @media screen and (min-width: 900px) {
     .PostSection {
@@ -180,8 +189,8 @@
     }
 
     .Nav {
-        background-color: #EFEFEF;
-        color: Gray;
+        background-color: #8A2A36;
+        color: white;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -207,7 +216,7 @@
     }
     
     .Nav a:hover {
-        color: #3F3F3F;
+        color: #c0c0c0;
     }
 
     /* For the section stor all the cards in commitee page */
@@ -347,8 +356,8 @@
     }
 
     .Nav {
-        background-color: #EFEFEF;
-        color: Gray;
+        background-color: #8A2A36;
+        color: white;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -375,7 +384,7 @@
     }
     
     .Nav a:hover {
-        color: #3F3F3F;
+        color: #c0c0c0;
     }
 
     /* For the section stor all the cards in commitee page */

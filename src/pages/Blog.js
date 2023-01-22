@@ -15,7 +15,7 @@ const Blog = ( props ) => {
               return (
                 <Col key={index} md={4}>
                   <div className='BlogCol'>               
-                      <Link to={`/BlogPost/${val.PostID}`}><img src={val.ImagePath} alt={val.PostID} width='100%' /></Link>
+                      <Link to={`/BlogPost/${val.PostID}`}><img src={val.ImagePath} alt={val.PostID} className='BlogGridSingle' /></Link>
                   </div>
                 </Col>
               );
