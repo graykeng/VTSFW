@@ -20,15 +20,15 @@ const VTSFtitle = ( props ) => {
             <img
               alt=''
               src={VTSFPath}
-              width='40'
-              height='40'
+              width='50'
+              height='50'
               className="d-inline-block align-top"
             />{' '}
             <span className='TitleText'>VTSF</span>
           </Navbar.Brand>
           <Navbar.Collapse className="justify-content-end">
             <Navbar.Brand>
-              <Button variant="primary" onClick={NotYet}>Buy Ticket</Button>
+              <Button variant="primary" onClick={NotYet}>Get Ticket</Button>
             </Navbar.Brand>
             <Navbar.Brand href="https://www.instagram.com/vtsf2022/" target="_blank">
               <img

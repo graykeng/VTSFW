@@ -54,7 +54,7 @@
 
 .TitleText {
     font-family: "Times New Roman", Times, serif;
-    font-size: 1.12em;
+    font-size: 1.5em;
     padding-left: 10%;
 }
 
@@ -78,14 +78,6 @@
 .BlogCol {
    margin: 5%;
    vertical-align: middle;
-}
-
-.NavBox {
-    display: flex;
-}
-
-.EmptyBox {
-    flex: 1;
 }
 
 /* BlogPost Page */
@@ -222,7 +214,7 @@
     }
 
     .Nav {
-        background-color: white;
+        background-color: #EFEFEF;
         color: Gray;
         display: flex;
         justify-content: center;
@@ -355,7 +347,7 @@
     }
 
     .Nav {
-        background-color: white;
+        background-color: #EFEFEF;
         color: Gray;
         display: flex;
         justify-content: center;
@@ -391,10 +383,6 @@
 /* Background color */
 .BGC {
     background-color: #FFFFFD;
-}
-
-.NAVC {
-    background-color: #EFEFEF;
 }
 
 

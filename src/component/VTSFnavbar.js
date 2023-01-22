@@ -19,10 +19,6 @@ const VTSFnavbar = () => {
     //         </Container>
     //     </Navbar>
     // </div>
-    <div className='NavBox'>
-      <div className='EmptyBox'>
-
-      </div>
       <nav className='Nav'>
         <ul>
           <li><a href='/'>Home</a></li>
@@ -31,10 +27,6 @@ const VTSFnavbar = () => {
           <li><a href='/Sponsors'>Sponsors</a></li>
         </ul>
       </nav>
-      <div className='EmptyBox'>
-
-      </div>
-    </div>
   )
 }
 
