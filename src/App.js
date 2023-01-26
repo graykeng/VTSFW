@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react'
 import Home from "./pages/Home";
 import Gallery from "./pages/Gallery";
 import Blog from "./pages/Blog";
-import Commitee from "./pages/Commitee";
+import Committee from "./pages/Committee";
 import Sponsors from "./pages/Sponsors";
 import BlogPost from "./pages/BlogPost";
 
@@ -13,13 +13,13 @@ import VTSFnavbar from "./component/VTSFnavbar";
 import VTSFtitle from "./component/VTSFtitle";
 import VTSFfooter from "./component/VTSFfooter";
 
-import { getEventPic, getCommiteeInfo, getSponsorsInfo, getLogoPic, getBlogPostGrid } from "./ApiCaller";
+import { getEventPic, getCommitteeInfo, getSponsorsInfo, getLogoPic, getBlogPostGrid } from "./ApiCaller";
 
 function App() {
 
   // Define the get, set methods to connect to the backend server
   const [EventPic, setEventPic] = useState([]);
-  const [CommiteeInfo, setCommiteeInfo] = useState([]);
+  const [CommitteeInfo, setCommitteeInfo] = useState([]);
   const [SponsorsInfo, setSponsorsInfo] = useState([]);
   const [LogoPic, setLogoPic] = useState([]);
   const [BlogPostGrid, setBlogPostGrid] = useState([]);
@@ -27,7 +27,7 @@ function App() {
   // Render only once by using useEffect
   useEffect(() => {
     getEventPic().then(data => setEventPic(data));
-    getCommiteeInfo().then(data => setCommiteeInfo(data));
+    getCommitteeInfo().then(data => setCommitteeInfo(data));
     getSponsorsInfo().then(data => setSponsorsInfo(data));
     getLogoPic().then(data => setLogoPic(data));
     getBlogPostGrid().then(data => setBlogPostGrid(data));
@@ -42,7 +42,7 @@ function App() {
           <Route path="/" element={<Home EventPic={ EventPic }/>} />
           <Route path="/Gallery" element={<Gallery EventInfo={ EventPic }/>} />
           <Route path="/Blog" element={<Blog BlogPostGrid={ BlogPostGrid }/>} />
-          <Route path="/Commitee" element={<Commitee CommiteeInfo={ CommiteeInfo }/>} />
+          <Route path="/Committee" element={<Committee CommitteeInfo={ CommitteeInfo }/>} />
           <Route path="/Sponsors" element={<Sponsors SponsorsInfo={ SponsorsInfo }/>} />
           <Route path="/BlogPost/:id" element={<BlogPost />} />
         </Routes>

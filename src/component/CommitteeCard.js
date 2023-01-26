@@ -2,20 +2,20 @@ import React from 'react';
 
 import '../App.css';
 
-const CommiteeCard = ( props ) => {
+const CommitteeCard = ( props ) => {
 
   return (
     <div className='SingleCard'>
       <div>
-        <img src={props.CommiteeInfo.ImagePath} className="CardImage" alt={props.CommiteeInfo.FirstName} />
+        <img src={props.CommitteeInfo.ImagePath} className="CardImage" alt={props.CommitteeInfo.FirstName} />
       </div>
 
       <div className='CardTitle'>
         <h3>
-          {props.CommiteeInfo.FirstName + ' ' + props.CommiteeInfo.LastName}
+          {props.CommitteeInfo.FirstName + ' ' + props.CommitteeInfo.LastName}
         </h3>
         <h5>
-          {props.CommiteeInfo.Title}
+          {props.CommitteeInfo.Title}
         </h5>
       </div>
 
@@ -28,4 +28,4 @@ const CommiteeCard = ( props ) => {
   )
 }
 
-export default CommiteeCard
+export default CommitteeCard

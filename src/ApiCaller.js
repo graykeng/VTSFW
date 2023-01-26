@@ -7,7 +7,7 @@ export const getEventPic = () => {
         .then((response) => response.data);
 };
 
-export const getCommiteeInfo = () => {
+export const getCommitteeInfo = () => {
     return Axios.get(url + "/CommiteeInfo")
         .then((response) => response.data);
 };

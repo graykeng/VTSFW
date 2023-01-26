@@ -6,7 +6,7 @@ import Row from 'react-bootstrap/Row';
 
 import '../App.css';
 
-import CommiteeCard from '../component/CommiteeCard';
+import CommitteeCard from '../component/CommitteeCard';
 
 const Commitee = ( props ) => {
 
@@ -20,8 +20,8 @@ const Commitee = ( props ) => {
 
                     <div className='AllCards'>
                         <Row xs={1} md={2}>
-                            {props.CommiteeInfo.filter(val => val.id >= 20220000 && val.id <= 20229999).map((val, key) => (
-                                <CommiteeCard key={val.id} CommiteeInfo={val} />
+                            {props.CommitteeInfo.filter(val => val.id >= 20220000 && val.id <= 20229999).map((val, key) => (
+                                <CommitteeCard key={val.id} CommitteeInfo={val} />
                             ))}
                         </Row>
                     </div>

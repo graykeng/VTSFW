@@ -23,7 +23,7 @@ const VTSFnavbar = () => {
         <ul>
           <li><a href='/'>Home</a></li>
           <li><a href='/Blog'>Blog</a></li>
-          <li><a href='/Commitee'>Commitee</a></li>
+          <li><a href='/Committee'>Committee</a></li>
           <li><a href='/Sponsors'>Sponsors</a></li>
         </ul>
       </nav>
