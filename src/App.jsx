@@ -8,6 +8,7 @@ import Blog from "./pages/Blog";
 import Committee from "./pages/Committee";
 import Sponsors from "./pages/Sponsors";
 import BlogPost from "./pages/BlogPost";
+import GetTicket from "./pages/GetTicket";
 
 import VTSFnavbar from "./component/VTSFnavbar";
 import VTSFtitle from "./component/VTSFtitle";
@@ -45,6 +46,7 @@ function App() {
           <Route path="/Committee" element={<Committee CommitteeInfo={ CommitteeInfo }/>} />
           <Route path="/Sponsors" element={<Sponsors SponsorsInfo={ SponsorsInfo }/>} />
           <Route path="/BlogPost/:id" element={<BlogPost />} />
+          <Route path="/GetTicket" element={<GetTicket />} />
         </Routes>
       </Router>
       <VTSFfooter LogoPic={ LogoPic }/>

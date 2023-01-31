@@ -28,7 +28,11 @@ const VTSFtitle = ( props ) => {
           </Navbar.Brand>
           <Navbar.Collapse className="justify-content-end">
             <Navbar.Brand>
-              <Button variant="primary" onClick={NotYet}>Get Ticket</Button>
+              {/* <Button variant="primary" onClick={(e) => {
+                e.preventDefault();
+                window.location.href='/GetTicket';
+                }}>Get Ticket</Button> */}
+                <Button variant='primary' onClick={NotYet}>Get Ticket</Button>
             </Navbar.Brand>
             <Navbar.Brand href="https://www.instagram.com/vtsf2022/" target="_blank">
               <img
