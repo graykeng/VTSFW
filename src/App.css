@@ -1,6 +1,12 @@
+@import url('https://fonts.cdnfonts.com/css/jost');
+
+.VTSFtitle {
+    background-color: #333000;
+}
+
 /* Whole footer */
 .Footer {
-    background-color: #EFEFEF;
+    background-color: #DBD2C6;
 }
 
 /* Only for the interval of logos on the footer */
@@ -13,7 +19,7 @@
 }
 
 .SponsorRank {
-    font-family: palatino, serif;
+    font-family: 'Jost*', sans-serif;
     text-align: center;
     margin-top: 5%;
 }
@@ -30,6 +36,7 @@
     font-size: 2.5em;
     margin-bottom: 3%;
     font-family: 'cwTeXKai';
+    color: #333000;
 }
 
 .BlogSection {
@@ -72,7 +79,7 @@
     }
     
     .PostTitle {
-        font-family: 'Garamond', serif;
+        font-family: 'Jost*', sans-serif;
         font-style: italic;
         flex: 2;
     }
@@ -106,13 +113,14 @@
         padding-top: 1%;
         padding-left: 5%;
         font-size: 1.1em;
-        font-family: 'Trebuchet MS', sans-serif;
+        font-family: 'Jost*', sans-serif;
         flex: 1;
     }
 
     /* Event Details */
     .EventDetailsTitle {
-        font-family: 'Apple Chancery', sans-serif;
+        font-family: 'Jost*', sans-serif;
+        color: #333000;
         font-size: 5em;
         text-align: center;
         margin-top: 3%;
@@ -125,10 +133,11 @@
         padding-bottom: 5%;
         text-align: center;
         font-size: 1.2em;
+        color: #333000;
     }
     
     .EventDetailsChn {
-        background-color: #8A2A36;
+        background-color: #E37C2D;
         padding-left: 20%;
         padding-right: 20%;
         padding-top: 5%;
@@ -181,7 +190,7 @@
     /* Commitee cards title */
     .CardTitle {
         text-align: center;
-        font-family: "Times New Roman", Times, serif;
+        font-family: 'Jost*', sans-serif;
         font-size: 1.5em;
         font-weight: bold;
 
@@ -189,8 +198,8 @@
     }
 
     .Nav {
-        background-color: #8A2A36;
-        color: white;
+        background-color: #FAB496;
+        color: #333000;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -215,7 +224,8 @@
     }
     
     .Nav a:hover {
-        color: #c0c0c0;
+        color: #E37C2D;
+        transform: scale(1.05);
     }
 
     /* For the section stor all the cards in commitee page */
@@ -240,16 +250,17 @@
 
     /* Commitee cards text */
     .CardText {
-        font-family: "Times New Roman", Times, serif;
+        font-family: 'Jost*', sans-serif;
         font-size: 1.25em;
         padding-left: 20%;
         padding-right: 20%;
     }
 
     .TitleText {
-        font-family: "Times New Roman", Times, serif;
+        font-family: 'Jost*', sans-serif;
         font-size: 1.5em;
         padding-left: 10%;
+        color: #DBD2C6;
     }
 
 }
@@ -265,7 +276,7 @@
     }
 
     .PostTitle {
-        font-family: 'Garamond', serif;
+        font-family: 'Jost*', sans-serif;
         font-style: italic;
     }
 
@@ -281,11 +292,11 @@
     .PostContent {
         padding-left: 2%;
         padding-right: 2%;
-        font-family: 'Trebuchet MS', sans-serif;
+        font-family: 'Jost*', sans-serif;
     }
 
     .EventDetailsTitle {
-        font-family: 'Apple Chancery', sans-serif;
+        font-family: 'Jost*', sans-serif;
         font-size: 2em;
         text-align: center;
         margin-top: 1%;
@@ -301,7 +312,7 @@
     }
 
     .EventDetailsChn {
-        background-color: #8A2A36;
+        background-color: #E37C2D;
         padding-left: 5%;
         padding-right: 5%;
         padding-top: 5%;
@@ -348,21 +359,22 @@
     
     .CardTitle {
         text-align: center;
-        font-family: "Times New Roman", Times, serif;
+        font-family: 'Jost*', sans-serif;
         font-weight: bold;
     
         margin-top: 1%;
     }
 
     .Nav {
-        background-color: #8A2A36;
-        color: white;
+        background-color: #FAB496;
+        color: #333000;
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 2rem;
         padding-top: 1%;
         padding-bottom: 1%;
+        font-family: 'Jost*', sans-serif;
     }
     
     .Nav ul {
@@ -382,7 +394,8 @@
     }
     
     .Nav a:hover {
-        color: #c0c0c0;
+        color: #E37C2D;
+        transform: scale(1.05);
     }
 
     /* For the section stor all the cards in commitee page */
@@ -407,16 +420,16 @@
 
     /* Commitee cards text */
     .CardText {
-        font-family: "Times New Roman", Times, serif;
+        font-family: 'Jost*', sans-serif;
         padding-left: 20%;
         padding-right: 20%;
     }
 
     .TitleText {
-        font-family: "Times New Roman", Times, serif;
+        font-family: 'Jost*', sans-serif;
         font-size: 1.5em;
         padding-left: 10%;
-        color: #212529;
+        color: #333000;
     }
 }
 

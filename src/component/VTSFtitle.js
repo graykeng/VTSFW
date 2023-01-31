@@ -14,7 +14,7 @@ const VTSFtitle = ( props ) => {
 
   return (
     <>
-      <Navbar bg="dark" variant="dark">
+      <Navbar className='VTSFtitle'>
         <Container>
           <Navbar.Brand href="/">
             <img
