@@ -2,14 +2,17 @@ import React from 'react'
 
 import FormInput from '../component/FormInput'
 
-import { workshopArr, dietaryArr, OccupationArr, heardArr } from '../Data'
+import { insertTicketInfo } from '../ApiCaller'
+
+import { workshopArr, dietaryArr, OccupationArr } from '../Data'
 
 const GetTicket = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const data = new FormData(e.target);
-    console.log(Object.fromEntries(data.entries()))
+    console.log(Object.fromEntries(data.entries()));
+    insertTicketInfo(Object.fromEntries(data.entries()));
   }
 
   return (
@@ -24,8 +27,8 @@ const GetTicket = () => {
         <FormInput name="Workshop" type="menu" options={workshopArr} question="What is the workshop you want to attend?" />
         <FormInput name="Dietary" type="menu" options={dietaryArr} question="Do you have any dietary restrictions?" />
         <FormInput name="Occupation" type="menu" options={OccupationArr} question="What is your current occupation?" />
-        <FormInput name="Attend" type="yesOrNo" question="Did you attend the event in 2022?" />
-        <FormInput name="Heard" type="multipleChoice" options={heardArr} question="How did you hear about this event? (Multiple answers)" />
+        <FormInput name="Attended" type="menu" options={["Select", "Yes", "No"]} question="Did you attend the event in 2022?" />
+        <FormInput name="Heard" type="input" placeholder="Friends, Instagram, Facebook, etc." question="How did you hear about this event?" />
         <button className='TicketSubmit'>Submit</button>
       </form>
     </div>

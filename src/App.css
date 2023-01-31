@@ -307,6 +307,16 @@
         cursor: pointer;
         margin-top: 15px;
         margin-bottom: 30px;
+        transition: transform 0.3s;
+    }
+
+    .TicketSubmit:hover {
+        transform: scale(1.05);
+    }
+
+    .InputLabel {
+        font-size: 14px;
+        color: gray;
     }
 
 }
@@ -521,6 +531,16 @@
         cursor: pointer;
         margin-top: 15px;
         margin-bottom: 30px;
+        transition: transform 0.3s;
+    }
+
+    .TicketSubmit:hover {
+        transform: scale(1.05);
+    }
+
+    .InputLabel {
+        font-size: 14px;
+        color: gray;
     }
 }
 

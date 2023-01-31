@@ -32,3 +32,23 @@ export const getPost = (id) => {
     .then((response) => response.data);
 };
 
+export const insertTicketInfo = (data) => {
+    Axios.post(url + "/insertTicketInfo", {
+        FirstName: data.FirstName,
+        LastName: data.LastName,
+        PhoneNumber: data.PhoneNumber,
+        Email: data.Email,
+        School: data.School,
+        Workshop: data.Workshop,
+        Dietary: data.Dietary,
+        Occupation: data.Occupation,
+        Attended: data.Attended,
+        Heard: data.Heard,
+        })
+        .then(res => {
+            console.log(res.data);
+        })
+        .catch(err => {
+            console.error(err);
+        })
+}

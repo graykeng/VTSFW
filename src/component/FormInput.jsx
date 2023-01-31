@@ -10,9 +10,10 @@ const FormInput = ( props ) => {
             <div>
                 <div>
                     <br/>
-                    <label>{props.question}</label>
+                    <label className='InputLabel'>{props.question}</label>
                 </div>
                 <input name={props.name} className='FormInput' placeholder={props.placeholder}/>
+                <span>{props.errorMessage}</span>
             </div>
             break;
         case "menu":
@@ -20,35 +21,14 @@ const FormInput = ( props ) => {
             <div>
                 <div>
                     <br/>
-                    <label>{props.question}</label>
+                    <label className='InputLabel'>{props.question}</label>
                 </div>
                 <select className='FormInput' name={props.name}>
                     {props.options.map((val, index) => (
                         <option value={val} key={index}>{val}</option>
                     ))}
                 </select>
-            </div>
-            break;
-        case "yesOrNo":
-            inputType =
-            <div>
-                <div>
-                    <br/>
-                    <label>{props.question}</label>
-                </div>
-                
-            </div>
-            break;
-        case "multipleChoice":
-            inputType =
-            <div>
-                <div>
-                    <br/>
-                    <label>{props.question}</label>
-                </div>
-                {/* {props.options.map((val, index) => (
-                    <input type="checkbox" id={val} name={props.name} value={val}>ddd</input>
-                ))} */}
+                <span>{props.errorMessage}</span>
             </div>
             break;
         default:
