@@ -9,7 +9,7 @@ import { getPost } from '../ApiCaller';
 import '../App.css'
 
 const BlogPost = () => {
-  const {id}= useParams();
+  const {id} = useParams();
   const [Post, setPost] = useState([]);
   var imageSection;
 

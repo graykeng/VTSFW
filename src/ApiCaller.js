@@ -32,8 +32,14 @@ export const getPost = (id) => {
     .then((response) => response.data);
 };
 
-export const insertTicketInfo = (data) => {
+export const getTicketStatus = (uuid) => {
+    return Axios.get(url + `/RedeemTicket/${uuid}`)
+        .then((response) => response.data);
+};
+
+export const insertTicketInfo = (data, uuid) => {
     Axios.post(url + "/insertTicketInfo", {
+        TicketID: uuid,
         FirstName: data.FirstName,
         LastName: data.LastName,
         ChnName: data.ChnName,
@@ -54,4 +60,8 @@ export const insertTicketInfo = (data) => {
         .catch(err => {
             console.error(err);
         })
+};
+
+export const updateRedeem = (uuid) => {
+    Axios.put(url + "/updateRedeem", {TicketID: uuid});
 }

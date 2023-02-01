@@ -1,18 +1,20 @@
-import React from 'react'
+import React from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
-import FormInput from '../component/FormInput'
+import FormInput from '../component/FormInput';
 
-import { insertTicketInfo } from '../ApiCaller'
-
-import { workshopArr, dietaryArr, OccupationArr } from '../Data'
+import { insertTicketInfo } from '../ApiCaller';
+import { workshopArr, dietaryArr, OccupationArr } from '../Data';
 
 const GetTicket = () => {
+
+  const ID = uuidv4().replace(/-/g, '');
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const data = new FormData(e.target);
     console.log(Object.fromEntries(data.entries()));
-    insertTicketInfo(Object.fromEntries(data.entries()));
+    insertTicketInfo(Object.fromEntries(data.entries()), ID);
   }
 
   return (

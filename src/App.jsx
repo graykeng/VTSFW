@@ -15,6 +15,7 @@ import VTSFtitle from "./component/VTSFtitle";
 import VTSFfooter from "./component/VTSFfooter";
 
 import { getEventPic, getCommitteeInfo, getSponsorsInfo, getLogoPic, getBlogPostGrid } from "./ApiCaller";
+import Redeem from "./pages/Redeem";
 
 function App() {
 
@@ -47,6 +48,7 @@ function App() {
           <Route path="/Sponsors" element={<Sponsors SponsorsInfo={ SponsorsInfo }/>} />
           <Route path="/BlogPost/:id" element={<BlogPost />} />
           <Route path="/GetTicket" element={<GetTicket />} />
+          <Route path="/Redeem/:uuid" element={<Redeem />} />
         </Routes>
       </Router>
       <VTSFfooter LogoPic={ LogoPic }/>
