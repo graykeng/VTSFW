@@ -36,9 +36,12 @@ export const insertTicketInfo = (data) => {
     Axios.post(url + "/insertTicketInfo", {
         FirstName: data.FirstName,
         LastName: data.LastName,
+        ChnName: data.ChnName,
         PhoneNumber: data.PhoneNumber,
         Email: data.Email,
         School: data.School,
+        Age: data.Age,
+        Taiwanese: data.Taiwanese,
         Workshop: data.Workshop,
         Dietary: data.Dietary,
         Occupation: data.Occupation,

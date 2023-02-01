@@ -21,9 +21,12 @@ const GetTicket = () => {
         <h1 className='FormTitle'>Register</h1>
         <FormInput name="FirstName" type="input" placeholder="First Name" question="First Name" />
         <FormInput name="LastName" type="input" placeholder="Last Name" question="Last Name" />
+        <FormInput name="ChnName" type="input" placeholder="Chinese Name" question="Chinese Name" />
         <FormInput name="PhoneNumber" type="input" placeholder="Phone Number" question="Phone Number" />
         <FormInput name="Email" type="input" placeholder="Email" question="Email" />
         <FormInput name="School" type="input" placeholder="School" question="School" />
+        <FormInput name="Age" type="input" placeholder="Age" question="Age" />
+        <FormInput name="Taiwanese" type="menu" options={["Select", "Yes", "No"]} question="Are you a Taiwanese?" />
         <FormInput name="Workshop" type="menu" options={workshopArr} question="What is the workshop you want to attend?" />
         <FormInput name="Dietary" type="menu" options={dietaryArr} question="Do you have any dietary restrictions?" />
         <FormInput name="Occupation" type="menu" options={OccupationArr} question="What is your current occupation?" />

@@ -56,9 +56,9 @@ const Sponsors = ( props ) => {
         <Tab eventKey="VTSF 2023" title="VTSF 2023" disabled>
             
         </Tab>
-        <Tab eventKey="VTSF 2024" title="VTSF 2024" disabled>
+        {/* <Tab eventKey="VTSF 2024" title="VTSF 2024" disabled>
             
-        </Tab>
+        </Tab> */}
       </Tabs>
     </div>
   )
