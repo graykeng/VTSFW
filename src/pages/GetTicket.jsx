@@ -14,13 +14,19 @@ const GetTicket = () => {
     e.preventDefault();
     const data = new FormData(e.target);
     console.log(Object.fromEntries(data.entries()));
-    insertTicketInfo(Object.fromEntries(data.entries()), ID);
+    try {
+      insertTicketInfo(Object.fromEntries(data.entries()), ID);
+      window.location.href="/Etransfer";
+    } catch (error) {
+      console.error(error);
+      alert("There's something wrong with our server. Please check back later.");
+    }
   }
 
   return (
     <div className='TicketPage'>
       <form onSubmit={handleSubmit} className="FormSection">
-        <h1 className='FormTitle'>Register</h1>
+        <h1 className='FormTitle'>Register(Testing)</h1>
         <FormInput name="FirstName" type="input" placeholder="First Name" question="First Name" />
         <FormInput name="LastName" type="input" placeholder="Last Name" question="Last Name" />
         <FormInput name="ChnName" type="input" placeholder="Chinese Name" question="Chinese Name" />

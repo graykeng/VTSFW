@@ -40,6 +40,7 @@ export const getTicketStatus = (uuid) => {
 export const insertTicketInfo = (data, uuid) => {
     Axios.post(url + "/insertTicketInfo", {
         TicketID: uuid,
+        RedeemAddress: "https://vtsf.ca/Redeem/" + uuid,
         FirstName: data.FirstName,
         LastName: data.LastName,
         ChnName: data.ChnName,
