@@ -9,7 +9,6 @@ import Committee from "./pages/Committee";
 import Sponsors from "./pages/Sponsors";
 import BlogPost from "./pages/BlogPost";
 import GetTicket from "./pages/GetTicket";
-import Etransfer from "./pages/Etransfer";
 
 import VTSFnavbar from "./component/VTSFnavbar";
 import VTSFtitle from "./component/VTSFtitle";
@@ -50,7 +49,6 @@ function App() {
           <Route path="/BlogPost/:id" element={<BlogPost />} />
           <Route path="/GetTicket" element={<GetTicket />} />
           <Route path="/Redeem/:uuid" element={<Redeem />} />
-          <Route path="/Etransfer" element={<Etransfer />} />
         </Routes>
       </Router>
       <VTSFfooter LogoPic={ LogoPic }/>
