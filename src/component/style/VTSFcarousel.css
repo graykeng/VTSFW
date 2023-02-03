@@ -1,0 +1,24 @@
+/* desktop */
+@media screen and (min-width: 1200px) {
+    /* home page carousel */
+    .CarouselHomePage {
+        height: auto;
+        max-height: 100%;
+        width: auto;
+        max-width: 100%;
+    
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* half desktop */
+@media screen and (min-width: 801px) and (max-width: 1199px) {
+    
+}
+
+/* mobile devices */
+@media screen and (max-width: 800px) {
+    
+}

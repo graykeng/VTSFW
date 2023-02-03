@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../App.css';
+import './style/SponsorCard.css';
 
 const SponsorCard = ( props ) => {
 

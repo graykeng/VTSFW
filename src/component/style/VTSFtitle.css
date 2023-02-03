@@ -1,0 +1,262 @@
+/* desktop */
+@media screen and (min-width: 1200px) {
+    /* whole nav bar */
+    .Nav {
+        background-color: #FFB781;
+        width: 100%;
+        color: #333000;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 150px;
+        flex-direction: row;
+    }
+
+    /* this section contain img and text */
+    .NavFirstSection {
+        display: flex;
+        align-items: center;
+    }
+
+    /* img section */
+    .NavImgSection {
+        margin-left: 20px;
+    }
+
+    /* big VTSF logo */
+    .NavImg {
+        display: block;
+    }
+
+    /* small VTSF logo */
+    .NavImgSmall {
+        display: none;
+    }
+
+    /* VTSF text */
+    .NavText {
+        font-family: 'Jost*', sans-serif;
+        font-size: 2em;
+        color: white;
+        line-height: 2.5;
+        margin-left: 20px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    /* this section contain 4 nav buttons */
+    .NavSecondSection {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* four nav buttons */
+    .NavSecondSection a {
+        color: inherit;
+        text-decoration: none;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        margin-left: 100px;
+        font-size: 1.2em;
+        letter-spacing: 1px;
+    }
+    .NavSecondSection a:hover {
+        color: #E37C2D;
+        transform: scale(1.05);
+    }
+
+    /* "Get Ticket" button */
+    .NavTicketButton {
+        width: 10%;
+        padding: 10px;
+        border: none;
+        background-color: #227BFF;
+        color: white;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 18px;
+        cursor: pointer;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        transition: transform 0.3s;
+        margin-right: 2%;
+        margin-left: 2%;
+    }
+    .NavTicketButton:hover {
+        transform: scale(1.05);
+    }
+}
+
+/* half desktop */
+@media screen and (min-width: 801px) and (max-width: 1199px) {
+    /* whole nav bar */
+    .Nav {
+        background-color: #FFB781;
+        width: 100%;
+        color: #333000;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 120px;
+        flex-direction: row;
+    }
+
+    /* this section contain img and text */
+    .NavFirstSection {
+        display: flex;
+        align-items: center;
+    }
+
+    /* img section */
+    .NavImgSection {
+        margin-left: 10px;
+    }
+
+    /* big VTSF logo */
+    .NavImg {
+        display: none;
+    }
+
+    /* small VTSF logo */
+    .NavImgSmall {
+        display: block;
+    }
+
+    /* VTSF text */
+    .NavText {
+        display: none;
+    }
+
+    /* this section contain 4 nav buttons */
+    .NavSecondSection {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* four nav buttons */
+    .NavSecondSection a {
+        color: inherit;
+        text-decoration: none;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 1em;
+        margin-right: 8%;
+    }
+    .NavSecondSection a:hover {
+        color: #E37C2D;
+        transform: scale(1.05);
+    }
+
+    /* "Get Ticket" button */
+    .NavTicketButton {
+        height: 30px;
+        border: none;
+        background-color: #227BFF;
+        color: white;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 12px;
+        cursor: pointer;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        transition: transform 0.3s;
+        margin-right: 5%;
+    }
+    .NavTicketButton:hover {
+        transform: scale(1.05);
+    }
+}
+
+/* mobile devices */
+@media screen and (max-width: 800px) {
+    /* whole nav bar */
+    .Nav {
+        background-color: #FFB781;
+        width: 100%;
+        color: #333000;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+        flex-direction: row;
+    }
+
+    /* this section contain img and text */
+    .NavFirstSection {
+        display: flex;
+        align-items: center;
+    }
+
+    .NavImgSection {
+        margin-left: 40%;
+    }
+
+    /* big VTSF logo */
+    .NavImg {
+        display: none;
+    }
+
+    /* small VTSF logo */
+    .NavImgSmall {
+        display: block;
+    }
+
+    /* VTSF text */
+    .NavText {
+        display: none;
+    }
+
+    /* this section contain 4 nav buttons */
+    .NavSecondSection {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* four nav buttons */
+    .NavSecondSection a {
+        color: inherit;
+        text-decoration: none;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 0.7em;
+        margin-right: 8%;
+    }
+    .NavSecondSection a:hover {
+        color: #E37C2D;
+        transform: scale(1.05);
+    }
+
+    /* nav bar home button */
+    .NavHome {
+        overflow: hidden;
+    }
+
+    /* "Get Ticket" button */
+    .NavTicketButton {
+        height: 30px;
+        border: none;
+        background-color: #227BFF;
+        color: white;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 12px;
+        cursor: pointer;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        transition: transform 0.3s;
+        margin-right: 5%;
+    }
+    .NavTicketButton:hover {
+        transform: scale(1.05);
+    }
+}

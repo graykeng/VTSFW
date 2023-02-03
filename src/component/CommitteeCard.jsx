@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './CommitteeCard.css';
+import './style/CommitteeCard.css';
 
 const CommitteeCard = ( props ) => {
 

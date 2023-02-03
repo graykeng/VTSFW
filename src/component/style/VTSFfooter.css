@@ -1,0 +1,14 @@
+/* desktop */
+@media screen and (min-width: 1200px) {
+    
+}
+
+/* half desktop */
+@media screen and (min-width: 801px) and (max-width: 1199px) {
+    
+}
+
+/* mobile devices */
+@media screen and (max-width: 800px) {
+    
+}

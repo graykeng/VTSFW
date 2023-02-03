@@ -3,6 +3,8 @@ import { Helmet } from 'react-helmet';
 import { Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
+import './style/Blog.css';
+
 const Blog = ( props ) => {
   return (
     <div>

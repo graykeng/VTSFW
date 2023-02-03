@@ -268,7 +268,7 @@
         letter-spacing: 1px;
     }
 
-    .Nav a:hover {
+    .NavSecondSection a:hover {
         color: #E37C2D;
         transform: scale(1.05);
     }
@@ -303,7 +303,7 @@
         /* border: 5px solid black; */
     }
 
-    One single commitee card
+    /* One single commitee card */
     .SingleCard {
         /* margin: auto; */
         margin-bottom: 2%;
@@ -579,7 +579,7 @@
         margin-right: 8%;
     }
 
-    .Nav a:hover {
+    .NavSecondSection a:hover {
         color: #E37C2D;
         transform: scale(1.05);
     }

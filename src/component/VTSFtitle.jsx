@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './style/VTSFtitle.css';
+
 const VTSFtitle = ( props ) => {
 
   const VTSFPath = props.LogoPic.filter(val => val.Logo === 'VTSF').map(val => val.ImagePath).toString();
@@ -24,8 +26,8 @@ const VTSFtitle = ( props ) => {
               <img 
                 alt=''
                 src={VTSFPath}
-                width='50'
-                height='50'
+                width='40'
+                height='40'
                 className='NavImgSmall'
               />
             </a>
@@ -33,7 +35,7 @@ const VTSFtitle = ( props ) => {
             <span className='NavText'>Vancouver Taiwanese Student Forum</span>
         </div>
         <div className='NavSecondSection'>
-          <a href='/'>Home</a>
+          <a className='NavHome' href='/'>Home</a>
           <a href='/Blog'>Blog</a>
           <a href='/Committee'>Committee</a>
           <a href='/Sponsors'>Sponsors</a>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './FormInput.css';
+import './style/FormInput.css';
 
 const FormInput = ( props ) => {
 
