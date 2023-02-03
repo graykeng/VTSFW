@@ -44,9 +44,7 @@ const GetTicket = () => {
   }
 
   useEffect(() => {
-    console.log(formErrors)
     if (Object.keys(formErrors).length === 0 && isSubmit){
-      console.log(formValues);
       try {
         insertTicketInfo(formValues, ID);
         setShowForm(false);
