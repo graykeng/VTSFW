@@ -38,7 +38,7 @@ function App() {
   return (
     <div className="App BGC">
       <VTSFtitle LogoPic={ LogoPic }/>
-      <VTSFnavbar />
+      {/* <VTSFnavbar /> */}
       <Router>
         <Routes>
           <Route path="/" element={<Home EventPic={ EventPic }/>} />

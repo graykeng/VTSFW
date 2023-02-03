@@ -10,6 +10,8 @@ import { workshopOption, dietaryOption, occupationOption, heardOption, trueOrFal
 const GetTicket = () => {
   const [ShowForm, setShowForm] = useState(true);
   const [ShowSuccess, setShowSuccess] = useState(false);
+  const [showCopy, setShowCopy] = useState(true);
+  const [showBack, setShowBack] = useState(false);
 
   useEffect(() => {
     new Clipboard('.copy');
@@ -42,6 +44,12 @@ const GetTicket = () => {
     setFormErrors(validate(formValues));
     setIsSubmit(true);
   }
+
+  const handleRedeem = (e) => {
+    setShowCopy(false);
+    setShowBack(true);
+    alert("Copied!");
+}
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -102,9 +110,7 @@ const GetTicket = () => {
     } else if (values.Email.length > 250) {
       errors.Email = "Email is too long.";
     }
-    if (!values.School) {
-      errors.School = "School is required.";
-    } else if (values.School.length > 250) {
+    if (values.School.length > 250) {
       errors.School = "School is too long.";
     }
     if (!values.Age) {
@@ -145,7 +151,7 @@ const GetTicket = () => {
           <FormInput name="ChnName" type="input" value={formValues.ChnName} onChange={handleChange} errorMessage={formErrors.ChnName} placeholder="Chinese Name" question="Chinese Name" />
           <FormInput name="PhoneNumber" type="input" value={formValues.PhoneNumber} onChange={handleChange} errorMessage={formErrors.PhoneNumber} placeholder="Phone Number" question="Phone Number*" />
           <FormInput name="Email" type="input" value={formValues.Email} onChange={handleChange} errorMessage={formErrors.Email} placeholder="Email" question="Email*" />
-          <FormInput name="School" type="input" value={formValues.School} onChange={handleChange} errorMessage={formErrors.School} placeholder="School" question="School*" />
+          <FormInput name="School" type="input" value={formValues.School} onChange={handleChange} errorMessage={formErrors.School} placeholder="School" question="School" />
           <FormInput name="Age" type="input" value={formValues.Age} onChange={handleChange} errorMessage={formErrors.Age} placeholder="Age" question="Age*" />
           <FormInput name="Taiwanese" type="menu" options={trueOrFalse} onChange={handleChange} errorMessage={formErrors.Taiwanese} question="Are you a Taiwanese?*" />
           <FormInput name="Workshop" type="menu" options={workshopOption} onChange={handleChange} errorMessage={formErrors.Workshop} question="What is the workshop you want to attend?*" />
@@ -161,7 +167,8 @@ const GetTicket = () => {
           <div className='RedeemSection'>
             <h1 className='RedeemH1'>Last step...</h1>
             <p className='EtransferP'>To pay your ticket, please E-transfer $15 to example@gmail.com with your name as comment. Once we confirmed the transaction, we'll proceed your application and send you confirmation Email.</p>
-            <button className="RedeemBt copy" data-clipboard-text="example@gmail.com">Copy Email</button>
+            {showCopy && (<button className="RedeemBt copy" data-clipboard-text="example@gmail.com" onClick={handleRedeem}>Copy Email</button>)}
+            {showBack && (<button className='RedeemBt' onClick={(e) => {window.location.href='/';}}>Back to home page</button>)}
           </div>
         </div>)}
     </div>
