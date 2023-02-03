@@ -40,6 +40,7 @@ const Redeem = () => {
                         </h1>
                         <button onClick={handleRedeem} className="RedeemBt">Redeem</button>
                         <label className='WarningMessage'>*This button can only click by a STAFF!</label>
+                        <br/>
                         <label className='WarningMessage'>*Once you redeem your ticket, your ticket will be invalid.</label>
                     </div>
                 </div>
