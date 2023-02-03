@@ -110,22 +110,22 @@ const GetTicket = () => {
     } else if (!numRegex.test(values.Age)) {
       errors.Age = "Age can only contain numbers."
     }
-    if (values.Taiwanese == "Select"){
+    if (values.Taiwanese === "Select"){
       errors.Taiwanese = "Select yes or no.";
     }
-    if (values.Workshop == "Select workshop"){
+    if (values.Workshop === "Select workshop"){
       errors.Workshop = "Select the workshop you want to attend.";
     }
-    if (values.Dietary == "Select dietary option"){
+    if (values.Dietary === "Select dietary option"){
       errors.Dietary = "Select your dietary option.";
     }
-    if (values.Occupation == "Select occupation"){
+    if (values.Occupation === "Select occupation"){
       errors.Occupation = "Select your occupation.";
     }
-    if (values.Attended == "Select"){
+    if (values.Attended === "Select"){
       errors.Attended = "Select yes or no.";
     }
-    if (values.Heard == "Select"){
+    if (values.Heard === "Select"){
       errors.Heard = "Select how you heard about this event.";
     }
     return errors;
