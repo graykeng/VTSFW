@@ -1,0 +1,26 @@
+/* desktop */
+@media screen and (min-width: 1200px) {
+    /* For the section stor all the cards in commitee page */
+    .AllCards {
+        width: 75%;
+        margin: auto;
+    }
+}
+
+/* half desktop */
+@media screen and (min-width: 801px) and (max-width: 1199px) {
+    /* For the section stor all the cards in commitee page */
+    .AllCards {
+        width: 85%;
+        margin: auto;
+    }
+}
+
+/* mobile devices */
+@media screen and (max-width: 800px) {
+    /* For the section stor all the cards in commitee page */
+    .AllCards {
+        width: 95%;
+        margin: auto;
+    }
+}

@@ -4,7 +4,7 @@ import { Tab } from 'react-bootstrap';
 import { Tabs } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
 
-import '../App.css';
+import './style/Committee.css';
 
 import CommitteeCard from '../component/CommitteeCard';
 

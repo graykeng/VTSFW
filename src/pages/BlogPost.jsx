@@ -6,7 +6,7 @@ import moment from 'moment';
 
 import { getPost } from '../ApiCaller';
 
-import '../App.css'
+import './style/BlogPost.css';
 
 const BlogPost = () => {
   const {id} = useParams();

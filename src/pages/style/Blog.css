@@ -1,0 +1,197 @@
+/* desktop */
+@media screen and (min-width: 1200px) {
+    /* whole blog grid page */
+    .BlogSection {
+        display: felx;
+        justify-content: center;    
+        align-items: center; 
+        padding-left: 20%;
+        padding-right: 20%;
+        padding-top: 2%;
+        margin-bottom: 2%;
+    }
+
+    /* blog single column in a single row */
+    .BlogCol {
+        margin: 5%;
+        vertical-align: middle;
+     }
+     
+    /* single img on the blog grid */
+    .BlogGridSingle {
+        width: 100%;
+        transition: transform 0.3s;
+    }
+    .BlogGridSingle:hover {
+        transform: scale(1.05);
+    }
+
+    /* "Blog Posts" on blog grid */
+    .BlogGridTitle {
+        font-family: 'Jost*', sans-serif;
+        text-align: center;
+        margin-top: 5%;
+    }
+
+    /* button container */
+    .ButtonField {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* "Back to top" button */
+    .TopButton {
+        width: 50%;
+        padding: 10px;
+        border: none;
+        background-color: #227BFF;
+        color: white;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 18px;
+        cursor: pointer;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        transition: transform 0.3s;
+        margin-right: 2%;
+        margin-left: 2%;
+        justify-content: center;
+        align-items: center;
+    }
+    .TopButton:hover {
+        transform: scale(1.05);
+    }
+}
+
+/* half desktop */
+@media screen and (min-width: 801px) and (max-width: 1199px) {
+    /* whole blog grid page */
+    .BlogSection {
+        display: felx;
+        justify-content: center;    
+        align-items: center; 
+        padding-left: 20%;
+        padding-right: 20%;
+        padding-top: 2%;
+        margin-bottom: 2%;
+    }
+
+    /* blog single column in a single row */
+    .BlogCol {
+        margin: 5%;
+        vertical-align: middle;
+     }
+     
+    /* single img on the blog grid */
+    .BlogGridSingle {
+        width: 100%;
+        transition: transform 0.3s;
+    }
+    .BlogGridSingle:hover {
+        transform: scale(1.05);
+    }
+
+    /* "Blog Posts" on blog grid */
+    .BlogGridTitle {
+        font-family: 'Jost*', sans-serif;
+        text-align: center;
+        margin-top: 5%;
+    }
+
+    /* button container */
+    .ButtonField {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* "Back to top" button */
+    .TopButton {
+        width: 50%;
+        padding: 10px;
+        border: none;
+        background-color: #227BFF;
+        color: white;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 18px;
+        cursor: pointer;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        transition: transform 0.3s;
+        margin-right: 2%;
+        margin-left: 2%;
+        justify-content: center;
+        align-items: center;
+    }
+    .TopButton:hover {
+        transform: scale(1.05);
+    }
+}
+
+/* mobile devices */
+@media screen and (max-width: 800px) {
+    /* whole blog grid page */
+    .BlogSection {
+        display: felx;
+        justify-content: center;    
+        align-items: center; 
+        padding-left: 20%;
+        padding-right: 20%;
+        padding-top: 2%;
+        margin-bottom: 2%;
+    }
+
+    /* blog single column in a single row */
+    .BlogCol {
+        margin: 5%;
+        vertical-align: middle;
+     }
+     
+    /* single img on the blog grid */
+    .BlogGridSingle {
+        width: 100%;
+        transition: transform 0.3s;
+    }
+    .BlogGridSingle:hover {
+        transform: scale(1.05);
+    }
+
+    /* "Blog Posts" on blog grid */
+    .BlogGridTitle {
+        font-family: 'Jost*', sans-serif;
+        text-align: center;
+        margin-top: 5%;
+    }
+
+    /* button container */
+    .ButtonField {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* "Back to top" button */
+    .TopButton {
+        width: 50%;
+        padding: 10px;
+        border: none;
+        background-color: #227BFF;
+        color: white;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 18px;
+        cursor: pointer;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        transition: transform 0.3s;
+        margin-right: 2%;
+        margin-left: 2%;
+        justify-content: center;
+        align-items: center;
+    }
+    .TopButton:hover {
+        transform: scale(1.05);
+    }
+}

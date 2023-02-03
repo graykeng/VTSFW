@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './style/VTSFfooter.css'
+
 const VTSFfooter = ( props ) => {
 
     const VTSFPath = props.LogoPic.filter(val => val.Logo === 'VTSF').map(val => val.ImagePath).toString();

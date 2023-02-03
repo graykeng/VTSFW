@@ -114,7 +114,7 @@
 
     /* img section */
     .NavImgSection {
-        margin-left: 10px;
+        margin-left: 100%;
     }
 
     /* big VTSF logo */
@@ -146,7 +146,7 @@
         height: 100%;
         display: flex;
         align-items: center;
-        font-size: 1em;
+        font-size: 1.2em;
         margin-right: 8%;
     }
     .NavSecondSection a:hover {
@@ -156,13 +156,13 @@
 
     /* "Get Ticket" button */
     .NavTicketButton {
-        height: 30px;
+        height: 35px;
         border: none;
         background-color: #227BFF;
         color: white;
         border-radius: 5px;
         font-weight: bold;
-        font-size: 12px;
+        font-size: 15px;
         cursor: pointer;
         margin-top: 30px;
         margin-bottom: 30px;

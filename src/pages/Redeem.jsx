@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 
 import { getTicketStatus, updateRedeem } from '../ApiCaller';
+import './style/Redeem.css';
 
 const Redeem = () => {
     const {uuid} = useParams();
@@ -29,18 +31,25 @@ const Redeem = () => {
         case 0:
             page = 
                 <div className='RedeemPage'>
+                    <Helmet>
+                        <title>Redeem | {FirstName}</title>
+                    </Helmet>
                     <div className='RedeemSection'>
                         <h1 className='RedeemH1'>
                             Welcome, {FirstName}!
                         </h1>
                         <button onClick={handleRedeem} className="RedeemBt">Redeem</button>
-                        <label>*Once you redeem your ticket, your ticket will be invalid.</label>
+                        <label className='WarningMessage'>*This button can only click by a STAFF!</label>
+                        <label className='WarningMessage'>*Once you redeem your ticket, your ticket will be invalid.</label>
                     </div>
                 </div>
             break;
         case 1:
             page =
                 <div className='RedeemPage'>
+                    <Helmet>
+                        <title>Redeem | Redeemed</title>
+                    </Helmet>
                     <div className='RedeemSection'>
                         <h1 className='RedeemH1'>
                             Hi, {FirstName}, your ticket has been redeemed. Enjoy your VTSF trip!
@@ -52,6 +61,9 @@ const Redeem = () => {
         default:
             page =
                 <div className='RedeemPage'>
+                    <Helmet>
+                        <title>Redeem | Failed</title>
+                    </Helmet>
                     <div className='RedeemSection'>
                         <h1 className='RedeemH1'>
                             Hi, this ticketID does not exist, please get your ticket.

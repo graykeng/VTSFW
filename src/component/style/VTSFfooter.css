@@ -1,14 +1,41 @@
 /* desktop */
 @media screen and (min-width: 1200px) {
-    
+    /* Whole footer */
+    .Footer {
+        background-color: #DBD2C6;
+    }
+
+    /* Only for the interval of logos on the footer */
+    .Logo {
+        margin-right: 10px;
+    }
+
 }
 
 /* half desktop */
 @media screen and (min-width: 801px) and (max-width: 1199px) {
-    
+    /* Whole footer */
+    .Footer {
+        background-color: #DBD2C6;
+    }
+
+    /* Only for the interval of logos on the footer */
+    .Logo {
+        margin-right: 10px;
+    }
+
 }
 
 /* mobile devices */
 @media screen and (max-width: 800px) {
-    
+    /* Whole footer */
+    .Footer {
+        background-color: #DBD2C6;
+    }
+
+    /* Only for the interval of logos on the footer */
+    .Logo {
+        margin-right: 10px;
+    }
+
 }

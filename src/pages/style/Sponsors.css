@@ -1,0 +1,49 @@
+@import url('https://fonts.cdnfonts.com/css/jost');
+
+/* desktop */
+@media screen and (min-width: 1200px) {
+    /* For the section stor all the cards in sponsor page */
+    .AllCards {
+        width: 75%;
+        margin: auto;
+    }
+
+    /* sponsor rank text */
+    .SponsorRank {
+        font-family: 'Jost*', sans-serif;
+        text-align: center;
+        margin-top: 5%;
+    }
+}
+
+/* half desktop */
+@media screen and (min-width: 801px) and (max-width: 1199px) {
+    /* For the section stor all the cards in sponsor page */
+    .AllCards {
+        width: 85%;
+        margin: auto;
+    }
+
+    /* sponsor rank text */
+    .SponsorRank {
+        font-family: 'Jost*', sans-serif;
+        text-align: center;
+        margin-top: 5%;
+    }
+}
+
+/* mobile devices */
+@media screen and (max-width: 800px) {
+    /* For the section stor all the cards in sponsor page */
+    .AllCards {
+        width: 95%;
+        margin: auto;
+    }
+
+    /* sponsor rank text */
+    .SponsorRank {
+        font-family: 'Jost*', sans-serif;
+        text-align: center;
+        margin-top: 5%;
+    }
+}

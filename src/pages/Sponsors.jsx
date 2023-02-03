@@ -5,6 +5,7 @@ import { Tabs } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
 
 import SponsorCard from '../component/SponsorCard';
+import './style/Sponsors.css';
 
 const Sponsors = ( props ) => {
   

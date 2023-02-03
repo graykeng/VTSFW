@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import Clipboard from 'clipboard';
+import { Helmet } from 'react-helmet'
 
+import './style/GetTicket.css'
 import FormInput from '../component/FormInput';
-
 import { insertTicketInfo } from '../ApiCaller';
 import { workshopOption, dietaryOption, occupationOption, heardOption, trueOrFalse } from '../Data';
 
@@ -143,6 +144,9 @@ const GetTicket = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>VTSF | Ticket</title>
+      </Helmet>
       {ShowForm &&(<div className='TicketPage'>
         <form onSubmit={handleSubmit} className="FormSection">
           <h1 className='FormTitle'>Register(Testing)</h1>
@@ -159,16 +163,16 @@ const GetTicket = () => {
           <FormInput name="Occupation" type="menu" options={occupationOption} onChange={handleChange} errorMessage={formErrors.Occupation} question="What is your current occupation?*" />
           <FormInput name="Attended" type="menu" options={trueOrFalse} onChange={handleChange} errorMessage={formErrors.Attended} question="Did you attend the event in 2022?*" />
           <FormInput name="Heard" type="menu" options={heardOption} onChange={handleChange} errorMessage={formErrors.Heard} question="How did you hear about this event?*" />
-          <button className='TicketSubmit'>Submit</button>
+          <button className='TicketSubmitBt'>Submit</button>
         </form>
       </div>)}
       {ShowSuccess &&(
-        <div className='RedeemPage'>
-          <div className='RedeemSection'>
-            <h1 className='RedeemH1'>Last step...</h1>
+        <div className='ReminderPage'>
+          <div className='ReminderSection'>
+            <h1 className='ReminderH1'>Last step...</h1>
             <p className='EtransferP'>To pay your ticket, please E-transfer $15 to example@gmail.com with your name as comment. Once we confirmed the transaction, we'll proceed your application and send you confirmation Email.</p>
-            {showCopy && (<button className="RedeemBt copy" data-clipboard-text="example@gmail.com" onClick={handleRedeem}>Copy Email</button>)}
-            {showBack && (<button className='RedeemBt' onClick={(e) => {window.location.href='/';}}>Back to home page</button>)}
+            {showCopy && (<button className="ReminderBt copy" data-clipboard-text="example@gmail.com" onClick={handleRedeem}>Copy Email</button>)}
+            {showBack && (<button className='ReminderBt' onClick={(e) => {window.location.href='/';}}>Back to home page</button>)}
           </div>
         </div>)}
     </div>
