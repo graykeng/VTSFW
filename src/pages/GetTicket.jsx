@@ -54,6 +54,7 @@ const GetTicket = () => {
         insertTicketInfo(formValues, ID);
         setShowForm(false);
         setShowSuccess(true);
+        window.scrollTo(0,0);
       } catch (error) {
         console.error(error);
         alert("There's something wrong with our server. Please check back later.");

@@ -55,9 +55,9 @@ export const insertTicketInfo = (data, uuid) => {
         Attended: data.Attended,
         Heard: data.Heard,
         })
-        .then(res => {
-            console.log(res.data);
-        })
+        // .then(res => {
+        //     console.log(res.data);
+        // })
         .catch(err => {
             console.error(err);
         })
