@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+
+import './FormInput.css';
 
 const FormInput = ( props ) => {
 
@@ -10,7 +12,7 @@ const FormInput = ( props ) => {
             <div className='SingleInputArea'>
                 <div>
                     <br/>
-                    <label className='InputLabel'>{props.question}</label>
+                    <label className='FormQuestionLabel'>{props.question}</label>
                 </div>
                 <input name={props.name} value={props.value} onChange={props.onChange} className='FormInput' placeholder={props.placeholder}/>
                 <div className='ErrorMessage'>
@@ -23,7 +25,7 @@ const FormInput = ( props ) => {
             <div className='SingleInputArea'>
                 <div>
                     <br/>
-                    <label className='InputLabel'>{props.question}</label>
+                    <label className='FormQuestionLabel'>{props.question}</label>
                 </div>
                 <select className='FormInput' name={props.name} onChange={props.onChange}>
                     {props.options.map((val, index) => (

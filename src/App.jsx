@@ -10,12 +10,13 @@ import Sponsors from "./pages/Sponsors";
 import BlogPost from "./pages/BlogPost";
 import GetTicket from "./pages/GetTicket";
 
-import VTSFnavbar from "./component/VTSFnavbar";
+
 import VTSFtitle from "./component/VTSFtitle";
 import VTSFfooter from "./component/VTSFfooter";
 
 import { getEventPic, getCommitteeInfo, getSponsorsInfo, getLogoPic, getBlogPostGrid } from "./ApiCaller";
 import Redeem from "./pages/Redeem";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 

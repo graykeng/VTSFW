@@ -1,0 +1,83 @@
+/* desktop */
+@media screen and (min-width: 1200px) {
+    /* whole input area */
+    .SingleInputArea {
+        width: 300px;
+    }
+
+    /* question text */
+    .FormQuestionLabel {
+        font-size: 14px;
+        color: gray;
+    }
+
+    /* form error message */
+    .ErrorMessage{
+        font-size: 0.8em;
+        color: red;
+        white-space: normal;
+    }
+
+    /* input field */
+    .FormInput {
+        padding: 15px;
+        margin: 10px 0px;
+        width: 300px;
+    }
+}
+
+/* half desktop */
+@media screen and (min-width: 801px) and (max-width: 1199px) {
+    /* whole input area */
+    .SingleInputArea {
+        width: 300px;
+    }
+
+    /* question text */
+    .FormQuestionLabel {
+        font-size: 14px;
+        color: gray;
+    }
+
+    /* form error message */
+    .ErrorMessage{
+        font-size: 0.8em;
+        color: red;
+        white-space: normal;
+    }
+
+    /* input field */
+    .FormInput {
+        padding: 15px;
+        margin: 10px 0px;
+        width: 280px;
+    }
+}
+
+/* mobile devices */
+@media screen and (max-width: 800px) {
+    /* whole input area */
+    .SingleInputArea {
+        width: 300px;
+    }
+
+    /* question text */
+    .FormQuestionLabel {
+        font-size: 14px;
+        color: gray;
+    }
+
+    /* form error message */
+    .ErrorMessage{
+        font-size: 0.8em;
+        color: red;
+        white-space: normal;
+    }
+
+    /* input field */
+    .FormInput {
+        padding: 15px;
+        margin: 10px 0px;
+        width: 300px;
+    }
+}

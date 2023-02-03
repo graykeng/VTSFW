@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../App.css';
+import './CommitteeCard.css';
 
 const CommitteeCard = ( props ) => {
 
@@ -10,7 +10,7 @@ const CommitteeCard = ( props ) => {
         <img src={props.CommitteeInfo.ImagePath} className="CardImage" alt={props.CommitteeInfo.FirstName} />
       </div>
 
-      <div className='CardTitle'>
+      <div className='CommitteeCardTitle'>
         <h3>
           {props.CommitteeInfo.FirstName + ' ' + props.CommitteeInfo.LastName}
         </h3>

@@ -70,12 +70,6 @@
     font-size: 1.3em;
 }
 
-.ErrorMessage{
-    font-size: 0.8em;
-    color: red;
-    white-space: normal;
-}
-
 .GetTicketBt{
     margin-right: 25px;
 }
@@ -248,10 +242,13 @@
 
     .NavText {
         font-family: 'Jost*', sans-serif;
-        font-size: 2.5em;
+        font-size: 2em;
         color: white;
         line-height: 2.5;
         margin-left: 20px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .NavSecondSection {
@@ -306,7 +303,7 @@
         /* border: 5px solid black; */
     }
 
-    /* One single commitee card */
+    One single commitee card
     .SingleCard {
         /* margin: auto; */
         margin-bottom: 2%;
@@ -563,11 +560,6 @@
     }
 
     .NavText {
-        font-family: 'Jost*', sans-serif;
-        font-size: 2.5em;
-        color: white;
-        line-height: 2.5;
-        margin-left: 20px;
         display: none;
     }
 
