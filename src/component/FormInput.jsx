@@ -7,28 +7,32 @@ const FormInput = ( props ) => {
     switch (props.type) {
         case "input":
             inputType = 
-            <div>
+            <div className='SingleInputArea'>
                 <div>
                     <br/>
                     <label className='InputLabel'>{props.question}</label>
                 </div>
-                <input name={props.name} className='FormInput' placeholder={props.placeholder}/>
-                <span>{props.errorMessage}</span>
+                <input name={props.name} value={props.value} onChange={props.onChange} className='FormInput' placeholder={props.placeholder}/>
+                <div className='ErrorMessage'>
+                    <label>{props.errorMessage}</label>
+                </div>
             </div>
             break;
         case "menu":
             inputType =
-            <div>
+            <div className='SingleInputArea'>
                 <div>
                     <br/>
                     <label className='InputLabel'>{props.question}</label>
                 </div>
-                <select className='FormInput' name={props.name}>
+                <select className='FormInput' name={props.name} onChange={props.onChange}>
                     {props.options.map((val, index) => (
                         <option value={val} key={index}>{val}</option>
                     ))}
                 </select>
-                <span>{props.errorMessage}</span>
+                <div className='ErrorMessage'>
+                    <label>{props.errorMessage}</label>
+                </div>
             </div>
             break;
         default:

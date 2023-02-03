@@ -3,6 +3,11 @@ export const EventDetailsChn = "溫哥華台灣學生論壇 (VTSF) 是一個讓�
 export const EventDetailsEng = "The inaugural Vancouver Taiwanese Student Forum (VTSF) is a platform for students to engage in professional development with leaders in various sectors including industry, academia, and the government. The core of the event includes keynote speeches and professional workshops which are specifically designed for students currently enrolled in a post-secondary degree/diploma. This bilingual in-person event is a pioneer effort and ambitious endeavor to bring together the Taiwanese community. The goal of this platform is to allow for the sharing of experiences and the mentoring of young scholars with a Taiwanese descent who may have grown up in diverse backgrounds.";
 
 // GetTicket Page
-export const workshopArr = ["Select workshop", "WS1", "WS2", "WS3", "WS4", "WS5", "WS6"];
-export const dietaryArr = ["Select dietary option", "None", "Vegetarian", "Gluten allergy"];
-export const OccupationArr = ["Select occupation", "University student", "Graduate student", "Part-time employee", "Full-time employee", "Other"];
+export const workshopOption = ["Select workshop", "WS1", "WS2", "WS3", "WS4", "WS5", "WS6"];
+export const dietaryOption = ["Select dietary option", "None", "Vegetarian", "Gluten allergy"];
+export const occupationOption = ["Select occupation", "University student", "Graduate student", "Part-time employee", "Full-time employee", "Other"];
+export const heardOption = ["Select", "Facebook", "Instagram", "Friends", "Taiwanese Association"];
+export const trueOrFalse = ["Select", "Yes", "No"];
+
+
+

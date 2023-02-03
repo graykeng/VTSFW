@@ -69,6 +69,12 @@
     font-size: 1.3em;
 }
 
+.ErrorMessage{
+    font-size: 0.8em;
+    color: red;
+    white-space: normal;
+}
+
 /* BlogPost Page */
 @media screen and (min-width: 900px) {
     .PostSection {
@@ -274,7 +280,7 @@
     .FormInput {
         padding: 15px;
         margin: 10px 0px;
-        width: 280px;
+        width: 300px;
     }
 
     .TicketPage {
@@ -324,6 +330,10 @@
     .InputLabel {
         font-size: 14px;
         color: gray;
+    }
+
+    .SingleInputArea {
+        width: 300px;
     }
 
     /* Redeem Page */
