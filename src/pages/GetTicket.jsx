@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import Clipboard from 'clipboard';
 
 import FormInput from '../component/FormInput';
 
@@ -9,6 +10,10 @@ import { workshopOption, dietaryOption, occupationOption, heardOption, trueOrFal
 const GetTicket = () => {
   const [ShowForm, setShowForm] = useState(true);
   const [ShowSuccess, setShowSuccess] = useState(false);
+
+  useEffect(() => {
+    new Clipboard('.copy');
+  }, [])
 
   const initialValues = { 
     FirstName: "",
@@ -155,10 +160,7 @@ const GetTicket = () => {
           <div className='RedeemSection'>
             <h1 className='RedeemH1'>Last step...</h1>
             <p className='EtransferP'>To pay your ticket, please E-transfer $15 to example@gmail.com with your name as comment. Once we confirmed the transaction, we'll proceed your application and send you confirmation Email.</p>
-            <button onClick={() => {
-              navigator.clipboard.writeText("example@gmail.com");
-              alert("Copied!");
-            }} className="RedeemBt">Copy Email</button>
+            <button className="RedeemBt copy" data-clipboard-text="example@gmail.com">Copy Email</button>
           </div>
         </div>)}
     </div>
