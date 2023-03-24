@@ -1,0 +1,87 @@
+.nav-container {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center; /* 添加此属性以使导航栏居中 */
+    padding: 1rem 0;
+  }
+  
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center; /* 添加此属性以使列表项居中 */
+    align-items: center; /* 添加此属性以使列表项垂直居中 */
+    margin: 0; /* 添加此属性以去除默认的外边距 */
+}
+
+.navbar li {
+    margin: 0 1rem;
+    position: relative; /* 添加此属性以确保hover效果生效 */
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    transition: color 0.5s ease-in-out; /* 添加此属性以实现渐变的hover效果 */
+    display: inline-block; /* 将元素更改为内联块级元素，以便应用内边距 */
+    padding: 10px 10px; /* 为链接添加内边距 */
+    line-height: 2; /* 增加行高以提高垂直点击范围 */
+}
+
+.navbar li:hover a.noStyle {
+    color: inherit; /* 悬停时使用与非悬停状态相同的颜色 */
+    text-decoration: none; /* 移除悬停时的下划线 */
+}
+
+.navbar li:hover a:not(.noStyle) {
+    color: #008FC7; /*仅在a元素包含hoverEffect类名时应用hover效果 */
+}
+
+.ticketButton-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.custom-button {
+    border: none;
+    padding: 10px 20px;
+    background-color: #F5F5F5;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+    background-color: #008FC7;
+    color: #fff;
+}
+
+.left-button {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    position: relative;
+}
+
+.right-button {
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    margin-left: 0; /* 使两个按钮之间没有间隙 */
+}
+
+.left-button::after {
+    content: '';
+  position: absolute;
+  width: 1.5px; /* 设置分隔线的宽度 */
+  height: calc(100% - 10px); /* 设置分隔线的高度为按钮高度减去所需的间距 */
+  background-color: #B8B8B8; /* 设置分隔线的颜色 */
+  top: 5px; /* 设置分隔线距离按钮顶部的距离 */
+  right: -1px; /* 将分隔线放在左侧按钮的右侧边缘 */
+}

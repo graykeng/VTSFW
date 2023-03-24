@@ -9,9 +9,11 @@ import Committee from "./pages/Committee";
 import Sponsors from "./pages/Sponsors";
 import BlogPost from "./pages/BlogPost";
 import GetTicket from "./pages/GetTicket";
+import FHome from "./pages/FHome";
+import FNav from "./component/FNav";
 
 
-import VTSFtitle from "./component/VTSFtitle";
+//import VTSFtitle from "./component/VTSFtitle";
 import VTSFfooter from "./component/VTSFfooter";
 
 import { getEventPic, getCommitteeInfo, getSponsorsInfo, getLogoPic, getBlogPostGrid } from "./ApiCaller";
@@ -38,8 +40,10 @@ function App() {
 
   return (
     <div className="App BGC">
-      <VTSFtitle LogoPic={ LogoPic }/>
-      {/* <VTSFnavbar /> */}
+      {/* <VTSFtitle LogoPic={ LogoPic }/> */}
+      <header>
+        <FNav LogoPic={ LogoPic} />
+      </header>
       <Router>
         <Routes>
           <Route path="/" element={<Home EventPic={ EventPic }/>} />
@@ -50,6 +54,7 @@ function App() {
           <Route path="/BlogPost/:id" element={<BlogPost />} />
           <Route path="/GetTicket" element={<GetTicket />} />
           <Route path="/Redeem/:uuid" element={<Redeem />} />
+          <Route path="/Home" element={<FHome LogoPic={ LogoPic }/>} />
         </Routes>
       </Router>
       <VTSFfooter LogoPic={ LogoPic }/>
