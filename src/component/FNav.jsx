@@ -2,12 +2,16 @@ import React from 'react'
 import './style/FNav.css';
 
 const FNav = ( props ) => {
+    // const [language, setLanguage] = useState('Chn');
 
     const VTSFPath = props.LogoPic.filter(val => val.Logo === 'VTSF').map(val => val.ImagePath).toString();
 
     function NotYet(){
         alert("We haven't started selling the ticket for 2023.");
-      }
+    };
+
+    
+    
 
     return (
         <div>
@@ -19,8 +23,8 @@ const FNav = ( props ) => {
                             <img
                                 alt=''
                                 src={VTSFPath}
-                                width='100'
-                                height='100'
+                                width='70'
+                                height='70'
                             />
                             </a>
                         </li>
@@ -44,6 +48,9 @@ const FNav = ( props ) => {
                 <div className='ticketButton-container'>
                     <button className='custom-button left-button' onClick={NotYet}>點我購票！</button>
                     <button className='custom-button right-button' onClick={NotYet}>買起來:D</button>
+                </div>
+                <div className='languageButton-container'>
+                    {/* <button className='languageButton' onClick={}>EN</button> */}
                 </div>
             </div>
         </div>

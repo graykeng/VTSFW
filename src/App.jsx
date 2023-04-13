@@ -54,7 +54,7 @@ function App() {
           <Route path="/BlogPost/:id" element={<BlogPost />} />
           <Route path="/GetTicket" element={<GetTicket />} />
           <Route path="/Redeem/:uuid" element={<Redeem />} />
-          <Route path="/Home" element={<FHome LogoPic={ LogoPic }/>} />
+          <Route path="/Home" element={<FHome EventPic={ EventPic }/>} />
         </Routes>
       </Router>
       <VTSFfooter LogoPic={ LogoPic }/>

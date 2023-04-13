@@ -1,29 +1,53 @@
 import React, { useState, useEffect } from 'react';
-import './Carousel.css';
 
-const Carousel = ({ images, interval }) => {
-  const [activeIndex, setActiveIndex] = useState(0);
+import './style/FCarousel.css';
+
+const Carousel = (props) => {
+  const imagePaths = props.EventPic
+    .filter(val => val.InPage === 'Carousel')
+    .map(val => val.ImagePath);
+
+  const [currentImage, setCurrentImage] = useState(0);
+  const [intervalId, setIntervalId] = useState(null);
+  // const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setActiveIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, interval);
+    startTimer();
 
     return () => {
-      clearTimeout(timer);
+      clearInterval(intervalId);
     };
-  }, [activeIndex, images.length, interval]);
+  }, [imagePaths.length]);
+
+  const startTimer = () => {
+    if (intervalId) {
+      clearInterval(intervalId);
+    }
+    const newIntervalId = setInterval(() => {
+      setCurrentImage((prevImage) => (prevImage + 1) % imagePaths.length);
+    }, 3000);
+    setIntervalId(newIntervalId);
+  };
+
+  const handlePrev = () => {
+    setCurrentImage((currentImage - 1 + imagePaths.length) % imagePaths.length);
+    startTimer();
+  };
+
+  const handleNext = () => {
+    setCurrentImage((currentImage + 1) % imagePaths.length);
+    startTimer();
+  };
 
   return (
-    <div className="carousel">
-      {images.map((image, index) => (
-        <div
-          key={index}
-          className={`carousel-item ${index === activeIndex ? 'active' : ''}`}
-        >
-          <img src={image} alt="" />
+    <div>
+      <div className="carousel-container">
+        <div className='carousel-inner'>
+          <button className='prevButton' onClick={handlePrev}></button>
+          <button className='nextButton' onClick={handleNext}></button>
+          <img src={imagePaths[currentImage]} alt="carousel" />
         </div>
-      ))}
+      </div>
     </div>
   );
 };
