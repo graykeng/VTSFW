@@ -4,7 +4,7 @@ import './style/VTSFfooter.css'
 
 const VTSFfooter = ( props ) => {
 
-    const VTSFPath = props.LogoPic.filter(val => val.Logo === 'VTSF').map(val => val.ImagePath).toString();
+    const VTSFPath = props.LogoPic.filter(val => val.Logo === 'VTSF-BlackIcon-NoBG').map(val => val.ImagePath).toString();
     const InstagramPath = props.LogoPic.filter(val => val.Logo === 'Instagram').map(val => val.ImagePath).toString();
     const FacebookPath = props.LogoPic.filter(val => val.Logo === 'Facebook').map(val => val.ImagePath).toString();
     const GithubPath = props.LogoPic.filter(val => val.Logo === 'Github').map(val => val.ImagePath).toString();

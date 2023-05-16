@@ -9,12 +9,14 @@ import Committee from "./pages/Committee";
 import Sponsors from "./pages/Sponsors";
 import BlogPost from "./pages/BlogPost";
 import GetTicket from "./pages/GetTicket";
+import FHome from "./pages/FHome";
+import FNav from "./component/FNav";
 
 
-import VTSFtitle from "./component/VTSFtitle";
+//import VTSFtitle from "./component/VTSFtitle";
 import VTSFfooter from "./component/VTSFfooter";
 
-import { getEventPic, getCommitteeInfo, getSponsorsInfo, getLogoPic, getBlogPostGrid } from "./ApiCaller";
+import { getEventPic, getCommitteeInfo, getSponsorsInfo, getLogoPic, getBlogPostGrid, getBlogPostScroll } from "./ApiCaller";
 import Redeem from "./pages/Redeem";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -26,6 +28,7 @@ function App() {
   const [SponsorsInfo, setSponsorsInfo] = useState([]);
   const [LogoPic, setLogoPic] = useState([]);
   const [BlogPostGrid, setBlogPostGrid] = useState([]);
+  const [BlogPostScroll, setBlogPostScroll] = useState([]);
 
   // Render only once by using useEffect
   useEffect(() => {
@@ -34,15 +37,18 @@ function App() {
     getSponsorsInfo().then(data => setSponsorsInfo(data));
     getLogoPic().then(data => setLogoPic(data));
     getBlogPostGrid().then(data => setBlogPostGrid(data));
+    getBlogPostScroll().then(data => setBlogPostScroll(data));
   }, [])
 
   return (
     <div className="App BGC">
-      <VTSFtitle LogoPic={ LogoPic }/>
-      {/* <VTSFnavbar /> */}
+      {/* <VTSFtitle LogoPic={ LogoPic }/> */}
+      <header>
+        <FNav LogoPic={ LogoPic } />
+      </header>
       <Router>
         <Routes>
-          <Route path="/" element={<Home EventPic={ EventPic }/>} />
+          <Route path="/Home" element={<Home EventPic={ EventPic }/>} />
           <Route path="/Gallery" element={<Gallery EventInfo={ EventPic }/>} />
           <Route path="/Blog" element={<Blog BlogPostGrid={ BlogPostGrid }/>} />
           <Route path="/Committee" element={<Committee CommitteeInfo={ CommitteeInfo }/>} />
@@ -50,6 +56,7 @@ function App() {
           <Route path="/BlogPost/:id" element={<BlogPost />} />
           <Route path="/GetTicket" element={<GetTicket />} />
           <Route path="/Redeem/:uuid" element={<Redeem />} />
+          <Route path="/" element={<FHome EventPic={ EventPic } LogoPic={ LogoPic } BlogPostScroll={ BlogPostScroll }/>} />
         </Routes>
       </Router>
       <VTSFfooter LogoPic={ LogoPic }/>

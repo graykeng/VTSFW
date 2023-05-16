@@ -1,0 +1,183 @@
+@media screen and (min-width: 800px) {
+    .nav-container {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .navbar {
+        display: flex;
+        justify-content: center;
+        padding: 1rem 0;
+      }
+      
+    .navbar ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+    
+    .navbar li {
+        margin: 0 1rem;
+        position: relative;
+    }
+    
+    .navbar a {
+        text-decoration: none;
+        color: #000;
+        font-weight: 600;
+        transition: color 0.3s ease-in-out;
+        display: inline-block;
+        padding: 10px 10px;
+        line-height: 2;
+    }
+    
+    .navbar li:hover a.noStyle {
+        color: inherit;
+        text-decoration: none;
+    }
+    
+    .navbar li:hover a:not(.noStyle) {
+        color: #008FC7;
+    }
+    
+    .ticketButton-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 20px;
+    }
+    
+    .custom-button {
+        border: none;
+        padding: 10px 20px;
+        background-color: #F5F5F5;
+        color: #000;
+        font-weight: bold;
+        cursor: pointer;
+        outline: none;
+        transition: background-color 0.3s ease;
+    }
+    
+    .custom-button:hover {
+        background-color: #008FC7;
+        color: #fff;
+    }
+    
+    .left-button {
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+        position: relative;
+    }
+    
+    .right-button {
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+        margin-left: 0;
+    }
+    
+    .left-button::after {
+        content: '';
+      position: absolute;
+      width: 1.5px;
+      height: calc(100% - 10px);
+      background-color: #B8B8B8;
+      top: 5px;
+      right: -1px;
+    }
+    
+    .disabled-link {
+        pointer-events: none;
+        cursor: not-allowed;
+        opacity: 0.6;
+      }
+    .phone-display{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .nav-container {
+        display: flex;
+        justify-content: left;
+    }
+    
+    .navbar {
+        display: flex;
+        justify-content: left;
+      }
+      
+    .navbar ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        margin: 0;
+    }
+
+    .navbar img {
+        margin-right: 15px;
+    }
+    
+    .navbar li {
+        margin: 0;
+        position: relative;
+    }
+    
+    .navbar a {
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+        transition: color 0.3s ease-in-out;
+        display: inline-block;
+        line-height: 2;
+        font-size: 12px;
+    }
+    
+    .navbar li:hover a.noStyle {
+        color: inherit;
+        text-decoration: none;
+    }
+    
+    .navbar li:hover a:not(.noStyle) {
+        color: #008FC7;
+    }
+    
+    .ticketButton-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 20px;
+    }
+    
+    .custom-button {
+        border: none;
+        border-radius: 30%;
+        padding: 5px 5px;
+        background-color: #F5F5F5;
+        color: #000;
+        font-weight: bold;
+        font-size: 15px;
+        outline: none;
+        transition: background-color 0.3s ease;
+        margin-right: 15px;
+    }
+    
+    .custom-button:hover {
+        background-color: #008FC7;
+        color: #fff;
+    }
+    
+
+    
+    .disabled-link {
+        pointer-events: none;
+        cursor: not-allowed;
+        opacity: 0.6;
+      }
+    
+    .phone-no-display {
+        display:none;
+    }
+}
