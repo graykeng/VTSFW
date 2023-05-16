@@ -4,6 +4,7 @@ import './style/FNav.css';
 const FNav = ( props ) => {
     // const [language, setLanguage] = useState('Chn');
 
+
     const VTSFPath = props.LogoPic.filter(val => val.Logo === 'VTSF').map(val => val.ImagePath).toString();
 
     function NotYet(){
@@ -50,7 +51,7 @@ const FNav = ( props ) => {
                     <button className='custom-button right-button' onClick={NotYet}>買起來:D</button>
                 </div>
                 <div className='languageButton-container'>
-                    {/* <button className='languageButton' onClick={}>EN</button> */}
+                    {/* TODO */}
                 </div>
             </div>
         </div>

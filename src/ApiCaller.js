@@ -27,6 +27,11 @@ export const getBlogPostGrid = () => {
         .then((response) => response.data);
 };
 
+export const getBlogPostScroll = () => {
+    return Axios.get(url + "/BlogPostScroll")
+        .then((response) => response.data);
+};
+
 export const getPost = (id) => {
     return Axios.get(url + `/BlogPostDetail/${id}`)
     .then((response) => response.data);

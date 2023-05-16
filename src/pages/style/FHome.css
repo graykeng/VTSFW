@@ -1,13 +1,77 @@
 /* App.css */
 .App {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
   
-  header {
-    position: sticky;
-    top: 0;
-    background-color: white;
-    z-index: 100;
-  }
+/* header {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 100;
+} */
+
+.information {
+  background-color: #ECECEC;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.news {
+  flex-basis: 50%;
+  text-align: center;
+  justify-content: center;
+}
+
+.clubs {
+  flex-basis: 50%;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 20px;
+}
+
+.clubs-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  padding-bottom: 40px;
+}
+
+.logos {
+  margin: 20px;
+}
+
+.news-content {
+  height: 300px;
+  width: 700px;
+  overflow-y: scroll;
+  padding: 10px;
+  margin-left: 15%;
+  margin-bottom: 40px;
+
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.1); /* Firefox */
+}
+
+.news-content::-webkit-scrollbar {
+  width: 8px; /* 设置滚动条的宽度 */
+}
+
+.news-content::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5); /* 设置滚动条的颜色 */
+}
+
+.news-content::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.1); /* 设置滚动条轨道的颜色 */
+}
+
+.no-underline {
+  text-decoration: none;
+}

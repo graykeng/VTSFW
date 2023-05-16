@@ -5,6 +5,7 @@ import ReactLinkify from 'react-linkify';
 import moment from 'moment';
 
 import { getPost } from '../ApiCaller';
+import PostCarousel from '../component/PostCarousel';
 
 import './style/BlogPost.css';
 
@@ -36,13 +37,14 @@ const BlogPost = () => {
     imageSection = <img src={imageArr[0]} alt={imageArr[0]} className='PostCarouselSize'/>
   } else {
     imageSection = 
-    <Carousel>
-      {imageArr.map((val, index) => (
-        <Carousel.Item key={index}>
-          <img src={val} alt={val} className='PostCarouselSize'/>
-        </Carousel.Item>
-      ))} 
-    </Carousel>
+    // <Carousel>
+    //   {imageArr.map((val, index) => (
+    //     <Carousel.Item key={index}>
+    //       <img src={val} alt={val} className='PostCarouselSize'/>
+    //     </Carousel.Item>
+    //   ))} 
+    // </Carousel>
+    <PostCarousel ImageArr={imageArr} />
   }
   
   return (
