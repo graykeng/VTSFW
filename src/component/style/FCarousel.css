@@ -1,77 +1,146 @@
-.carousel-container {
-    display: flex;
-    background-color: #DEEBF7;
-    /* to be deleted */
 
-}
-
-.carousel-inner {
-    display: flex;
-    justify-content: center;
-}
-
-.carousel-inner img {
-    display: block;
-    width: 75%;
-    max-height: 900px;
-    object-fit: cover; /* 將圖片裁剪縮放以符合容器大小 */
-    object-position: center; /* 將圖片位置調整至容器中間 */
-    transition: opacity 0.5s ease-in-out;
-}
-
-.prevButton {
-    display: inline-block;
-    position: absolute;
-    top: 90%;
-    left: 75%;
-    width: 60px;
-    height: 60px;
-    transform: translate(-50%, -50%);
-    padding: 10px 20px;
-    background-color: transparent;
-    border: 3px solid #fff;
-    border-radius: 50%;
-    font-size: 16px;
-    color: #fff;
-}
-
-.prevButton::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 45%; /* 這裡是箭頭距離按鈕邊緣的距離，可自行調整 */
-    transform: translate(-50%, -50%);
-    border-width: 10px 10px 10px 0;
-    border-style: solid;
-    border-color: transparent #fff transparent transparent;
+@media screen and (min-width: 800px) {
+    .carousel-container {
+        display: flex;
+        background-color: #DEEBF7;
+        /* to be deleted */
+    
     }
-
-
-
-.nextButton {
-    display: inline-block;
-    position: absolute;
-    top: 90%;
-    left: 80%;
-    width: 60px;
-    height: 60px;
-    transform: translate(-50%, -50%);
-    padding: 10px 20px;
-    background-color: transparent;
-    border: 3px solid #fff;
-    border-radius: 50%;
-    font-size: 16px;
-    color: #fff;
+    
+    .carousel-inner {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .carousel-inner img {
+        display: block;
+        width: 75%;
+        max-height: 900px;
+        object-fit: cover; /* 將圖片裁剪縮放以符合容器大小 */
+        object-position: center; /* 將圖片位置調整至容器中間 */
+        transition: opacity 0.5s ease-in-out;
+    }
+    
+    .carousel-text-chn {
+        position: absolute;
+        bottom: 10%;
+        left: 15%;
+        color: #fff;
+        font-size: 50px;
+        font-weight: bold;
+    }
+    
+    .carousel-text-eng {
+        position: absolute;
+        bottom: 5%;
+        left: 15%;
+        color: #fff;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    
+    .prevButton {
+        display: inline-block;
+        position: absolute;
+        top: 90%;
+        left: 75%;
+        width: 60px;
+        height: 60px;
+        transform: translate(-50%, -50%);
+        padding: 10px 20px;
+        background-color: transparent;
+        border: 3px solid #fff;
+        border-radius: 50%;
+        font-size: 16px;
+        color: #fff;
+    }
+    
+    .prevButton::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 45%; /* 這裡是箭頭距離按鈕邊緣的距離，可自行調整 */
+        transform: translate(-50%, -50%);
+        border-width: 10px 10px 10px 0;
+        border-style: solid;
+        border-color: transparent #fff transparent transparent;
+        }
+    
+    
+    
+    .nextButton {
+        display: inline-block;
+        position: absolute;
+        top: 90%;
+        left: 80%;
+        width: 60px;
+        height: 60px;
+        transform: translate(-50%, -50%);
+        padding: 10px 20px;
+        background-color: transparent;
+        border: 3px solid #fff;
+        border-radius: 50%;
+        font-size: 16px;
+        color: #fff;
+    }
+    
+    .nextButton::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 30%; /* 這裡是箭頭距離按鈕邊緣的距離，可自行調整 */
+        transform: translate(-50%, -50%);
+        border-width: 10px 0 10px 10px;
+        border-style: solid;
+        border-color: transparent transparent transparent #fff;
+    }    
 }
 
-.nextButton::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    right: 30%; /* 這裡是箭頭距離按鈕邊緣的距離，可自行調整 */
-    transform: translate(-50%, -50%);
-    border-width: 10px 0 10px 10px;
-    border-style: solid;
-    border-color: transparent transparent transparent #fff;
+@media screen and (max-width: 800px) {
+    .carousel-container {
+        display: flex;
+        background-color: #DEEBF7;
+        /* to be deleted */
+    
+    }
+    
+    .carousel-inner {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .carousel-inner img {
+        display: block;
+        width: 100%;
+        max-height: 900px;
+        object-fit: cover; /* 將圖片裁剪縮放以符合容器大小 */
+        object-position: center; /* 將圖片位置調整至容器中間 */
+        transition: opacity 0.5s ease-in-out;
+    }
+    
+    .carousel-text-chn {
+        position: absolute;
+        bottom: 12%;
+        left: 3%;
+        color: #fff;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    
+    .carousel-text-eng {
+        position: absolute;
+        bottom: 5%;
+        left: 3%;
+        color: #fff;
+        font-size: 10px;
+        font-weight: bold;
+    }
+    
+    .prevButton {
+        display: none;
+    }
+    
+    .nextButton {
+        display: none;
+    }
 }
-

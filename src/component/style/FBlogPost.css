@@ -1,36 +1,80 @@
-.main {
-    width: 95%;
-    height: 80px;
-    margin: 10px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .date {
-    align-items: center; /* 垂直居中 */
-  }
-  
-  .day {
-    width: 80px; /* 设置天数容器的固定宽度 */
-    height: 60px; /* 设置天数容器的固定高度 */
-    text-align: center;
-    font-size: 45px;
-    color: #018DC6;
-  }
-  
-  .year-month {
-    text-align: center;
-    font-size: 18px;
-    color: #018DC6;
-  }
+@media screen and (min-width: 800px) {
+    .main {
+        width: 95%;
+        height: 80px;
+        margin: 10px;
+        display: flex;
+        align-items: center;
+      }
+      
+      .date {
+        align-items: center; /* 垂直居中 */
+      }
+      
+      .day {
+        width: 80px; /* 设置天数容器的固定宽度 */
+        height: 60px; /* 设置天数容器的固定高度 */
+        text-align: center;
+        font-size: 45px;
+        color: #018DC6;
+      }
+      
+      .year-month {
+        text-align: center;
+        font-size: 18px;
+        color: #018DC6;
+      }
+    
+      .title-and-content {
+        text-align: left;
+        color: #6B6B6B;
+        margin-left: 10px;
+      }
+    
+      .title {
+        font-weight: bold;
+        font-size: large;
+      }
+    
+}
 
-  .title-and-content {
-    text-align: left;
-    color: #6B6B6B;
-    margin-left: 10px;
-  }
+@media screen and (max-width: 800px) {
+    .main {
+        width: 95%;
+        height: 80px;
+        display: flex;
+        align-items: center;
+      }
+      
+      .date {
+        align-items: center; /* 垂直居中 */
+      }
+      
+      .day {
+        width: 25px; /* 设置天数容器的固定宽度 */
+        height: 28px; /* 设置天数容器的固定高度 */
+        text-align: center;
+        font-size: 25px;
+        color: #018DC6;
+      }
+      
+      .year-month {
+        text-align: center;
+        font-size: 8px;
+        color: #018DC6;
+      }
+    
+      .title-and-content {
+        text-align: left;
+        color: #6B6B6B;
+        margin-left: 10px;
+        font-size: 12px;
+      }
+    
+      .title {
+        font-weight: bold;
+        font-size: 15px;
+      }
+    
+}
 
-  .title {
-    font-weight: bold;
-    font-size: large;
-  }

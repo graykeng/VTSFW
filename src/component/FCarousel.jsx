@@ -46,6 +46,12 @@ const Carousel = (props) => {
           <button className='prevButton' onClick={handlePrev}></button>
           <button className='nextButton' onClick={handleNext}></button>
           <img src={imagePaths[currentImage]} alt="carousel" />
+          <div className='carousel-text-chn'>
+            轉動世界的台灣價值
+          </div>
+          <div className="carousel-text-eng">
+            Changing the world with Taiwanese Values
+          </div>
         </div>
       </div>
     </div>

@@ -48,7 +48,7 @@ function App() {
       </header>
       <Router>
         <Routes>
-          <Route path="/" element={<Home EventPic={ EventPic }/>} />
+          <Route path="/Home" element={<Home EventPic={ EventPic }/>} />
           <Route path="/Gallery" element={<Gallery EventInfo={ EventPic }/>} />
           <Route path="/Blog" element={<Blog BlogPostGrid={ BlogPostGrid }/>} />
           <Route path="/Committee" element={<Committee CommitteeInfo={ CommitteeInfo }/>} />
@@ -56,7 +56,7 @@ function App() {
           <Route path="/BlogPost/:id" element={<BlogPost />} />
           <Route path="/GetTicket" element={<GetTicket />} />
           <Route path="/Redeem/:uuid" element={<Redeem />} />
-          <Route path="/Home" element={<FHome EventPic={ EventPic } LogoPic={ LogoPic } BlogPostScroll={ BlogPostScroll }/>} />
+          <Route path="/" element={<FHome EventPic={ EventPic } LogoPic={ LogoPic } BlogPostScroll={ BlogPostScroll }/>} />
         </Routes>
       </Router>
       <VTSFfooter LogoPic={ LogoPic }/>
