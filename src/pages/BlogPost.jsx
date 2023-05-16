@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { Carousel } from 'react-bootstrap';
 import ReactLinkify from 'react-linkify';
 import moment from 'moment';
 
