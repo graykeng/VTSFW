@@ -2,8 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState, useEffect } from 'react'
 
-import Home from "./pages/Home";
-import Gallery from "./pages/Gallery";
+import Details from "./pages/Details";
 import Blog from "./pages/Blog";
 import Committee from "./pages/Committee";
 import Sponsors from "./pages/Sponsors";
@@ -48,8 +47,8 @@ function App() {
       </header>
       <Router>
         <Routes>
-          <Route path="/Home" element={<Home EventPic={ EventPic }/>} />
-          <Route path="/Gallery" element={<Gallery EventInfo={ EventPic }/>} />
+          
+          <Route path="/Details" element={<Details EventInfo={ EventPic }/>} />
           <Route path="/Blog" element={<Blog BlogPostGrid={ BlogPostGrid }/>} />
           <Route path="/Committee" element={<Committee CommitteeInfo={ CommitteeInfo }/>} />
           <Route path="/Sponsors" element={<Sponsors SponsorsInfo={ SponsorsInfo }/>} />
