@@ -4,6 +4,8 @@ import './style/CommitteeCard.css';
 
 const CommitteeCard = ( props ) => {
 
+  const LinkedInPath = props.LogoPic.filter(val => val.Logo === 'LinkedIn').map(val => val.ImagePath).toString();
+
   return (
     <div className='SingleCard'>
       <div>
@@ -11,19 +13,29 @@ const CommitteeCard = ( props ) => {
       </div>
 
       <div className='CommitteeCardTitle'>
-        <h3>
-          {props.CommitteeInfo.FirstName + ' ' + props.CommitteeInfo.LastName}
-        </h3>
+        <div className='CommitteeCardTitleWithLinkedInLogo'>
+          <h3>
+            {props.CommitteeInfo.FirstName + ' ' + props.CommitteeInfo.LastName}
+          </h3>
+          <div className='LinkedIn'>
+            <a href={props.CommitteeInfo.LinkedInPath} target="_blank" rel="noopener noreferrer" className='Logo'><img width='25' height='25' src={LinkedInPath} alt="Linkedin Logo"/></a>
+          </div>
+        </div>
         <h5>
           {props.CommitteeInfo.Title}
         </h5>
       </div>
 
-      {/* <div className='CardText'>
+      <div className='CardText'>
         <p>
-          {props.Intro}
+        {props.CommitteeInfo.Intro.split('\n').map((text, index) => (
+          <React.Fragment key={index}>
+            {text}
+            <br />
+          </React.Fragment>
+        ))}
         </p>
-      </div> */}
+      </div>
     </div>
   )
 }

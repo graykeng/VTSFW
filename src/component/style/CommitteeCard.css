@@ -18,6 +18,15 @@
         margin-top: 1%;
     }
 
+    .CommitteeCardTitleWithLinkedInLogo {
+        display: flex;
+        justify-content: center;
+    }
+
+    .LinkedIn {
+        margin-left: 10px;
+    }
+
     /* For the image on the card from the commitee page */
     .CardImage {
         border-radius: 8px;
@@ -31,6 +40,12 @@
         margin-right: auto;
         
         display: block;
+    }
+
+    .CardText {
+        text-align: center;
+        padding-left: 20%;
+        padding-right: 20%;
     }
 }
 
@@ -52,6 +67,11 @@
         margin-top: 1%;
     }
 
+    .CommitteeCardTitleWithLinkedInLogo {
+        display: flex;
+        justify-content: center;
+    }
+
     /* For the image on the card from the commitee page */
     .CardImage {
         border-radius: 8px;
@@ -65,6 +85,12 @@
         margin-right: auto;
         
         display: block;
+    }
+
+    .CardText {
+        text-align: center;
+        padding-left: 10%;
+        padding-right: 10%;
     }
 }
 
@@ -85,6 +111,11 @@
         margin-top: 1%;
     }
 
+    .CommitteeCardTitleWithLinkedInLogo {
+        display: flex;
+        justify-content: center;
+    }
+
     /* For the image on the card from the commitee page */
     .CardImage {
         border-radius: 8px;
@@ -98,5 +129,11 @@
         margin-right: auto;
         
         display: block;
+    }
+
+    .CardText {
+        text-align: center;
+        padding-left: 5%;
+        padding-right: 5%;
     }
 }

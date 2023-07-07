@@ -15,13 +15,13 @@ const Commitee = ( props ) => {
             <Helmet>
                 <title>VTSF | Commitee</title>
             </Helmet>
-            <Tabs defaultActiveKey="VTSF 2022" className="mt-3 mb-5" fill>
+            <Tabs defaultActiveKey="VTSF 2023" className="mt-3 mb-5" fill>
                 <Tab eventKey="VTSF 2022" title="VTSF 2022">
 
                     <div className='AllCards'>
                         <Row xs={1} md={2}>
                             {props.CommitteeInfo.filter(val => val.id > 20220000 && val.id <= 20230000).map((val, key) => (
-                                <CommitteeCard key={val.id} CommitteeInfo={val} />
+                                <CommitteeCard key={val.id} CommitteeInfo={val} LogoPic={ props.LogoPic } />
                             ))}
                         </Row>
                     </div>
@@ -31,7 +31,7 @@ const Commitee = ( props ) => {
                     <div className='AllCards'>
                         <Row xs={1} md={2}>
                             {props.CommitteeInfo.filter(val => val.id > 20230000 && val.id <= 20240000).map((val, key) => (
-                                <CommitteeCard key={val.id} CommitteeInfo={val} />
+                                <CommitteeCard key={val.id} CommitteeInfo={val} LogoPic={ props.LogoPic } />
                             ))}
                         </Row>
                     </div>

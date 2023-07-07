@@ -26,7 +26,7 @@ const VTSFfooter = ( props ) => {
                         <h5>VTSF SOCIAL MEDIA</h5>
                         <div className='mt-3'>
                             <a href="/" className='Logo'><img width='30' height='30' src={VTSFPath} alt="VTSF Logo"/></a>
-                            <a href="https://www.instagram.com/vtsf2022/" target="_blank" rel="noopener noreferrer" className='Logo'><img width='30' height='30' src={InstagramPath} alt="Instagram Logo"/></a>
+                            <a href="https://www.instagram.com/vtsf2023/" target="_blank" rel="noopener noreferrer" className='Logo'><img width='30' height='30' src={InstagramPath} alt="Instagram Logo"/></a>
                             <a href="https://www.facebook.com/Vancouver-Taiwanese-Student-Forum-VTSF-108853708309621" target="_blank" rel="noopener noreferrer" className='Logo'><img width='30' height='30' src={FacebookPath} alt="Facebook Logo"/></a>
                         </div>
                     </div>

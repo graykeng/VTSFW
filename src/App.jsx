@@ -10,6 +10,7 @@ import BlogPost from "./pages/BlogPost";
 import GetTicket from "./pages/GetTicket";
 import FHome from "./pages/FHome";
 import FNav from "./component/FNav";
+import MobileNav from "./component/MobileNav";
 
 
 //import VTSFtitle from "./component/VTSFtitle";
@@ -44,13 +45,14 @@ function App() {
       {/* <VTSFtitle LogoPic={ LogoPic }/> */}
       <header>
         <FNav LogoPic={ LogoPic } />
+        <MobileNav />
       </header>
       <Router>
         <Routes>
           
           <Route path="/Details" element={<Details EventInfo={ EventPic }/>} />
           <Route path="/Blog" element={<Blog BlogPostGrid={ BlogPostGrid }/>} />
-          <Route path="/Committee" element={<Committee CommitteeInfo={ CommitteeInfo }/>} />
+          <Route path="/Committee" element={<Committee CommitteeInfo={ CommitteeInfo } LogoPic={ LogoPic }/>} />
           <Route path="/Sponsors" element={<Sponsors SponsorsInfo={ SponsorsInfo }/>} />
           <Route path="/BlogPost/:id" element={<BlogPost />} />
           <Route path="/GetTicket" element={<GetTicket />} />

@@ -31,4 +31,23 @@
     .details-main {
         font-family: 'Jost*', sans-serif;
     }
+    .details-title {
+        text-align: center;
+        font-size: 30px;
+        margin: 5%;
+    }
+
+    .details-event-details-eng {
+        background-color: #fff;
+        padding: 20px;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .details-event-details-chn {
+        background-color: #DEEBF7;
+        padding: 20px;
+        text-align: center;
+        font-size: 20px;
+    }
 }
