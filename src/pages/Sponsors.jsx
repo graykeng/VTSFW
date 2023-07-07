@@ -20,8 +20,8 @@ const Sponsors = ( props ) => {
               <h1 className='SponsorRank'>PLATINUM</h1>
               <hr/>
               <Row xs={1} sm={1} md={2}>
-                  {/* filter the SponsorsInfo and get platinum sponsors in 2022 */}
-                  {props.SponsorsInfo.filter(val => val.SponsorRank === "platinum" && val.id >= 20220000 && val.id <=20229999).map((val, key) => (
+                {/* filter the SponsorsInfo and get platinum sponsors in 2022 */}
+                {props.SponsorsInfo.filter(val => val.SponsorRank === "platinum" && val.id >= 20220000 && val.id <=20229999).map((val, key) => (
                   <SponsorCard key={val.id} SponsorsInfo={val} />
                 ))}
               </Row>
