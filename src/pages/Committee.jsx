@@ -36,16 +36,16 @@ const Commitee = ( props ) => {
                     <div className='AllCards'>
                         {isSmallScreen ? (
                             <Row>
-                                {props.CommitteeInfo.filter(val => val.id > 20220000 && val.id <= 20230000).map((val, key) => (
-                                    <CommitteeCard key={val.id} CommitteeInfo={val} LogoPic={ props.LogoPic } />
-                                ))}
+                                    {props.CommitteeInfo.filter(val => val.id > 20220000 && val.id <= 20230000).map((val, key) => (
+                                        <CommitteeCard key={val.id} CommitteeInfo={val} LogoPic={ props.LogoPic } />
+                                    ))}
                             </Row>
                         ) : (
                             <Row xs={1} md={2}>
                             {props.CommitteeInfo.filter(val => val.id > 20220000 && val.id <= 20230000).map((val, key) => (
                                 <CommitteeCard key={val.id} CommitteeInfo={val} LogoPic={ props.LogoPic } />
                             ))}
-                        </Row>
+                            </Row>
                         )}
                     </div>
 
@@ -54,9 +54,9 @@ const Commitee = ( props ) => {
                     <div className='AllCards'>
                         {isSmallScreen ? (
                             <Row>
-                                {props.CommitteeInfo.filter(val => val.id > 20230000 && val.id <= 20240000).map((val, key) => (
-                                    <CommitteeCard key={val.id} CommitteeInfo={val} LogoPic={ props.LogoPic } />
-                                ))}
+                                    {props.CommitteeInfo.filter(val => val.id > 20230000 && val.id <= 20240000).map((val, key) => (
+                                        <CommitteeCard key={val.id} CommitteeInfo={val} LogoPic={ props.LogoPic } />
+                                    ))}
                             </Row>
                         ) : (
                             <Row xs={1} md={2}>
