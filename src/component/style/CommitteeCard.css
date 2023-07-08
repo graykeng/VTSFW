@@ -3,7 +3,7 @@
 /* desktop */
 @media screen and (min-width: 1200px) {
     /* One single commitee card */
-    .SingleCard {
+    .CommitteeSingleCard {
         margin-bottom: 2%;
         width: 50%;
         padding: 1%;
@@ -52,7 +52,7 @@
 /* half desktop */
 @media screen and (min-width: 801px) and (max-width: 1199px) {
     /* One single commitee card */
-    .SingleCard {
+    .CommitteeSingleCard {
         margin-bottom: 2%;
         width: 50%;
         padding: 1%;
@@ -97,9 +97,8 @@
 /* mobile devices */
 @media screen and (max-width: 800px) {
     /* One single commitee card */
-    .SingleCard {
+    .CommitteeSingleCard {
         margin-bottom: 2%;
-        width: 50%;
         padding: 1%;
         overflow-x: hidden;
     }

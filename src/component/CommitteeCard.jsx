@@ -7,7 +7,7 @@ const CommitteeCard = ( props ) => {
   const LinkedInPath = props.LogoPic.filter(val => val.Logo === 'LinkedIn').map(val => val.ImagePath).toString();
 
   return (
-    <div className='SingleCard'>
+    <div className='CommitteeSingleCard'>
       <div>
         <img src={props.CommitteeInfo.ImagePath} className="CardImage" alt={props.CommitteeInfo.FirstName} />
       </div>
