@@ -54,8 +54,17 @@ const Sponsors = ( props ) => {
               </Row>
           </div>
         </Tab>
-        <Tab eventKey="VTSF 2023" title="VTSF 2023" disabled>
-            
+        <Tab eventKey="VTSF 2023" title="VTSF 2023">
+          <div className='AllCards'>
+              <h1 className='SponsorRank'>PLATINUM</h1>
+              <hr/>
+              <Row xs={1} sm={1} md={2}>
+                {/* filter the SponsorsInfo and get platinum sponsors in 2022 */}
+                {props.SponsorsInfo.filter(val => val.SponsorRank === "platinum" && val.id >= 20230000 && val.id <=20239999).map((val, key) => (
+                  <SponsorCard key={val.id} SponsorsInfo={val} />
+                ))}
+              </Row>
+          </div>
         </Tab>
         {/* <Tab eventKey="VTSF 2024" title="VTSF 2024" disabled>
             
