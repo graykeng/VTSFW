@@ -190,7 +190,7 @@ const GetTicket = () => {
         <div className='ReminderPage'>
           <div className='ReminderSection'>
             <h1 className='ReminderH1'>Last step...</h1>
-            <p className='EtransferP'>To pay your ticket, please E-transfer $20 to vtsf2022@gmail.com with your name as comment. Once we confirmed the transaction, we'll proceed your application and send you confirmation Email.</p>
+            <p className='EtransferP'>To pay your ticket, please E-transfer $20 to vtsf2022@gmail.com with your name in the comment. Once we confirmed the transaction, we'll proceed your application and send you confirmation Email.</p>
             {showCopy && (<button className="ReminderBt copy" data-clipboard-text="vtsf2022@gmail.com" onClick={handleRedeem}>Copy Email</button>)}
             {showBack && (<button className='ReminderBt' onClick={(e) => {window.location.href='/';}}>Back to home page</button>)}
           </div>
