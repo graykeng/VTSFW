@@ -6,9 +6,9 @@ const FNav = ( props ) => {
 
     const VTSFPath = props.LogoPic.filter(val => val.Logo === 'VTSF-BlackIcon-NoBG').map(val => val.ImagePath).toString();
 
-    function NotYet(){
-        alert("We haven't started selling the ticket for 2023.");
-    };
+    // function NotYet(){
+    //     alert("We haven't started selling the ticket for 2023.");
+    // };
 
     const handleTicketButton = () => {
         window.location.href = '/getticket';
