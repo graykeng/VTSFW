@@ -14,6 +14,11 @@ const GetTicket = () => {
   const [ShowSuccess, setShowSuccess] = useState(false);
   const [showCopy, setShowCopy] = useState(true);
   const [showBack, setShowBack] = useState(false);
+  const [recaptchaVerified, setRecaptchaVerified] = useState(false);
+
+  const handleRecaptchaChange = (value) => {
+    setRecaptchaVerified(value);
+  };
 
   useEffect(() => {
     new Clipboard('.copy');
@@ -44,8 +49,12 @@ const GetTicket = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setFormErrors(validate(formValues));
-    setIsSubmit(true);
+    if (recaptchaVerified){
+      setFormErrors(validate(formValues));
+      setIsSubmit(true);
+    } else {
+      alert("Please complete reCAPTCHA verification.");
+    }
   }
 
   const handleRedeem = (e) => {
@@ -169,7 +178,7 @@ const GetTicket = () => {
           <FormInput name="Occupation" type="menu" options={occupationOption} onChange={handleChange} errorMessage={formErrors.Occupation} question="What is your current occupation?*" />
           <FormInput name="Attended" type="menu" options={trueOrFalse} onChange={handleChange} errorMessage={formErrors.Attended} question="Did you attend the event in 2022?*" />
           <FormInput name="Heard" type="menu" options={heardOption} onChange={handleChange} errorMessage={formErrors.Heard} question="How did you hear about this event?*" />
-          <ReCAPTCHA sitekey="6LfZv4AnAAAAALW5RV6bKShL62YOP1ktOyad1yb5" />
+          <ReCAPTCHA sitekey="6LfZv4AnAAAAALW5RV6bKShL62YOP1ktOyad1yb5" onChange={handleRecaptchaChange} />
           <button className='TicketSubmitBt'>Submit</button>
         </form>
       </div>)}
@@ -178,7 +187,7 @@ const GetTicket = () => {
           <div className='ReminderSection'>
             <h1 className='ReminderH1'>Last step...</h1>
             <p className='EtransferP'>To pay your ticket, please E-transfer $20 to vtsf2022@gmail.com with your name as comment. Once we confirmed the transaction, we'll proceed your application and send you confirmation Email.</p>
-            {showCopy && (<button className="ReminderBt copy" data-clipboard-text="example@gmail.com" onClick={handleRedeem}>Copy Email</button>)}
+            {showCopy && (<button className="ReminderBt copy" data-clipboard-text="vtsf2022@gmail.com" onClick={handleRedeem}>Copy Email</button>)}
             {showBack && (<button className='ReminderBt' onClick={(e) => {window.location.href='/';}}>Back to home page</button>)}
           </div>
         </div>)}
