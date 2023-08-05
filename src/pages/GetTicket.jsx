@@ -107,6 +107,8 @@ const GetTicket = () => {
       errors.ChnName = "Chinese name can only contain Chinese characters. If you don't have a Chinese name, leave this field blank.";
     } else if (values.ChnName.length > 250) {
       errors.ChnName = "Chinese name is too long.";
+    } else if (!values.ChnName) {
+      errors.ChnName = "請輸入中文名字。"
     }
     if (!values.PhoneNumber) {
       errors.PhoneNumber = "Phone number is required.";
@@ -124,6 +126,8 @@ const GetTicket = () => {
     }
     if (values.School.length > 250) {
       errors.School = "School is too long.";
+    } else if (!values.School) {
+      errors.School = "School is required. If it's not applicable, enter N/A."
     }
     if (!values.Age) {
       errors.Age = "Age is required.";
@@ -166,13 +170,13 @@ const GetTicket = () => {
           <h1 className='FormTitle'>Register(Testing)</h1>
           <FormInput name="FirstName" type="input" value={formValues.FirstName} onChange={handleChange} errorMessage={formErrors.FirstName} placeholder="First Name" question="First Name*" />
           <FormInput name="LastName" type="input" value={formValues.LastName} onChange={handleChange} errorMessage={formErrors.LastName} placeholder="Last Name" question="Last Name*" />
-          <FormInput name="ChnName" type="input" value={formValues.ChnName} onChange={handleChange} errorMessage={formErrors.ChnName} placeholder="Chinese Name" question="Chinese Name" />
+          <FormInput name="ChnName" type="input" value={formValues.ChnName} onChange={handleChange} errorMessage={formErrors.ChnName} placeholder="中文名字" question="中文名字*" />
           <FormInput name="PhoneNumber" type="input" value={formValues.PhoneNumber} onChange={handleChange} errorMessage={formErrors.PhoneNumber} placeholder="Phone Number" question="Phone Number*" />
           <FormInput name="Email" type="input" value={formValues.Email} onChange={handleChange} errorMessage={formErrors.Email} placeholder="Email" question="Email*" />
-          <FormInput name="School" type="input" value={formValues.School} onChange={handleChange} errorMessage={formErrors.School} placeholder="School" question="School" />
+          <FormInput name="School" type="input" value={formValues.School} onChange={handleChange} errorMessage={formErrors.School} placeholder="School" question="School*" />
           <FormInput name="Age" type="input" value={formValues.Age} onChange={handleChange} errorMessage={formErrors.Age} placeholder="Age" question="Age*" />
-          <FormInput name="Dietary" type="input" value={formValues.Dietary} onChange={handleChange} errorMessage={formErrors.Dietary} question="Do you have any dietary restrictions? Leave blank if none." />
-          <FormInput name="Taiwanese" type="menu" options={trueOrFalse} onChange={handleChange} errorMessage={formErrors.Taiwanese} question="Are you a Taiwanese?*" />
+          <FormInput name="Dietary" type="input" value={formValues.Dietary} onChange={handleChange} errorMessage={formErrors.Dietary} question="Do you have any dietary restrictions?" />
+          <FormInput name="Taiwanese" type="menu" options={trueOrFalse} onChange={handleChange} errorMessage={formErrors.Taiwanese} question="Are you Taiwanese?*" />
           <FormInput name="WorkshopFirst" type="menu" options={workshopOption} onChange={handleChange} errorMessage={formErrors.Workshop} question="Which workshop is your First preference?*" />
           <FormInput name="WorkshopSecond" type="menu" options={workshopOption} onChange={handleChange} errorMessage={formErrors.Workshop} question="Which workshop is your Second preference?*" />
           <FormInput name="Occupation" type="menu" options={occupationOption} onChange={handleChange} errorMessage={formErrors.Occupation} question="What is your current occupation?*" />
