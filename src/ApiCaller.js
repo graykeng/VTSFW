@@ -54,17 +54,23 @@ export const insertTicketInfo = (data, uuid) => {
         School: data.School,
         Age: data.Age,
         Taiwanese: data.Taiwanese,
-        Workshop: data.Workshop,
+        WorkshopFirst: data.WorkshopFirst,
+        WorkshopSecond: data.WorkshopSecond,
         Dietary: data.Dietary,
         Occupation: data.Occupation,
         Attended: data.Attended,
-        Heard: data.Heard,
+        Heard: data.Heard
         })
-        // .then(res => {
-        //     console.log(res.data);
-        // })
+        .then(res => {
+            if (res.data.message === "Data inserted successfully!") {
+                console.log(res.data.message);
+            } else {
+                throw new Error("res.message wrong.");
+            }
+        })
         .catch(err => {
             console.error(err);
+            throw err;
         })
 };
 

@@ -1,15 +1,18 @@
-import React from 'react'
+import React from 'react';
 import './style/FNav.css';
 
 const FNav = ( props ) => {
     // const [language, setLanguage] = useState('Chn');
-
 
     const VTSFPath = props.LogoPic.filter(val => val.Logo === 'VTSF-BlackIcon-NoBG').map(val => val.ImagePath).toString();
 
     function NotYet(){
         alert("We haven't started selling the ticket for 2023.");
     };
+
+    const handleTicketButton = () => {
+        window.location.href = '/getticket';
+    }
 
     
     
@@ -56,7 +59,7 @@ const FNav = ( props ) => {
                 </nav>
                 <div className='ticketButton-container'>
                     <button className='custom-button left-button phone-no-display' onClick={NotYet}>點我購票！</button>
-                    <button className='custom-button right-button phone-no-display' onClick={NotYet}>買起來:D</button>
+                    <button className='custom-button right-button phone-no-display' onClick={handleTicketButton}>買起來:D</button>
                     <button className='phone-display custom-button' onClick={NotYet}>購票</button>
                 </div>
                 <div className='languageButton-container'>

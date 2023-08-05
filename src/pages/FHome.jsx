@@ -27,7 +27,7 @@ const FHome = ( props ) => {
             <div className='news-content'>
               {props.BlogPostScroll.map((val, index) => {
                 return (
-                  <Link to={`/BlogPost/${val.PostID}`} className='no-underline'><FBlogPost date={val.DateAndTime} title={val.Title} ContentEng={val.ContentEng}/></Link>
+                  <Link key={index} to={`/BlogPost/${val.PostID}`} className='no-underline'><FBlogPost date={val.DateAndTime} title={val.Title} ContentEng={val.ContentEng}/></Link>
                 )
               })}
               

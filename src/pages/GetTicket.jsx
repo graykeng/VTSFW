@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import Clipboard from 'clipboard';
 import { Helmet } from 'react-helmet'
+import ReCAPTCHA from 'react-google-recaptcha';
 
 import './style/GetTicket.css'
 import FormInput from '../component/FormInput';
 import { insertTicketInfo } from '../ApiCaller';
-import { workshopOption, dietaryOption, occupationOption, heardOption, trueOrFalse } from '../Data';
+import { workshopOption, occupationOption, heardOption, trueOrFalse } from '../Data';
 
 const GetTicket = () => {
   const [ShowForm, setShowForm] = useState(true);
@@ -27,9 +28,10 @@ const GetTicket = () => {
     School: "",
     Age: "",
     Taiwanese: "Select",
-    Workshop: "Select workshop",
-    Dietary: "Select dietary option",
-    Occupation: "Select occupation",
+    WorkshopFirst: "Select workshop",
+    WorkshopSecond: "Select workshop",
+    Dietary: "",
+    Occupation: "",
     Attended: "Select",
     Heard: "Select"
   };
@@ -66,7 +68,7 @@ const GetTicket = () => {
         window.scrollTo(0,0);
       } catch (error) {
         console.error(error);
-        alert("There's something wrong with our server. Please check back later.");
+        alert("There's something wrong with our server. Please contact our instagram (vtsf2023).");
       }
     }
   }, [formErrors])
@@ -124,11 +126,14 @@ const GetTicket = () => {
     if (values.Taiwanese === "Select"){
       errors.Taiwanese = "Select yes or no.";
     }
-    if (values.Workshop === "Select workshop"){
+    if (values.WorkshopFirst === "Select workshop"){
       errors.Workshop = "Select the workshop you want to attend.";
     }
-    if (values.Dietary === "Select dietary option"){
-      errors.Dietary = "Select your dietary option.";
+    if (values.WorkshopSecond === "Select workshop"){
+      errors.Workshop = "Select the workshop you want to attend.";
+    }
+    if (values.WorkshopFirst === values.WorkshopSecond){
+      errors.Workshop = "Preference must be different."
     }
     if (values.Occupation === "Select occupation"){
       errors.Occupation = "Select your occupation.";
@@ -157,12 +162,14 @@ const GetTicket = () => {
           <FormInput name="Email" type="input" value={formValues.Email} onChange={handleChange} errorMessage={formErrors.Email} placeholder="Email" question="Email*" />
           <FormInput name="School" type="input" value={formValues.School} onChange={handleChange} errorMessage={formErrors.School} placeholder="School" question="School" />
           <FormInput name="Age" type="input" value={formValues.Age} onChange={handleChange} errorMessage={formErrors.Age} placeholder="Age" question="Age*" />
+          <FormInput name="Dietary" type="input" value={formValues.Dietary} onChange={handleChange} errorMessage={formErrors.Dietary} question="Do you have any dietary restrictions? Leave blank if none." />
           <FormInput name="Taiwanese" type="menu" options={trueOrFalse} onChange={handleChange} errorMessage={formErrors.Taiwanese} question="Are you a Taiwanese?*" />
-          <FormInput name="Workshop" type="menu" options={workshopOption} onChange={handleChange} errorMessage={formErrors.Workshop} question="What is the workshop you want to attend?*" />
-          <FormInput name="Dietary" type="menu" options={dietaryOption} onChange={handleChange} errorMessage={formErrors.Dietary} question="Do you have any dietary restrictions?*" />
+          <FormInput name="WorkshopFirst" type="menu" options={workshopOption} onChange={handleChange} errorMessage={formErrors.Workshop} question="Which workshop is your First preference?*" />
+          <FormInput name="WorkshopSecond" type="menu" options={workshopOption} onChange={handleChange} errorMessage={formErrors.Workshop} question="Which workshop is your Second preference?*" />
           <FormInput name="Occupation" type="menu" options={occupationOption} onChange={handleChange} errorMessage={formErrors.Occupation} question="What is your current occupation?*" />
           <FormInput name="Attended" type="menu" options={trueOrFalse} onChange={handleChange} errorMessage={formErrors.Attended} question="Did you attend the event in 2022?*" />
           <FormInput name="Heard" type="menu" options={heardOption} onChange={handleChange} errorMessage={formErrors.Heard} question="How did you hear about this event?*" />
+          <ReCAPTCHA sitekey="6LfZv4AnAAAAALW5RV6bKShL62YOP1ktOyad1yb5" />
           <button className='TicketSubmitBt'>Submit</button>
         </form>
       </div>)}
@@ -170,7 +177,7 @@ const GetTicket = () => {
         <div className='ReminderPage'>
           <div className='ReminderSection'>
             <h1 className='ReminderH1'>Last step...</h1>
-            <p className='EtransferP'>To pay your ticket, please E-transfer $15 to example@gmail.com with your name as comment. Once we confirmed the transaction, we'll proceed your application and send you confirmation Email.</p>
+            <p className='EtransferP'>To pay your ticket, please E-transfer $20 to vtsf2022@gmail.com with your name as comment. Once we confirmed the transaction, we'll proceed your application and send you confirmation Email.</p>
             {showCopy && (<button className="ReminderBt copy" data-clipboard-text="example@gmail.com" onClick={handleRedeem}>Copy Email</button>)}
             {showBack && (<button className='ReminderBt' onClick={(e) => {window.location.href='/';}}>Back to home page</button>)}
           </div>
