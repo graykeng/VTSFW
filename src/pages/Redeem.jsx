@@ -27,6 +27,9 @@ const Redeem = () => {
     const FirstNamePre = Status.map(obj => obj.FirstName);
     const FirstName = FirstNamePre[0];
 
+    const SerialNumPre = Status.map(obj => obj.id);
+    const SerialNum = SerialNumPre[0];
+
     switch (TicketRedeemed) {
         case 0:
             page = 
@@ -42,6 +45,8 @@ const Redeem = () => {
                         <label className='WarningMessage'>*This button can only click by a STAFF!</label>
                         <br/>
                         <label className='WarningMessage'>*Once you redeem your ticket, your ticket will be invalid.</label>
+                        <br/>
+                        <label className='WarningMessage'>Ticket Serial Number: {SerialNum}</label>
                     </div>
                 </div>
             break;
