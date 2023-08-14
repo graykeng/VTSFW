@@ -44,6 +44,7 @@ const GetTicket = () => {
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
+  const [shakeButton, setShakeButton] = useState(false);
 
   const ID = uuidv4().replace(/-/g, '');
 
@@ -51,6 +52,13 @@ const GetTicket = () => {
     e.preventDefault();
     if (recaptchaVerified){
       setFormErrors(validate(formValues));
+      if (Object.keys(formErrors).length > 0) {
+        setShakeButton(true);
+  
+        setTimeout(() => {
+          setShakeButton(false);
+        }, 1000); // Adjust the duration as needed
+      }
       setIsSubmit(true);
     } else {
       alert("Please complete reCAPTCHA verification.");
@@ -145,7 +153,7 @@ const GetTicket = () => {
     if (values.WorkshopSecond === "Select workshop"){
       errors.Workshop = "Select the workshop you want to attend.";
     }
-    if (values.WorkshopFirst === values.WorkshopSecond){
+    if (values.WorkshopFirst === values.WorkshopSecond && values.WorkshopFirst !== "Select workshop"){
       errors.Workshop = "Preference must be different."
     }
     if (values.Occupation === "Select occupation"){
@@ -183,7 +191,7 @@ const GetTicket = () => {
           <FormInput name="Attended" type="menu" options={trueOrFalse} onChange={handleChange} errorMessage={formErrors.Attended} question="Did you attend the event in 2022?*" />
           <FormInput name="Heard" type="menu" options={heardOption} onChange={handleChange} errorMessage={formErrors.Heard} question="How did you hear about this event?*" />
           <ReCAPTCHA sitekey="6LfZv4AnAAAAALW5RV6bKShL62YOP1ktOyad1yb5" onChange={handleRecaptchaChange} />
-          <button className='TicketSubmitBt'>Submit</button>
+          <button className={`TicketSubmitBt ${shakeButton ? "shake" : ""}`}>Submit</button>
         </form>
       </div>)}
       {ShowSuccess &&(
