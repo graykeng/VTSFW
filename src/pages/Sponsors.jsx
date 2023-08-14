@@ -14,7 +14,7 @@ const Sponsors = ( props ) => {
       <Helmet>
           <title>VTSF | Sponsors</title>
       </Helmet>
-      <Tabs defaultActiveKey="VTSF 2022" className="mt-3 mb-5" fill>
+      <Tabs defaultActiveKey="VTSF 2023" className="mt-3 mb-5" fill>
         <Tab eventKey="VTSF 2022" title="VTSF 2022">
           <div className='AllCards'>
               <h1 className='SponsorRank'>PLATINUM</h1>
