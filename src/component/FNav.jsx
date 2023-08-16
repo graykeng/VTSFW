@@ -59,7 +59,7 @@ const FNav = ( props ) => {
                 </nav>
                 <div className='ticketButton-container'>
                     <button className='custom-button left-button phone-no-display' onClick={handleTicketButton}>點我購票！</button>
-                    <button className='custom-button right-button phone-no-display' onClick={handleTicketButton}>買起來:D</button>
+                    <button className='custom-button right-button phone-no-display' onClick={handleTicketButton}>Buy Ticket!</button>
                     <button className='phone-display custom-button' onClick={handleTicketButton}>購票</button>
                 </div>
                 <div className='languageButton-container'>

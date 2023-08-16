@@ -8,17 +8,29 @@ import './style/Redeem.css';
 const Redeem = () => {
     const {uuid} = useParams();
     const [Status, setStatus] = useState([]);
+    const [password, setPassword] = useState('');
+    const [showError, setShowError] = useState(false);
     var page;
 
     useEffect(() => {
         getTicketStatus(uuid).then(data => setStatus(data));
     }, [])
 
+    const handleOnChange = (e) => {
+        setPassword(e.target.value);
+        setShowError(false);
+      }
+
     const handleRedeem = (e) => {
-        updateRedeem(uuid);
-        setTimeout(() => {
-            window.location.reload();
-          }, 1000);
+        e.preventDefault();
+        if (password.trim() !== '7') {
+            setShowError(true);
+        } else {
+            updateRedeem(uuid);
+            setTimeout(() => {
+                window.location.reload();
+            }, 1000);
+        }
     }
 
     const TicketRedeemedPre = Status.map(obj => obj.TicketRedeemed);
@@ -30,6 +42,9 @@ const Redeem = () => {
     const SerialNumPre = Status.map(obj => obj.id);
     const SerialNum = SerialNumPre[0];
 
+    const LastNamePre = Status.map(obj => obj.LastName);
+    const LastName = LastNamePre[0];
+
     switch (TicketRedeemed) {
         case 0:
             page = 
@@ -39,9 +54,18 @@ const Redeem = () => {
                     </Helmet>
                     <div className='RedeemSection'>
                         <h1 className='RedeemH1'>
-                            Welcome, {FirstName}!
+                            Welcome, {FirstName} {LastName}!
                         </h1>
-                        <button onClick={handleRedeem} className="RedeemBt">Redeem</button>
+                        <form onSubmit={handleRedeem}>
+                            <input
+                                type='text'
+                                placeholder='Redeem Password'
+                                className='RedeemPasswordInput'
+                                onChange={handleOnChange}
+                            />
+                            {showError && <p className='WarningMessage'>Only STAFF can redeem!</p>}
+                            <button type='submit' className="RedeemBt">Redeem</button>
+                        </form>
                         <label className='WarningMessage'>*This button can only click by a STAFF!</label>
                         <br/>
                         <label className='WarningMessage'>*Once you redeem your ticket, your ticket will be invalid.</label>
@@ -58,8 +82,10 @@ const Redeem = () => {
                     </Helmet>
                     <div className='RedeemSection'>
                         <h1 className='RedeemH1'>
-                            Hi, {FirstName}, your ticket has been redeemed. Enjoy your VTSF trip!
+                            Hi, {FirstName} {LastName}, your ticket has been redeemed. Enjoy your VTSF trip!
                         </h1>
+                        <br/>
+                        <label className='WarningMessage'>Ticket Serial Number: {SerialNum}</label>
                         <button onClick={(e) => {window.location.href='/';}} className="RedeemBt">Go to Homepage</button>
                     </div>
                 </div>

@@ -89,6 +89,18 @@ const GetTicket = () => {
       }
     }
   }, [formErrors])
+
+  useEffect(() => {
+    // notify user when they try to exit
+    const handleBeforeUnload = (event) => {
+      event.preventDefault();
+      event.returnValue = '';
+    };
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, []);
   
 
   const validate = (values) => {
@@ -199,6 +211,7 @@ const GetTicket = () => {
           <div className='ReminderSection'>
             <h1 className='ReminderH1'>Last step...</h1>
             <p className='EtransferP'>To pay your ticket, please E-transfer $20 to vtsf2022@gmail.com with your name in the comment. Once we confirmed your transaction, you will receive a confirmation email with an QR code in the next five business days.</p>
+            <p className='EtransferP Red'>E-Transfer Security Question's Answer: VTSF</p>
             {showCopy && (<button className="ReminderBt copy" data-clipboard-text="vtsf2022@gmail.com" onClick={handleRedeem}>Copy Email</button>)}
             {showBack && (<button className='ReminderBt' onClick={(e) => {window.location.href='/';}}>Back to home page</button>)}
           </div>
