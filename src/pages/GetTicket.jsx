@@ -187,7 +187,7 @@ const GetTicket = () => {
       </Helmet>
       {ShowForm &&(<div className='TicketPage'>
         <form onSubmit={handleSubmit} className="FormSection">
-          <h1 className='FormTitle'>Register(Testing)</h1>
+          <h1 className='FormTitle'>Register</h1>
           <FormInput name="FirstName" type="input" value={formValues.FirstName} onChange={handleChange} errorMessage={formErrors.FirstName} placeholder="First Name" question="First Name*" />
           <FormInput name="LastName" type="input" value={formValues.LastName} onChange={handleChange} errorMessage={formErrors.LastName} placeholder="Last Name" question="Last Name*" />
           <FormInput name="ChnName" type="input" value={formValues.ChnName} onChange={handleChange} errorMessage={formErrors.ChnName} placeholder="中文名字" question="中文名字*" />
