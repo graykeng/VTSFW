@@ -9,7 +9,7 @@ const FNav = () => {
                 <nav className="mobile-navbar">
                     <ul>
                         <li>
-                            <a href="/Details">關於我們</a>
+                            <a href="/Details">關於活動</a>
                         </li>
                         <li>
                             <a href="/Sponsors">認識贊助商</a>

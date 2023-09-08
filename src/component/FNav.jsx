@@ -44,7 +44,7 @@ const FNav = ( props ) => {
                             <a href="/" className="noStyle">Vancouver Taiwanese Student Forum</a>
                         </li>
                         <li className='phone-no-display'>
-                            <a href="/Details">關於我們</a>
+                            <a href="/Details">關於活動</a>
                         </li>
                         <li className='phone-no-display'>
                             <a href="/Sponsors">認識贊助商</a>

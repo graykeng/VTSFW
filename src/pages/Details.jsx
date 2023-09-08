@@ -4,12 +4,16 @@ import { Helmet } from 'react-helmet'
 import './style/Details.css'
 
 const Details = ( props ) => {
+
+  const handleTicketButton = () => {
+    window.location.href = '/getticket';
+  }
   return (
     <div>
         <Helmet>
-            <title>VTSF | Details</title>
+            <title>VTSF | Event Details</title>
         </Helmet>
-        <div className='details-main'>
+        {/* <div className='details-main'>
           <div className='details-title'>
             關於我們 About Us
           </div>
@@ -39,6 +43,24 @@ const Details = ( props ) => {
             The Vancouver Taiwanese Student Forum (VTSF) is a platform for students to engage in professional development with leaders of Taiwanese heritage in the industry, academia, and the government. The core of this forum includes speeches and workshops covering diverse topics tailored to post-secondary students. Students will interact actively with experts from different fields and be able to reflect and enhance their personal development. <br/>
             This bilingual forum is well regarded as an ambitious endeavour to allow for the mentoring of young scholars with Taiwanese descent. We envision this platform to expand through the local communities embracing rich dialogue from the Taiwanese to the World.
           </div>
+        </div> */}
+        <div className='detail-main'>
+          <div className='details-title'>
+            關於活動 About Event
+          </div>
+          <img src='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailPic/1.jpg' alt='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailPic/1.jpg' width='95%' className='imgs'/>
+          <img src='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailPic/2.jpg' alt='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailPic/1.jpg' width='95%' className='imgs'/>
+          <img src='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailPic/3.jpg' alt='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailPic/1.jpg' width='95%' className='imgs'/>
+          <img src='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailPic/4.jpg' alt='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailPic/1.jpg' width='95%' className='imgs'/>
+          <img src='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailPic/5.jpg' alt='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailPic/1.jpg' width='95%' className='imgs'/>
+          <img src='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailPic/6.jpg' alt='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailPic/1.jpg' width='95%' className='imgs'/>
+          <img src='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailPic/7.jpg' alt='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailPic/1.jpg' width='95%' className='imgs'/>
+          <img src='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailPic/8.jpg' alt='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailPic/1.jpg' width='95%' className='imgs'/>
+          <img src='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailPic/9.jpg' alt='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailPic/1.jpg' width='95%' className='imgs'/>
+          <img src='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailPic/10.jpg' alt='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailPic/1.jpg' width='95%' className='imgs'/>
+          <img src='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailPic/11.jpg' alt='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailPic/1.jpg' width='95%' className='imgs'/>
+
+          <button className='ticket-button-on-detail-page' onClick={handleTicketButton}>點我購票</button>
         </div>
     </div>
   )
