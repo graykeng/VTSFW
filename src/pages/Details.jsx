@@ -48,17 +48,18 @@ const Details = ( props ) => {
           <div className='details-title'>
             關於活動 About Event
           </div>
-          <img src='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailPic/1.jpg' alt='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailPic/1.jpg' width='95%' className='imgs'/>
-          <img src='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailPic/2.jpg' alt='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailPic/1.jpg' width='95%' className='imgs'/>
-          <img src='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailPic/3.jpg' alt='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailPic/1.jpg' width='95%' className='imgs'/>
-          <img src='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailPic/4.jpg' alt='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailPic/1.jpg' width='95%' className='imgs'/>
-          <img src='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailPic/5.jpg' alt='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailPic/1.jpg' width='95%' className='imgs'/>
-          <img src='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailPic/6.jpg' alt='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailPic/1.jpg' width='95%' className='imgs'/>
-          <img src='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailPic/7.jpg' alt='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailPic/1.jpg' width='95%' className='imgs'/>
-          <img src='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailPic/8.jpg' alt='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailPic/1.jpg' width='95%' className='imgs'/>
-          <img src='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailPic/9.jpg' alt='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailPic/1.jpg' width='95%' className='imgs'/>
-          <img src='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailPic/10.jpg' alt='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailPic/1.jpg' width='95%' className='imgs'/>
-          <img src='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailPic/11.jpg' alt='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailPic/1.jpg' width='95%' className='imgs'/>
+          <img src='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailHQPic/1.png' alt='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailHQPic/1.png' width='95%' className='imgs'/>
+          <img src='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailHQPic/2.png' alt='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailHQPic/2.png' width='95%' className='imgs'/>
+          <img src='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailHQPic/3.png' alt='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailHQPic/3.png' width='95%' className='imgs'/>
+          <img src='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailHQPic/4.png' alt='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailHQPic/4.png' width='95%' className='imgs'/>
+          <img src='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailHQPic/5.png' alt='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailHQPic/5.png' width='95%' className='imgs'/>
+          <img src='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailHQPic/6.png' alt='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailHQPic/6.png' width='95%' className='imgs'/>
+          <img src='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailHQPic/7.png' alt='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailHQPic/7.png' width='95%' className='imgs'/>
+          <img src='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailHQPic/8.png' alt='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailHQPic/8.png' width='95%' className='imgs'/>
+          <img src='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailHQPic/9.png' alt='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailHQPic/9.png' width='95%' className='imgs'/>
+          <img src='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailHQPic/10.png' alt='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailHQPic/10.png' width='95%' className='imgs'/>
+          <img src='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailHQPic/11.png' alt='https://vtsf-img-storage.s3.us-west-2.amazonaws.com/detailHQPic/11.png' width='95%' className='imgs'/>
+          
 
           <button className='ticket-button-on-detail-page' onClick={handleTicketButton}>點我購票</button>
         </div>
