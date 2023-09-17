@@ -7,7 +7,7 @@ import Blog from "./pages/Blog";
 import Committee from "./pages/Committee";
 import Sponsors from "./pages/Sponsors";
 import BlogPost from "./pages/BlogPost";
-import GetTicket from "./pages/GetTicket";
+// import GetTicket from "./pages/GetTicket";
 import FHome from "./pages/FHome";
 import FNav from "./component/FNav";
 import MobileNav from "./component/MobileNav";
