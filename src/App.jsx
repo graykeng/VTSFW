@@ -55,7 +55,7 @@ function App() {
           <Route path="/Committee" element={<Committee CommitteeInfo={ CommitteeInfo } LogoPic={ LogoPic }/>} />
           <Route path="/Sponsors" element={<Sponsors SponsorsInfo={ SponsorsInfo }/>} />
           <Route path="/BlogPost/:id" element={<BlogPost />} />
-          <Route path="/GetTicket" element={<GetTicket />} />
+          {/* <Route path="/GetTicket" element={<GetTicket />} /> */}
           <Route path="/Redeem/:uuid" element={<Redeem />} />
           <Route path="/" element={<FHome EventPic={ EventPic } LogoPic={ LogoPic } BlogPostScroll={ BlogPostScroll }/>} />
         </Routes>

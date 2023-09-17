@@ -11,7 +11,8 @@ const FNav = ( props ) => {
     // };
 
     const handleTicketButton = () => {
-        window.location.href = '/getticket';
+        // window.location.href = '/getticket';
+        alert("Sold out.");
     }
 
     
